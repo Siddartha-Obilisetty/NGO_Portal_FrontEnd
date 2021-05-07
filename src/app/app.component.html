@@ -1,3 +1,30 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-secondary">
+  <a class="navbar-brand" href="#">NGO</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+      aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink=''>Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="details">Products Details</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-3">NGO portal</h1>
@@ -5,6 +32,8 @@
     <hr class="my-2">
   </div>
 </div>
+
 <div clas="container fluid">
   <app-admin></app-admin>
+  <router-outlet></router-outlet>
 </div>

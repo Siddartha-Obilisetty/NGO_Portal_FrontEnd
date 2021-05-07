@@ -13,6 +13,7 @@ import { DonorserviceService } from './donorservice.service';
 import { AdminserviceService } from './adminservice.service';
 import { NeedypeopleserviceService } from './needypeopleservice.service';
 import { EmployeeserviceService } from './employeeservice.service';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EmployeeserviceService } from './employeeservice.service';
     EmployeeComponent,
     AdminComponent,
     DonorComponent,
-    NeedypeopleComponent
+    NeedypeopleComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
