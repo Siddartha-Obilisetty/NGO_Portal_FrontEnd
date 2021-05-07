@@ -9,6 +9,10 @@ import { DonorComponent } from './donor/donor.component';
 import { NeedypeopleComponent } from './needypeople/needypeople.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DonorserviceService } from './donorservice.service';
+import { AdminserviceService } from './adminservice.service';
+import { NeedypeopleserviceService } from './needypeopleservice.service';
+import { EmployeeserviceService } from './employeeservice.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DonorserviceService,AdminserviceService,NeedypeopleserviceService,EmployeeserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
