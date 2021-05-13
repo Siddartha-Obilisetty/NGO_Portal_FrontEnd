@@ -34,7 +34,9 @@ import { EmployeeLoginComponent } from './employee/employee-login/employee-login
 import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
 import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
 import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
-import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './needypeople/login/login.component';
+import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
+import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { AboutComponent } from './about/about.component';
     FindNeedypersonByNameComponent,
     EmployeeLoginComponent,
     HelpNeedypersonComponent,
-    AboutComponent
+    LoginComponent,
+    RegisterNeedypersonComponent,
+    RequestForHelpComponent
   ],
   imports: [
     BrowserModule,
