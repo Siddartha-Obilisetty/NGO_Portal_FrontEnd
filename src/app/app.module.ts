@@ -43,12 +43,22 @@ import { ResetPasswordComponent } from './donor/reset-password/reset-password.co
     FindEmployeeByIdComponent,
     FindEmployeeByNameComponent,
     ApproveDonationComponent,
+<<<<<<< HEAD
     DonateToNgoComponent,
    
     RegisterDonorComponent,
          LoginDonorComponent,
          ForgotPasswordComponent,
          ResetPasswordComponent
+=======
+    AddNeedypersonComponent,
+    DeleteNeedypersonComponent,
+    FindAllNeedypeopleComponent,
+    FindNeedypersonByIdComponent,
+    FindNeedypersonByNameComponent,
+    EmployeeLoginComponent,
+    HelpNeedypersonComponent
+>>>>>>> 2cb71de27d17ece668d2b8fecaf8191d577e180a
   ],
   imports: [
     BrowserModule,
