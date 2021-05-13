@@ -21,6 +21,12 @@ import { FindAllEmployeesComponent } from './admin/find-all-employees/find-all-e
 import { FindEmployeeByIdComponent } from './admin/find-employee-by-id/find-employee-by-id.component';
 import { FindEmployeeByNameComponent } from './admin/find-employee-by-name/find-employee-by-name.component';
 import { ApproveDonationComponent } from './admin/approve-donation/approve-donation.component';
+import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
+
+import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
+import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
+import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,13 @@ import { ApproveDonationComponent } from './admin/approve-donation/approve-donat
     FindAllEmployeesComponent,
     FindEmployeeByIdComponent,
     FindEmployeeByNameComponent,
-    ApproveDonationComponent
+    ApproveDonationComponent,
+    DonateToNgoComponent,
+   
+    RegisterDonorComponent,
+         LoginDonorComponent,
+         ForgotPasswordComponent,
+         ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
