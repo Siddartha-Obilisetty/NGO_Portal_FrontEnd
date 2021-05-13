@@ -21,6 +21,13 @@ import { FindAllEmployeesComponent } from './admin/find-all-employees/find-all-e
 import { FindEmployeeByIdComponent } from './admin/find-employee-by-id/find-employee-by-id.component';
 import { FindEmployeeByNameComponent } from './admin/find-employee-by-name/find-employee-by-name.component';
 import { ApproveDonationComponent } from './admin/approve-donation/approve-donation.component';
+import { AddNeedypersonComponent } from './employee/add-needyperson/add-needyperson.component';
+import { DeleteNeedypersonComponent } from './employee/delete-needyperson/delete-needyperson.component';
+import { FindAllNeedypeopleComponent } from './employee/find-all-needypeople/find-all-needypeople.component';
+import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
+import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
+import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +43,14 @@ import { ApproveDonationComponent } from './admin/approve-donation/approve-donat
     FindAllEmployeesComponent,
     FindEmployeeByIdComponent,
     FindEmployeeByNameComponent,
-    ApproveDonationComponent
+    ApproveDonationComponent,
+    AddNeedypersonComponent,
+    DeleteNeedypersonComponent,
+    FindAllNeedypeopleComponent,
+    FindNeedypersonByIdComponent,
+    FindNeedypersonByNameComponent,
+    EmployeeLoginComponent,
+    HelpNeedypersonComponent
   ],
   imports: [
     BrowserModule,
