@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -5,5 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class DonorserviceService {
 
-  constructor() { }
+  baseURL='http://localhost:8085/donor';
+
+  constructor(private httpModule:HttpClient) { }
 }

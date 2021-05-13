@@ -29,23 +29,23 @@ export class AdminserviceService {
     return this.httpModule.delete(this.baseURL+'/employee/delete/'+employeeId);
   }
 
-  approveDonation(dd_id:number):Observable<DonationDistributionStatus>{
+  approveDonation(dd_id:number):Observable<any>{
     console.log("approve donation in service");
-    return this.httpModule.get<DonationDistributionStatus>(this.baseURL+'/approveDonation/'+dd_id);
+    return this.httpModule.get(this.baseURL+'/approveDonation/'+dd_id);
   }
 
-  findAllEmployee():Observable<Employee[]>{
+  findAllEmployee():Observable<any>{
     console.log("find all employee in service");
-    return this.httpModule.get<Employee[]>(this.baseURL+'/employee/all');
+    return this.httpModule.get(this.baseURL+'/employee/all');
   }
 
-  findEmployeeById(empid:number):Observable<Employee>{
+  findEmployeeById(empid:number):Observable<any>{
     console.log("get employee by id in service");
-    return this.httpModule.get<Employee>(this.baseURL+'/employee/getById/'+empid);
+    return this.httpModule.get(this.baseURL+'/employee/getById/'+empid);
   }
 
-  findEmployeeByName(ename:string):Observable<Employee[]>{
+  findEmployeeByName(ename:string):Observable<any>{
     console.log("get employee by Name in service");
-    return this.httpModule.get<Employee[]>(this.baseURL+'/employee/getByName/'+ename);
+    return this.httpModule.get(this.baseURL+'/employee/getByName/'+ename);
   }
 }
