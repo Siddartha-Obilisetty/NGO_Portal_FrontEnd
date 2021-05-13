@@ -27,6 +27,13 @@ import { RegisterDonorComponent } from './donor/register-donor/register-donor.co
 import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
 import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
+import { FindAllNeedypeopleComponent } from './employee/find-all-needypeople/find-all-needypeople.component';
+import { DeleteNeedypersonComponent } from './employee/delete-needyperson/delete-needyperson.component';
+import { AddNeedypersonComponent } from './employee/add-needyperson/add-needyperson.component';
+import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
+import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
+import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
 
 @NgModule({
   declarations: [
@@ -43,14 +50,6 @@ import { ResetPasswordComponent } from './donor/reset-password/reset-password.co
     FindEmployeeByIdComponent,
     FindEmployeeByNameComponent,
     ApproveDonationComponent,
-<<<<<<< HEAD
-    DonateToNgoComponent,
-   
-    RegisterDonorComponent,
-         LoginDonorComponent,
-         ForgotPasswordComponent,
-         ResetPasswordComponent
-=======
     AddNeedypersonComponent,
     DeleteNeedypersonComponent,
     FindAllNeedypeopleComponent,
@@ -58,7 +57,6 @@ import { ResetPasswordComponent } from './donor/reset-password/reset-password.co
     FindNeedypersonByNameComponent,
     EmployeeLoginComponent,
     HelpNeedypersonComponent
->>>>>>> 2cb71de27d17ece668d2b8fecaf8191d577e180a
   ],
   imports: [
     BrowserModule,
