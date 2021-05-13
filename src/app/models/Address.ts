@@ -11,8 +11,8 @@ export class Address{
 		this.landmark = landmark;
     } 
     toString():string {
-		return "Address [addressId=" + this.addressId + ", city=" 
+		return "addressId=" + this.addressId + ", city=" 
         + this.city + ", state=" + this.state + ", pin=" + this.pin +
-         ", landmark="+ this.landmark + "]";
+         ", landmark="+ this.landmark ;
 	}
 }

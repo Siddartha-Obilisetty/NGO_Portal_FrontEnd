@@ -1,1 +1,12 @@
 <p>admin works!</p>
+<div>
+<button class="btn btn-primary" (click)='getAllEmployees()'>Employee List</button>
+</div>
+<div>
+    <input type='text' placeholder="Employee Id" id='empId' name='empId'>
+    <button class="btn btn-primary" (click)='getEmployeeById(empId)'>Employee Details by Id</button>
+</div>
+<div>
+    <input type='text' placeholder="Employee Name" id='empName' name='empName'>
+    <button class="btn btn-primary" (click)='getEmployeeByName(empName)'>Employee Details by Name</button>
+</div>
