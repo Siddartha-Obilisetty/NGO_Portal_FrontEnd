@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Donation } from './models/Donation';
 import { Donor } from './models/Donor';
 
 
@@ -17,16 +18,28 @@ export class DonorserviceService {
     console.log("create donor ");
     return this.httpClient.post(this.baseURL+'/donor/register',donor);
 }
-  login(username:string,password:string):Observable<any>{
+
+
+ /*  login(username:string,password:string):Observable<any>{
   console.log("login donor");
   return this.httpClient.get(this.baseURL+'/donor/login',username,password);
-}
+} */
+
+
   forgotPassword(username:string):Observable<any>{
     console.log("");
     return this.httpClient.get(this.baseURL+'/donor/forgot_password'+username);
 }
-  resetPassword(username:string):Observable<any>{
+
+
+ /*  resetPassword(username:string):Observable<any>{
   console.log("");
   return this.httpClient.put(this.baseURL+'/donor/reset_password'+username);
+} */
+
+
+ donateToNGO(donation:Donation):Observable<any>{
+  console.log("donate to NGO ");
+  return this.httpClient.put(this.baseURL+'/donor/donate',donation);
 }
 }
