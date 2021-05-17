@@ -3,10 +3,12 @@
 <button class="btn btn-primary" (click)='getAllEmployees()'>Employee List</button>
 </div>
 <div>
-    <input type='text' placeholder="Employee Id" id='empId' name='empId'>
-    <button class="btn btn-primary" (click)='getEmployeeById(empId)'>Employee Details by Id</button>
+    <input type='text' placeholder="Employee Id" id='employeeId' name='employeeId'
+    [(ngModel)]="employee.employeeId" #employeeId="ngModel">
+    <button class="btn btn-primary" (click)='getEmployeeById()'>Employee Details by Id</button>
 </div>
 <div>
-    <input type='text' placeholder="Employee Name" id='empName' name='empName'>
-    <button class="btn btn-primary" (click)='getEmployeeByName(empName)'>Employee Details by Name</button>
+    <input type='text' placeholder="Employee Name" id='employeeName' name='employeeName'
+    [(ngModel)]="employee.employeeName" #employeeName="ngModel">
+    <button class="btn btn-primary" (click)='getEmployeeByName()'>Employee Details by Name</button>
 </div>

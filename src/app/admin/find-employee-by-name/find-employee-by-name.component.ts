@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AdminserviceService } from 'app/adminservice.service';
+import { Employee } from 'app/models/Employee';
 
 @Component({
   selector: 'app-find-employee-by-name',
@@ -7,9 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindEmployeeByNameComponent implements OnInit {
 
-  constructor() { }
+  employeeName:string;
+  employees:Employee[]=[];
+
+  constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.loadEmployeeData();
+  }
+
+  loadEmployeeData(){
+    this.employeeName=this.route.snapshot.params['name'];
+    this.adminService.findEmployeeByName(this.employeeName).subscribe(
+      employees=>{
+        this.employees=employees;
+        console.log(this.employees);
+      }
+    );
+  }
+
+  goToEmployeeList(){
+    this.router.navigate(['admin/getAllEmployees'])
   }
 
 }

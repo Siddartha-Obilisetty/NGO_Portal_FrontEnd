@@ -11,10 +11,8 @@ import { Employee } from '../models/Employee';
 })
 export class AdminComponent implements OnInit {
 
-  @Input() empId:number;
-  empName:string;
   employees:Employee[]=[];
-  employee:Employee;
+  employee:Employee=new Employee();
 
   constructor(private router:Router, private adminService:AdminserviceService) { 
   }
@@ -26,11 +24,11 @@ export class AdminComponent implements OnInit {
     this.router.navigate(['admin/getAllEmployees']);
   }
 
-  getEmployeeById(empId:number){
-    this.router.navigate(['admin/getEmployeeById/',empId]);
+  getEmployeeById(){
+    this.router.navigate(['admin/getEmployeeById/',this.employee.employeeId]);
   }
 
-  getEmployeeByName(empName:string){
-    this.router.navigate(['admin/getEmployeeByName/',empName]);
+  getEmployeeByName(){
+    this.router.navigate(['admin/getEmployeeByName/',this.employee.employeeName]);
   }
 }
