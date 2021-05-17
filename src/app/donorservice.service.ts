@@ -26,10 +26,16 @@ export class DonorserviceService {
 }
   forgotPassword(username:string):Observable<any>{
     console.log("");
-    return this.httpClient.get(this.baseURL+'/donor/forgot_password'+username);
+    let params=new HttpParams()
+      .set('username',username);
+    return this.httpClient.get(this.baseURL+'/donor/forgot_password',{params});
 }
-  resetPassword(username:string):Observable<any>{
+  resetPassword(username:string,oldPassword:string,newPassword:string):Observable<any>{
   console.log("");
-  return this.httpClient.put(this.baseURL+'/donor/reset_password'+username);
+  let params=new HttpParams()
+      .set('username',username)
+      .set('password',oldPassword)
+      .set('password',newPassword);
+  return this.httpClient.put(this.baseURL+'/donor/reset_password',{params});
 }
 }
