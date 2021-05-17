@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Donation } from './models/Donation';
@@ -20,12 +20,13 @@ export class DonorserviceService {
 }
 
 
- /*  login(username:string,password:string):Observable<any>{
+   login(username:string,password:string):Observable<any>{
   console.log("login donor");
-  return this.httpClient.get(this.baseURL+'/donor/login',username,password);
-} */
-
-
+  let params=new HttpParams()
+      .set('username',username)
+      .set('password',password);
+  return this.httpClient.get(this.baseURL+'/donor/login',{params});
+}
   forgotPassword(username:string):Observable<any>{
     console.log("");
     return this.httpClient.get(this.baseURL+'/donor/forgot_password'+username);
