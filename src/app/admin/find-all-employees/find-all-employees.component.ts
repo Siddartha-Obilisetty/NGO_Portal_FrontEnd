@@ -21,7 +21,6 @@ export class FindAllEmployeesComponent implements OnInit {
   reloadData(){
     this.adminService.findAllEmployee().subscribe(
       employees=>{
-        console.log(employees);
         this.employees=employees;
       }
     );
