@@ -21,7 +21,7 @@ export class FindNeedypersonByIdComponent implements OnInit {
 
   loadNeedyPeopleData(){
     this.needyPeopleId=this.route.snapshot.params['id'];
-    this.needyPeople.findNeedyPeopleById(this.needyPeopleId).subscribe(
+    this.employeeService.findNeedyPeopleById(this.needyPeopleId).subscribe(
       needyPeople=>{
         this.needyPeople=needyPeople;
       }

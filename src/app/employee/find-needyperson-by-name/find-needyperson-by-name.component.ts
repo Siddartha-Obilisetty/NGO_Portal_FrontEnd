@@ -10,8 +10,8 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
 })
 export class FindNeedypersonByNameComponent implements OnInit {
   
-  needyPeopleName: string;
-  needyPeople:NeedyPeople;
+  needyPeopleName:string;
+  needyPeople:NeedyPeople[]=[];
 
   constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -22,8 +22,8 @@ export class FindNeedypersonByNameComponent implements OnInit {
   loadNeedyPeopleData(){
     this.needyPeopleName=this.route.snapshot.params['name'];
     this.employeeService.findNeedyPeopleByName(this.needyPeopleName).subscribe(
-      needyPeopleName=>{
-        this.needyPeople=this.needyPeople;
+      needyPeople=>{
+        this.needyPeople=needyPeople;
         console.log(this.needyPeople);
       }
     );

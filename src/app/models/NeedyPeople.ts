@@ -9,7 +9,6 @@ export class NeedyPeople{
     password:string;
     request:number;
     address:Address=new Address();
-  findNeedyPeopleById: any;
     // constructor(needyPeopleId:number,needyPeopleName:string,
     //     phone:string,familyIncome:number,username:string,
     //     password:string,request:number,address:Address){
