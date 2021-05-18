@@ -3,13 +3,14 @@ export class DonationBox{
     registrationNo:string;
     accountNo:string;
     totalCollection:number;
-    constructor(ngoName:string,registrationNo:string,accountNo:string,
-        totalCollection:number){
-        this.ngoName = ngoName;		
-        this.registrationNo = registrationNo;
-		this.accountNo = accountNo;							
-        this.totalCollection = totalCollection;
-    }
+    // constructor(ngoName:string,registrationNo:string,accountNo:string,
+    //     totalCollection:number){
+    //     this.ngoName = ngoName;		
+    //     this.registrationNo = registrationNo;
+	// 	this.accountNo = accountNo;							
+    //     this.totalCollection = totalCollection;
+    // }
+    constructor(){}
     toString():string {
 		return "DonationBox [ngoName=" + this.ngoName + ", registrationNo="
         + this.registrationNo + ", accountNo=" + this.accountNo
