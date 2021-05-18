@@ -26,7 +26,7 @@ export class AddNeedypersonComponent implements OnInit {
       },
       error=>console.log(error)
     );
-    alert("employee added succesfully");
+    alert("needy person added succesfully");
   }
   goToNeedyPeopleList() {
     this.router.navigate(['employee/login/findAllNeedyPeople']);
