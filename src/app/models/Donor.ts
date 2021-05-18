@@ -1,4 +1,5 @@
-import { Address } from "node:cluster";
+import { Address } from "./Address";
+
 
 export class Donor{
     donorId:number;

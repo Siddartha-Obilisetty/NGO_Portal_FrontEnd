@@ -1,1 +1,75 @@
 <p>add-needyperson works!</p>
+<div style="width:400px">
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+    <form #addNeedyPersonForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="needyPeopleId">Needy Person Id</label>
+            <input type="number" name="needyPeopleId" class="form-control" 
+                    placeholder="Enter the Needy Person Id"
+                    #needyPeopleId="ngModel"
+                    [(ngModel)]= "needyPeople.needyPeopleId">
+        </div>
+        <div class="form-group">
+            <label for="name">NeedyPerson Name</label>
+            <input type="text" name="name" class="form-control" 
+                  placeholder="Enter the Needy Person name" 
+                  [(ngModel)]= "needyPeople.needyPeopleName" #name="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" class="form-control" 
+                  placeholder="Enter the phone number" 
+                  [(ngModel)]= "needyPeople.phone" #phone="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="phone">Family Income</label>
+            <input type="number" name="familyIncome" class="form-control" 
+                  placeholder="Enter Family Income" 
+                  [(ngModel)]= "needyPeople.familyIncome" #familyIncome="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" 
+                  placeholder="Enter the username" required 
+                  [(ngModel)]= "needyPeople.username" #username="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" 
+                  placeholder="Enter the Password"
+                  [(ngModel)]= "needyPeople.password" #password="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="address id">Address Id</label>
+            <input type="number" name="addressId" class="form-control" 
+                  placeholder="Enter the Address Id" 
+                  [(ngModel)]= "needyPeople.address.addressId" #addressId="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" name="city" class="form-control" 
+                  placeholder="Enter the City"  
+                  [(ngModel)]= "needyPeople.address.city" #city="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" name="state" class="form-control" 
+                  placeholder="Enter the State"
+                  [(ngModel)]= "needyPeople.address.state" #state="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="pin">pin</label>
+            <input type="text" name="pin" class="form-control" 
+                  placeholder="Enter the pin"
+                  [(ngModel)]= "needyPeople.address.pin" #pin="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="landmark">landmark</label>
+            <input type="text" name="landmark" class="form-control" 
+                  placeholder="Enter the landmark" required 
+                  [(ngModel)]= "needyPeople.address.landmark" #landmark="ngModel">
+        </div>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add Needy Person</button>
+        <button type="submit" class="btn btn-default" (click)= "addNeedyPersonForm.reset()">Reset</button>
+    </form>
+</div>

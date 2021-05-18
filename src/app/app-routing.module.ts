@@ -17,6 +17,12 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { NeedypeopleComponent } from './needypeople/needypeople.component';
 import { LoginComponent } from './needypeople/login/login.component';
 import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
+import { AddNeedypersonComponent } from './employee/add-needyperson/add-needyperson.component';
+import { DeleteNeedypersonComponent } from './employee/delete-needyperson/delete-needyperson.component';
+import { FindAllNeedypeopleComponent } from './employee/find-all-needypeople/find-all-needypeople.component';
+import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
+import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
+import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -32,12 +38,18 @@ const routes: Routes = [
   
   {path:'employee',component:EmployeeComponent},
   {path:'employee/login',component:EmployeeLoginComponent},
+  {path:'employee/login/addNeedyPerson',component:AddNeedypersonComponent},
+  {path:'employee/login/removeNeedyPerson/:id',component:DeleteNeedypersonComponent},
+  {path:'employee/login/findAllNeedyPeople',component:FindAllNeedypeopleComponent},
+  {path:'employee/login/findNeedyPeopleById/:id',component:FindNeedypersonByIdComponent},
+  {path:'employee/login/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
 
   {path:'donor',component:DonorComponent},
   {path:'donor/login',component:LoginDonorComponent},
 
   {path:'needypeople',component:NeedypeopleComponent},
   {path:'needypeople/login',component:LoginComponent},
+  {path:'needypeople/login/register',component:RegisterNeedypersonComponent},
   
   {path:'about',component:AboutComponent},
   {path:'loginpage',component:LoginpageComponent}

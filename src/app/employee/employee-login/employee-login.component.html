@@ -1,3 +1,16 @@
 <div class="alert alert-success" role="alert">
     You have <strong>successfully</strong> logged in as an employee!!!
 </div>
+<div>
+    <button class="btn btn-primary" (click)='findAllNeedyPeople()'>NeedyPeople List</button>
+    </div>
+    <div>
+        <input type='text' placeholder="Needy Person Id" id='needyPeopleId' name='needyPeopleId'
+        [(ngModel)]="needyPeople.needyPeopleId" #needyPeopleId="ngModel">
+        <button class="btn btn-primary" (click)='findNeedyPeopleById()'>NeedyPerson Details by Id</button>
+    </div>
+    <div>
+        <input type='text' placeholder="Needy Person Name" id='needyPeopleName' name='needyPeopleName'
+        [(ngModel)]="needyPeople.needyPeopleName" #needyPeopleName="ngModel">
+        <button class="btn btn-primary" (click)='findNeedyPeopleByName()'>NeedyPerson Details by Name</button>
+    </div>
