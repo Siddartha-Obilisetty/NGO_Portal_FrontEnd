@@ -23,6 +23,9 @@ import { FindAllNeedypeopleComponent } from './employee/find-all-needypeople/fin
 import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
 import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
+import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
+import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -46,6 +49,10 @@ const routes: Routes = [
 
   {path:'donor',component:DonorComponent},
   {path:'donor/login',component:LoginDonorComponent},
+  {path:'donor/login/register',component:RegisterDonorComponent},
+  {path:'donor/login/forgotPassword',component: ForgotPasswordComponent},
+  {path:'donor/login/resetPassword',component:ResetPasswordComponent},
+
 
   {path:'needypeople',component:NeedypeopleComponent},
   {path:'needypeople/login',component:LoginComponent},

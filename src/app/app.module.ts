@@ -64,7 +64,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     LoginComponent,
     RegisterNeedypersonComponent,
     RequestForHelpComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    NeedypeopleserviceComponent
   ],
   imports: [
     BrowserModule,
