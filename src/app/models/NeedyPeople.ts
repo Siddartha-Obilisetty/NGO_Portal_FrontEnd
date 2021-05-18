@@ -8,7 +8,7 @@ export class NeedyPeople{
     username:string;
     password:string;
     request:number;
-    address:Address;
+    address:Address=new Address();
   findNeedyPeopleById: any;
     // constructor(needyPeopleId:number,needyPeopleName:string,
     //     phone:string,familyIncome:number,username:string,

@@ -21,7 +21,9 @@ export class AddNeedypersonComponent implements OnInit {
   addNeedyPerson(){
     this.employeeService.addNeedyPerson(this.needyPeople).subscribe(
       result=>{
+        this.needyPeople=result;
         console.log(result);
+        console.log(this.needyPeople);
         this.goToNeedyPeopleList();
       },
       error=>console.log(error)
