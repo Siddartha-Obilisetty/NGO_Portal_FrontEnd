@@ -18,15 +18,15 @@ export class EmployeeComponent implements OnInit {
   }
 
   findAllNeedyPeople(){
-    this.router.navigate(['employee/login/findAllNeedyPeople']);
+    this.router.navigate(['employee/findAllNeedyPeople']);
   }
 
   findNeedyPeopleById(){
-    this.router.navigate(['employee/login/findNeedyPeopleById/',this.needyPeople.needyPeopleId]);
+    this.router.navigate(['employee/findNeedyPeopleById/',this.needyPeople.needyPeopleId]);
   }
 
   findNeedyPeopleByName(){
-    this.router.navigate(['employee/login/findNeedyPeopleByName/',this.needyPeople.needyPeopleName]);
+    this.router.navigate(['employee/findNeedyPeopleByName/',this.needyPeople.needyPeopleName]);
   }
 
 }

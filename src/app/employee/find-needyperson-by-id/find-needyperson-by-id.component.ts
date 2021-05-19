@@ -29,7 +29,7 @@ export class FindNeedypersonByIdComponent implements OnInit {
   }
 
   goToNeedyPeopleList(){
-    this.router.navigate(['employee/login/findAllNeedyPeople'])
+    this.router.navigate(['employee/findAllNeedyPeople'])
   }
 
 }

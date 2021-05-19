@@ -31,7 +31,7 @@ export class AddNeedypersonComponent implements OnInit {
     alert("needy person added succesfully");
   }
   goToNeedyPeopleList() {
-    this.router.navigate(['employee/login/findAllNeedyPeople']);
+    this.router.navigate(['employee/findAllNeedyPeople']);
   }
   onSubmit(){
     this.addNeedyPerson();

@@ -26,15 +26,15 @@ export class FindAllNeedypeopleComponent implements OnInit {
   }
 
   findNeedyPeopleById(needyPeopleId:number){
-    this.router.navigate(['employee/login/findNeedyPeopleById/',needyPeopleId]);
+    this.router.navigate(['employee/findNeedyPeopleById/',needyPeopleId]);
   }
 
   removeNeedyPerson(needyPeopleId:number){
-    this.router.navigate(['employee/login/removeNeedyPerson/',needyPeopleId]);
+    this.router.navigate(['employee/removeNeedyPerson/',needyPeopleId]);
   }
 
   addNeedyPerson(){
-    this.router.navigate(['employee/login/addNeedyPerson']);
+    this.router.navigate(['employee/addNeedyPerson']);
   }
 
 }

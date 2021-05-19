@@ -29,7 +29,7 @@ export class DeleteNeedypersonComponent implements OnInit {
   }
 
   reloadEmployeeData() {
-    this.router.navigate(['employee/login/findAllNeedyPeople']);
+    this.router.navigate(['employee/findAllNeedyPeople']);
   }
 }
 
