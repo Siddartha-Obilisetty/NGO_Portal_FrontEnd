@@ -31,11 +31,11 @@ export class FindAllEmployeesComponent implements OnInit {
   }
 
   deleteEmployee(employeeId:number){
-    this.router.navigate(['admin/deleteEmployee/',employeeId]);
+    this.router.navigate(['admin/deleteEmployeeById/',employeeId]);
   }
 
   updateEmployee(employeeId:number){
-    this.router.navigate(['admin/updateEmployee/',employeeId]);
+    this.router.navigate(['admin/updateEmployeeById/',employeeId]);
   }
 
   addEmployee(){
