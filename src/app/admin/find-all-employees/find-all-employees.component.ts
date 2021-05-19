@@ -11,7 +11,7 @@ import { Employee } from 'app/models/Employee';
 export class FindAllEmployeesComponent implements OnInit {
 
   employees:Employee[];
-
+  employee:Employee=new Employee();
   constructor(private adminService:AdminserviceService,private router:Router) { }
 
   ngOnInit(): void {
@@ -40,5 +40,14 @@ export class FindAllEmployeesComponent implements OnInit {
 
   addEmployee(){
     this.router.navigate(['admin/addEmployee']);
+  }
+
+  getEmployeeByIdMethod(){
+    this.router.navigate(['admin/getEmployeeById/',this.employee.employeeId]);
+  }
+
+
+  getEmployeeByName(){
+    this.router.navigate(['admin/getEmployeeByName/',this.employee.employeeName]);
   }
 }

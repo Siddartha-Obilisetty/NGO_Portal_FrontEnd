@@ -49,4 +49,9 @@ export class AdminserviceService {
     console.log("get employee by Name in service");
     return this.httpClient.get(this.baseURL+'/employee/getByName/'+ename);
   }
+
+  getAllDonations():Observable<any>{
+    console.log("get all donations in service");
+    return this.httpClient.get(this.baseURL+'/donationDistribution/all');
+  }
 }

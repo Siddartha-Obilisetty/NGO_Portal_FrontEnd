@@ -38,6 +38,7 @@ import { LoginComponent } from './needypeople/login/login.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     RegisterNeedypersonComponent,
     RequestForHelpComponent,
     LoginpageComponent,
+    GetAllDonationsComponent,
   ],
   imports: [
     BrowserModule,

@@ -27,6 +27,7 @@ import { DeleteNeedypersonComponent } from './employee/delete-needyperson/delete
 import { AddNeedypersonComponent } from './employee/add-needyperson/add-needyperson.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
+import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
   {path:'admin',component:AdminComponent},
   {path:'admin/addEmployee',component:AddEmployeeComponent},
   {path:'admin/approveDonation/:id',component:ApproveDonationComponent},
+  {path:'admin/getAllDonations',component:GetAllDonationsComponent},
   {path:'admin/deleteEmployeeById/:id',component:DeleteEmployeeComponent},
   {path:'admin/getAllEmployees',component:FindAllEmployeesComponent},
   {path:'admin/getEmployeeById/:id',component:FindEmployeeByIdComponent},

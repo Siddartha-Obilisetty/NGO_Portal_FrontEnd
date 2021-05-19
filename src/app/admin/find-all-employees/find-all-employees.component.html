@@ -1,4 +1,14 @@
 <div class="panel panel-primary">
+    <div>
+        <input type='text' placeholder="Employee Id" id='employeeId' name='employeeId'
+            [(ngModel)]="employee.employeeId" #employeeId="ngModel">
+        <button class="btn btn-primary" (click)='getEmployeeByIdMethod()'>Employee Details by Id</button>
+    </div>
+    <div>
+        <input type='text' placeholder="Employee Name" id='employeeName' name='employeeName'
+            [(ngModel)]="employee.employeeName" #employeeName="ngModel">
+        <button class="btn btn-primary" (click)='getEmployeeByName()'>Employee Details by Name</button>
+    </div>
     <div class="panel panel-heading">
         <h2>Employee List...!</h2>
     </div>>

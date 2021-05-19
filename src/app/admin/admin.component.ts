@@ -31,4 +31,8 @@ export class AdminComponent implements OnInit {
   getEmployeeByName(){
     this.router.navigate(['admin/getEmployeeByName/',this.employee.employeeName]);
   }
+
+  getAllDonations(){
+    this.router.navigate(['admin/getAllDonations']);
+  }
 }
