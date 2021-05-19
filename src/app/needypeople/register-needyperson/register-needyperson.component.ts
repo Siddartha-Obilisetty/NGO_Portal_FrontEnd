@@ -21,14 +21,10 @@ export class RegisterNeedypersonComponent implements OnInit {
     this.needyPeopleService.registerNeedyPerson(this.person).subscribe(
       result=>{
         console.log(result);
-        this.goToNeedyPeopleList();
       },
       error=>console.log(error)
     );
     alert("needy person added succesfully");
-  }
-  goToNeedyPeopleList(){
-    this.router.navigate(['/employee/needypeople/all'])
   }
   onSubmit(){
     this.createNeedyPeople();

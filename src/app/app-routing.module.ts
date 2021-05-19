@@ -42,11 +42,11 @@ const routes: Routes = [
   
   {path:'employee',component:EmployeeComponent},
   {path:'employee/login',component:EmployeeLoginComponent},
-  {path:'employee/login/addNeedyPerson',component:AddNeedypersonComponent},
-  {path:'employee/login/removeNeedyPerson/:id',component:DeleteNeedypersonComponent},
-  {path:'employee/login/findAllNeedyPeople',component:FindAllNeedypeopleComponent},
-  {path:'employee/login/findNeedyPeopleById/:id',component:FindNeedypersonByIdComponent},
-  {path:'employee/login/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
+  {path:'employee/addNeedyPerson',component:AddNeedypersonComponent},
+  {path:'employee/removeNeedyPerson/:id',component:DeleteNeedypersonComponent},
+  {path:'employee/findAllNeedyPeople',component:FindAllNeedypeopleComponent},
+  {path:'employee/findNeedyPeopleById/:id',component:FindNeedypersonByIdComponent},
+  {path:'employee/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
 
   {path:'donor',component:DonorComponent},
   {path:'donor/login',component:LoginDonorComponent},
