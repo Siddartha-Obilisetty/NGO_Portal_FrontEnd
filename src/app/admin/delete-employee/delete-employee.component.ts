@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AdminserviceService } from 'app/adminservice.service';
 
 @Component({
   selector: 'app-delete-employee',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteEmployeeComponent implements OnInit {
 
-  constructor() { }
+  empid:number;
+  constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.empid=this.route.snapshot.params['id'];
+    this.deleteProduct(this.empid);
   }
 
+  deleteProduct(employeeId:number){
+    this.adminService.deleteEmployee(employeeId).subscribe(
+      result=>{
+      },
+      error=>console.log(error));
+      alert("Employee deleted succesfully");
+      this.reloadEmployeeData();
+  }
+
+  reloadEmployeeData(){
+    this.router.navigate(['admin/getAllEmployees']);
+  }
 }
