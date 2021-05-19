@@ -20,7 +20,9 @@ export class RegisterNeedypersonComponent implements OnInit {
   createNeedyPeople(){
     this.needyPeopleService.registerNeedyPerson(this.person).subscribe(
       result=>{
+        this.person=result;
         console.log(result);
+        console.log(this.person);
         this.goToNeedyPeopleList();
       },
       error=>console.log(error)
@@ -28,7 +30,7 @@ export class RegisterNeedypersonComponent implements OnInit {
     alert("needy person added succesfully");
   }
   goToNeedyPeopleList(){
-    this.router.navigate(['/employee/needypeople/all'])
+    this.router.navigate(['employee/login/findAllNeedyPeople'])
   }
   onSubmit(){
     this.createNeedyPeople();
