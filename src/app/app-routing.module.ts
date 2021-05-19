@@ -57,8 +57,8 @@ const routes: Routes = [
 
   {path:'needypeople',component:NeedypeopleComponent},
   {path:'needypeople/login',component:LoginComponent},
-  {path:'needypeople/login/register',component:RegisterNeedypersonComponent},
-  {path:'needypeople/login/request/',component:RequestForHelpComponent},
+  {path:'needypeople/register',component:RegisterNeedypersonComponent},
+  {path:'needypeople/request/',component:RequestForHelpComponent},
   
   {path:'about',component:AboutComponent},
   {path:'loginpage',component:LoginpageComponent}
