@@ -1,3 +1,31 @@
-<div class="alert alert-success" role="alert">
+<div class="alert alert-success alert-dismissible fade show" role="alert">
     You have <strong>successfully</strong> logged in as an employee!!!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="container">
+    <div class="bg-light p-5 rounded">
+        <h1>Check list of needy people</h1>
+        <p class="lead my-4">Access the list of needy people identified by NGO and perform necessary actions, get the
+            details of each needy person and help needy person by verifying their family income.</p>
+        <button class="btn btn-lg btn-success my-3" (click)='findAllNeedyPeople()'>NeedyPeople List »</button>
+    </div>
+
+    <div class="bg-light p-5 rounded">
+        <h1>Get details by person's Id</h1>
+        <p class="lead my-4">Access all the details of a needy person by entering the unique id given to a needy person.
+            You can also check whether the needy person with a particular id exists or not.
+        </p>
+        <input class="form-control my-2" type="text" placeholder="Enter the id of needy person here" id='needyPeopleId' name='needyPeopleId'
+            [(ngModel)]="needyPeople.needyPeopleId" #needyPeopleId="ngModel">
+        <button class="btn btn-lg btn-primary my-2" (click)='findNeedyPeopleById()'>Get Details »</button>
+    </div>
+
+    <div class="bg-light p-5 rounded">
+        <h1>Get details by person's Name</h1>
+        <p class="lead my-4 ">Access all the details of a needy person by entering the name of the needy person.
+            You can also access list of needy people and their details, if there are multiple people with same name.</p>
+        <input class="form-control my-2" type='text' placeholder="Enter the name of needy person here" id='needyPeopleName' name='needyPeopleName'
+            [(ngModel)]="needyPeople.needyPeopleName" #needyPeopleName="ngModel">
+        <button class="btn btn-lg btn-primary my-2" (click)='findNeedyPeopleByName()'>Get Details »</button>
+    </div>
 </div>

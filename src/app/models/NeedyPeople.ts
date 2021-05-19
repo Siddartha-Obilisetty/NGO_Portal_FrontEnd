@@ -8,7 +8,7 @@ export class NeedyPeople{
     username:string;
     password:string;
     request:number;
-    address:Address;
+    address:Address=new Address();
     // constructor(needyPeopleId:number,needyPeopleName:string,
     //     phone:string,familyIncome:number,username:string,
     //     password:string,request:number,address:Address){
@@ -18,7 +18,6 @@ export class NeedyPeople{
 	// 	this.request = request;	                this.address = address;
     // }
     constructor(){}
-    
     toString():string{
         return "NeedyPeople [needyPeopleId=" + this.needyPeopleId + ", needyPeopleName=" 
         + this.needyPeopleName + ", phone="	+ this.phone + ", familyIncome=" + 

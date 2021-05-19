@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmployeeserviceService } from 'app/employeeservice.service';
+import { NeedyPeople } from 'app/models/NeedyPeople';
 
 @Component({
   selector: 'app-find-all-needypeople',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindAllNeedypeopleComponent implements OnInit {
 
-  constructor() { }
+  needyPeople:NeedyPeople[];
+
+  constructor(private employeeService:EmployeeserviceService,private router:Router) { }
 
   ngOnInit(): void {
+    this.reloadData();
+  }
+  reloadData() {
+    this.employeeService.findAllNeedyPeople().subscribe(
+      needyPeople=>{
+        this.needyPeople=needyPeople;
+      }
+    );
+  }
+
+  findNeedyPeopleById(needyPeopleId:number){
+    this.router.navigate(['employee/login/findNeedyPeopleById/',needyPeopleId]);
+  }
+
+  removeNeedyPerson(needyPeopleId:number){
+    this.router.navigate(['employee/login/removeNeedyPerson/',needyPeopleId]);
+  }
+
+  addNeedyPerson(){
+    this.router.navigate(['employee/login/addNeedyPerson']);
   }
 
 }

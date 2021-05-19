@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { EmployeeserviceService } from 'app/employeeservice.service';
+import { Address } from 'app/models/Address';
+import { NeedyPeople } from 'app/models/NeedyPeople';
 
 @Component({
   selector: 'app-add-needyperson',
@@ -7,9 +11,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddNeedypersonComponent implements OnInit {
 
-  constructor() { }
+  needyPeople:NeedyPeople=new NeedyPeople();
+
+  constructor(private employeeService:EmployeeserviceService,private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  addNeedyPerson(){
+    this.employeeService.addNeedyPerson(this.needyPeople).subscribe(
+      result=>{
+        this.needyPeople=result;
+        console.log(result);
+        console.log(this.needyPeople);
+        this.goToNeedyPeopleList();
+      },
+      error=>console.log(error)
+    );
+    alert("needy person added succesfully");
+  }
+  goToNeedyPeopleList() {
+    this.router.navigate(['employee/login/findAllNeedyPeople']);
+  }
+  onSubmit(){
+    this.addNeedyPerson();
+  }
+
+  
 }

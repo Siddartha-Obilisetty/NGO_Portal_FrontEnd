@@ -1,6 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 import { Donor } from './models/Donor';
 
 
@@ -17,7 +18,9 @@ export class DonorserviceService {
     console.log("create donor ");
     return this.httpClient.post(this.baseURL+'/donor/register',donor);
 }
-  login(username:string,password:string):Observable<any>{
+
+
+   login(username:string,password:string):Observable<any>{
   console.log("login donor");
   let params=new HttpParams()
       .set('username',username)

@@ -39,7 +39,6 @@ import { RegisterNeedypersonComponent } from './needypeople/register-needyperson
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
