@@ -17,6 +17,8 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
 import { NeedypeopleComponent } from './needypeople/needypeople.component';
 import { LoginComponent } from './needypeople/login/login.component';
 import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
+import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
+import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -38,6 +40,8 @@ const routes: Routes = [
 
   {path:'needypeople',component:NeedypeopleComponent},
   {path:'needypeople/login',component:LoginComponent},
+  {path:'needypeople/login/register',component:RegisterNeedypersonComponent},
+  {path:'needypeople/login/request/',component:RequestForHelpComponent},
   
   {path:'about',component:AboutComponent},
   {path:'loginpage',component:LoginpageComponent}
