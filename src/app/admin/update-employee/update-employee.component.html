@@ -1,1 +1,67 @@
-<p>update-employee works!</p>
+<div style="width:400px">
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+    <form #createEmployeeForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="name">Employee Name</label>
+            <input type="text" name="name" class="form-control" 
+                  placeholder="Enter the employee name" 
+                  [(ngModel)]= "employee.employeeName" #name="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" 
+                  placeholder="Enter the email"
+                  [(ngModel)]= "employee.email" #email="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="number" name="phone" class="form-control" 
+                  placeholder="Enter the phone number" 
+                  [(ngModel)]= "employee.phone" #phone="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" 
+                  placeholder="Enter the username" required 
+                  [(ngModel)]= "employee.username" #username="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" 
+                  placeholder="Enter the Password"
+                  [(ngModel)]= "employee.password" #password="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="address id">Address Id</label>
+            <input type="number" name="addressId" class="form-control" 
+                  placeholder="Enter the Address Id" 
+                  [(ngModel)]= "employee.address.addressId" #addressId="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" name="city" class="form-control" 
+                  placeholder="Enter the City"  
+                  [(ngModel)]= "employee.address.city" #city="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="state">State</label>
+            <input type="text" name="state" class="form-control" 
+                  placeholder="Enter the State"
+                  [(ngModel)]= "employee.address.state" #state="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="pin">pin</label>
+            <input type="text" name="pin" class="form-control" 
+                  placeholder="Enter the pin"
+                  [(ngModel)]= "employee.address.pin" #pin="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="landmark">landmark</label>
+            <input type="text" name="landmark" class="form-control" 
+                  placeholder="Enter the landmark" required 
+                  [(ngModel)]= "employee.address.landmark" #landmark="ngModel">
+        </div>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Update Employee</button>
+        <button type="submit" class="btn btn-default" (click)= "createEmployeeForm.reset()">Reset</button>
+    </form>
+</div>

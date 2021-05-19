@@ -10,23 +10,18 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
 })
 export class EmployeeLoginComponent implements OnInit {
 
-  needyPeople:NeedyPeople=new NeedyPeople();
-  
+  needyPeople:NeedyPeople[]=[];
+  needyPerson:NeedyPeople=new NeedyPeople();
+
   constructor(private router:Router,private employeeService:EmployeeserviceService) { }
 
   ngOnInit(): void {
   }
 
-  findAllNeedyPeople(){
-    this.router.navigate(['employee/login/findAllNeedyPeople']);
+  public employeeLogin(username:string,password:string){
+    this.employeeService.employeeLogin(username,password).subscribe(Response=>console.log(Response));
+    this.router.navigate(['employee']);
   }
 
-  findNeedyPeopleById(){
-    this.router.navigate(['employee/login/findNeedyPeopleById/',this.needyPeople.needyPeopleId]);
-  }
-
-  findNeedyPeopleByName(){
-    this.router.navigate(['employee/login/findNeedyPeopleByName/',this.needyPeople.needyPeopleName]);
-  }
 
 }

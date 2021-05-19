@@ -1,31 +1,24 @@
-<div class="alert alert-success alert-dismissible fade show" role="alert">
-    You have <strong>successfully</strong> logged in as an employee!!!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-<div class="container">
-    <div class="bg-light p-5 rounded">
-        <h1>Check list of needy people</h1>
-        <p class="lead my-4">Access the list of needy people identified by NGO and perform necessary actions, get the
-            details of each needy person and help needy person by verifying their family income.</p>
-        <button class="btn btn-lg btn-success my-3" (click)='findAllNeedyPeople()'>NeedyPeople List »</button>
-    </div>
-
-    <div class="bg-light p-5 rounded">
-        <h1>Get details by person's Id</h1>
-        <p class="lead my-4">Access all the details of a needy person by entering the unique id given to a needy person.
-            You can also check whether the needy person with a particular id exists or not.
-        </p>
-        <input class="form-control my-2" type="text" placeholder="Enter the id of needy person here" id='needyPeopleId' name='needyPeopleId'
-            [(ngModel)]="needyPeople.needyPeopleId" #needyPeopleId="ngModel">
-        <button class="btn btn-lg btn-primary my-2" (click)='findNeedyPeopleById()'>Get Details »</button>
-    </div>
-
-    <div class="bg-light p-5 rounded">
-        <h1>Get details by person's Name</h1>
-        <p class="lead my-4 ">Access all the details of a needy person by entering the name of the needy person.
-            You can also access list of needy people and their details, if there are multiple people with same name.</p>
-        <input class="form-control my-2" type='text' placeholder="Enter the name of needy person here" id='needyPeopleName' name='needyPeopleName'
-            [(ngModel)]="needyPeople.needyPeopleName" #needyPeopleName="ngModel">
-        <button class="btn btn-lg btn-primary my-2" (click)='findNeedyPeopleByName()'>Get Details »</button>
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-md-10 mx-auto col-lg-5">
+            <form class="p-4 p-md-5 border rounded-3 bg-light">
+                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" #emp_mail>
+                    <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" #emp_pwd>
+                    <label for="floatingPassword">Password</label>
+                </div>
+                <div class="checkbox mb-3">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button (click)="employeeLogin(emp_mail.value,emp_pwd.value)">login</button>
+                <hr class="my-4">
+                <small>You are getting logged in as an employee</small>
+            </form>
+        </div>
     </div>
 </div>

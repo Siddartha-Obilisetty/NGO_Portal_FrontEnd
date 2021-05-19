@@ -10,9 +10,8 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
 })
 export class EmployeeComponent implements OnInit {
 
-  needyPeople:NeedyPeople[]=[];
-  needyPerson:NeedyPeople=new NeedyPeople();
-
+  needyPeople:NeedyPeople=new NeedyPeople();
+  
   constructor(private router:Router,private employeeService:EmployeeserviceService) { }
 
   ngOnInit(): void {
@@ -23,11 +22,11 @@ export class EmployeeComponent implements OnInit {
   }
 
   findNeedyPeopleById(){
-    this.router.navigate(['employee/login/findNeedyPeopleById/',this.needyPerson.needyPeopleId]);
+    this.router.navigate(['employee/login/findNeedyPeopleById/',this.needyPeople.needyPeopleId]);
   }
 
   findNeedyPeopleByName(){
-    this.router.navigate(['employee/login/findNeedyPeopleByName/',this.needyPerson.needyPeopleName]);
+    this.router.navigate(['employee/login/findNeedyPeopleByName/',this.needyPeople.needyPeopleName]);
   }
 
 }

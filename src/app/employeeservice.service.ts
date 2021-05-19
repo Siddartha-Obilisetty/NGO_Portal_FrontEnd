@@ -13,6 +13,10 @@ export class EmployeeserviceService {
 
   constructor(private httpClient:HttpClient) { }
 
+  employeeLogin(username:string,password:string):Observable<any>{
+    console.log(this.baseURL+'/login?username='+username+'&password='+password);
+    return this.httpClient.get(this.baseURL+'/login?username='+username+'&password='+password);
+  }
   
   addNeedyPerson(needyPeople:NeedyPeople):Observable<any>{
     console.log("add needyperson in service");
@@ -38,5 +42,6 @@ export class EmployeeserviceService {
     console.log("get needyperson by Name in service");
     return this.httpClient.get(this.baseURL+'/needypeople/getbyName/'+needyPeopleName);
   }
+
 
 }
