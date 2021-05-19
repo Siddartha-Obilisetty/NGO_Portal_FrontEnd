@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DonorserviceService } from 'app/donorservice.service';
 
 @Component({
   selector: 'app-donor',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private adminService:DonorserviceService) { }
 
   ngOnInit(): void {
   }

@@ -17,7 +17,7 @@ export class DonorserviceService {
   registerDonor(donor:Donor):Observable<any>{
     console.log("create donor ");
     return this.httpClient.post(this.baseURL+'/donor/register',donor);
-}
+ }
 
 
    login(username:string,password:string):Observable<any>{
@@ -26,13 +26,13 @@ export class DonorserviceService {
       .set('username',username)
       .set('password',password);
   return this.httpClient.get(this.baseURL+'/donor/login',{params});
-}
+ }
   forgotPassword(username:string):Observable<any>{
     console.log("");
     let params=new HttpParams()
       .set('username',username);
     return this.httpClient.get(this.baseURL+'/donor/forgot_password',{params});
-}
+ }
   resetPassword(username:string,oldPassword:string,newPassword:string):Observable<any>{
   console.log("");
   let params=new HttpParams()
@@ -40,5 +40,5 @@ export class DonorserviceService {
       .set('password',oldPassword)
       .set('password',newPassword);
   return this.httpClient.put(this.baseURL+'/donor/reset_password',{params});
-}
+ }
 }
