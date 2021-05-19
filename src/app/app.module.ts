@@ -34,11 +34,11 @@ import { EmployeeLoginComponent } from './employee/employee-login/employee-login
 import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
 import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
 import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
-import { LoginComponent } from './needypeople/login/login.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
+import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needypeople-login.component';
 
 @NgModule({
   declarations: [
@@ -62,11 +62,11 @@ import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-dona
     FindNeedypersonByNameComponent,
     EmployeeLoginComponent,
     HelpNeedypersonComponent,
-    LoginComponent,
     RegisterNeedypersonComponent,
     RequestForHelpComponent,
     LoginpageComponent,
     GetAllDonationsComponent,
+    NeedypeopleLoginComponent
   ],
   imports: [
     BrowserModule,
