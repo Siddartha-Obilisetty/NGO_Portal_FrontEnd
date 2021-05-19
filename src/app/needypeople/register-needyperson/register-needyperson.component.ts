@@ -20,6 +20,7 @@ export class RegisterNeedypersonComponent implements OnInit {
   createNeedyPeople(){
     this.needyPeopleService.registerNeedyPerson(this.person).subscribe(
       result=>{
+        this.person=result;
         console.log(result);
       },
       error=>console.log(error)
