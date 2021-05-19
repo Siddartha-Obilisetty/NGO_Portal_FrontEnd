@@ -19,9 +19,10 @@ export class AdminserviceService {
     return this.httpClient.post(this.baseURL+'/employee/add',employee);
   }
 
-  modifyEmployee(employee:Employee):Observable<any>{
+  modifyEmployee(empid:number,employee:Employee):Observable<any>{
     console.log("modify employee in service");
-    return this.httpClient.put(this.baseURL+'/employee/update',employee);
+    console.log(empid,employee);
+    return this.httpClient.put(this.baseURL+'/employee/update/'+empid,employee);
   }
 
   deleteEmployee(employeeId:number):Observable<any>{

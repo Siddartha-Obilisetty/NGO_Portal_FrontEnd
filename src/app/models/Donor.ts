@@ -15,8 +15,8 @@ export class Donor{
 		// this.email = email;			this.phone = phone;
 		// this.username = username;	this.password = password;
 		// this.address=address;
-
     constructor(){}
+
     
     toString():string {
 		return "Donor [donorId=" + this.donorId + ", donorName=" + this.donorName

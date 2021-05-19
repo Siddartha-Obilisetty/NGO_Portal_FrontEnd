@@ -1,1 +1,30 @@
-<p>find-needyperson-by-name works!</p>
+<h2>NeedyPeople Details</h2>
+<hr>
+<div *ngFor='let needyPerson of needyPeople'>
+    <div *ngIf='needyPerson'>
+        <div>
+            <label><b>NeedyPerson Id:</b></label> {{needyPerson.needyPeopleId}}
+        </div>
+        <div>
+            <label><b>NeedyPerson Name:</b></label> {{needyPerson.needyPeopleName}}
+        </div>
+        <div>
+            <label><b>Phone:</b></label> {{needyPerson.phone}}
+        </div>
+        <div>
+            <label><b>Username:</b></label> {{needyPerson.username}}
+        </div>
+        <div>
+            <label><b>Password:</b></label> {{needyPerson.password}}
+        </div>
+        <div>
+            <label><b>Family Income:</b></label> {{needyPerson.familyIncome}}
+        </div>
+        <div>
+            <label><b>Address:</b></label> {{needyPerson.address.addressId}}, {{needyPerson.address.city}},
+            {{needyPerson.address.state}}
+            , {{needyPerson.address.pin}}, {{needyPerson.address.landmark}}.
+        </div>
+    </div>
+</div>
+<button (click)='goToNeedyPeopleList()' class='btn btn-primary'>Go To NeedyPeople List</button>

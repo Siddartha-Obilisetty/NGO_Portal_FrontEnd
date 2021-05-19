@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { EmployeeserviceService } from 'app/employeeservice.service';
 
 @Component({
   selector: 'app-delete-needyperson',
@@ -7,9 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteNeedypersonComponent implements OnInit {
 
-  constructor() { }
+  needyPeopleId: number;
+  constructor(private employeeService: EmployeeserviceService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.needyPeopleId = this.route.snapshot.params['id'];
+    console.log(this.needyPeopleId);
+    this.deletePerson(this.needyPeopleId);
   }
 
+  deletePerson(needyPeopleId: number) {
+    this.employeeService.removeNeedyPerson(needyPeopleId).subscribe(
+      result => {
+      },
+      error => console.error(error));
+      alert("Needy person deleted succesfully");
+      this.reloadEmployeeData();
+
+  }
+
+  reloadEmployeeData() {
+    this.router.navigate(['employee/findAllNeedyPeople']);
+  }
 }
+
+
