@@ -14,25 +14,13 @@ export class NeedypeopleComponent implements OnInit {
 
   constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService) { }
 
+  
   ngOnInit(): void {
   }
-  needyPersonLogin(){
-    console.log(this.person.username);
-    this.needyPeopleService.login(this.person.username,this.person.password).subscribe(
-      result=>{
-        console.log(result);
-        this.requestForHelp(this.person.needyPeopleId);
-        console.log("request for help");
-      },
-      error=>{console.log(error)}
-    );
-  }
-  requestForHelp(id:number){
-    id=this.person.needyPeopleId;
-    this.router.navigate(['needypeople/request/',id])
-  }
-  onSubmit(){
-    this.requestForHelp(111);
+  
+  requestForHelp()
+  {
+    this.router.navigate(['/needypeople/request/',this.person.needyPeopleId]);
   }
 //  createNeedyPeople(){
 //   this.needyPeopleService.registerNeedyPerson(this.person).subscribe(
