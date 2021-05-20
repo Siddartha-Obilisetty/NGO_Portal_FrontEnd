@@ -21,12 +21,7 @@ import { FindAllEmployeesComponent } from './admin/find-all-employees/find-all-e
 import { FindEmployeeByIdComponent } from './admin/find-employee-by-id/find-employee-by-id.component';
 import { FindEmployeeByNameComponent } from './admin/find-employee-by-name/find-employee-by-name.component';
 import { ApproveDonationComponent } from './admin/approve-donation/approve-donation.component';
-import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
 
-import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
-import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
-import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
 import { FindAllNeedypeopleComponent } from './employee/find-all-needypeople/find-all-needypeople.component';
 import { DeleteNeedypersonComponent } from './employee/delete-needyperson/delete-needyperson.component';
 import { AddNeedypersonComponent } from './employee/add-needyperson/add-needyperson.component';
@@ -38,6 +33,9 @@ import { LoginComponent } from './needypeople/login/login.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
+import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
+import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +63,9 @@ import { LoginpageComponent } from './loginpage/loginpage.component';
     RegisterNeedypersonComponent,
     RequestForHelpComponent,
     LoginpageComponent,
+    RegisterDonorComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -50,7 +50,7 @@ const routes: Routes = [
 
   {path:'donor',component:DonorComponent},
   {path:'donor/login',component:LoginDonorComponent},
-  {path:'donor/login/register',component:RegisterDonorComponent},
+  {path:'donor/register',component:RegisterDonorComponent},
   {path:'donor/login/forgotPassword',component: ForgotPasswordComponent},
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
 
