@@ -33,24 +33,17 @@ export class NeedypeopleserviceService {
   handleError(errorResponse: HttpErrorResponse)
   {
     let errorMessage = 'An error occurred';
-    if(!errorResponse.error || !errorResponse.error.error){
-      return throwError(errorMessage);
-    }
-    switch(errorResponse.error.error.message){
-      case 'USERNAME_DOES_NOT_EXIST':
-        errorMessage='NoSuchNeedyPeople';
-        break;
-      case 'INVALID_PASSWORD':
-        errorMessage='WrongCredentials';
-        break;
-    }
-    return throwError(errorMessage);
-
-
     
-    
-
-   
+    console.log(errorResponse.error);
+    switch(errorResponse.error[0]){
+      case 'T':
+        errorMessage='No Such Needy People';
+        break;
+      case 'W':
+        errorMessage='Wrong Credentials!!!';
+        break;
+    }
+    return throwError(errorMessage);   
   }
 
 

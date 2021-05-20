@@ -11,7 +11,7 @@ import { NeedypeopleserviceService } from 'app/needypeopleservice.service';
 export class NeedypeopleLoginComponent implements OnInit {
 
   person:NeedyPeople=new NeedyPeople();
-  error: string = null;
+  error:string = null;
 
   constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService) { }
   
@@ -26,7 +26,8 @@ export class NeedypeopleLoginComponent implements OnInit {
         this.person=person;
         this.loadNPHomePage(this.person.needyPeopleId);
       },
-      (error)=>{this.error='error'}
+      (error)=>{
+        this.error=error}
     );
   }
   loadNPHomePage(needyPeopleId: number) {
