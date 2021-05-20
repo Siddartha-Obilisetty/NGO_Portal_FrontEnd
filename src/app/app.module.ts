@@ -34,6 +34,11 @@ import { RequestForHelpComponent } from './needypeople/request-for-help/request-
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
 import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needypeople-login.component';
+import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
+import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
+import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
+import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +66,12 @@ import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needy
     RequestForHelpComponent,
     LoginpageComponent,
     GetAllDonationsComponent,
-    NeedypeopleLoginComponent
+    NeedypeopleLoginComponent,
+    RegisterDonorComponent,
+    LoginDonorComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    DonateToNgoComponent
   ],
   imports: [
     BrowserModule,
