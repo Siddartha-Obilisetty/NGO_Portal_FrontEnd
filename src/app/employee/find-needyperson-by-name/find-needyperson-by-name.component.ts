@@ -12,7 +12,8 @@ export class FindNeedypersonByNameComponent implements OnInit {
   
   needyPeopleName:string;
   needyPeople:NeedyPeople[]=[];
-
+  employeeId:number;
+  
   constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -30,7 +31,8 @@ export class FindNeedypersonByNameComponent implements OnInit {
   }
 
   goToNeedyPeopleList(){
-    this.router.navigate(['employee/findAllNeedyPeople'])
-  }
+    this.employeeId=this.route.snapshot.params['id'];
+    this.router.navigate(['employee',this.employeeId,'findNeedyPeople','all']);
+    }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeserviceService } from 'app/employeeservice.service';
 import { NeedyPeople } from 'app/models/NeedyPeople';
 
@@ -10,13 +10,16 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
 })
 export class FindAllNeedypeopleComponent implements OnInit {
 
+  employeeId:number;
   needyPeople:NeedyPeople[];
 
-  constructor(private employeeService:EmployeeserviceService,private router:Router) { }
+  constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.employeeId=this.route.snapshot.params['id'];
     this.reloadData();
   }
+
   reloadData() {
     this.employeeService.findAllNeedyPeople().subscribe(
       needyPeople=>{
@@ -26,15 +29,15 @@ export class FindAllNeedypeopleComponent implements OnInit {
   }
 
   findNeedyPeopleById(needyPeopleId:number){
-    this.router.navigate(['employee/findNeedyPeopleById/',needyPeopleId]);
+    this.router.navigate(['employee',this.employeeId,'findNeedyPeopleById',needyPeopleId]);
   }
 
   removeNeedyPerson(needyPeopleId:number){
-    this.router.navigate(['employee/removeNeedyPerson/',needyPeopleId]);
+    this.router.navigate(['employee',this.employeeId,'needyPerson','remove',needyPeopleId]);
   }
 
   addNeedyPerson(){
-    this.router.navigate(['employee/addNeedyPerson']);
+    this.router.navigate(['employee',this.employeeId,'needyPerson','add']);
   }
 
 }

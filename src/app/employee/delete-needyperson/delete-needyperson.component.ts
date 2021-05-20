@@ -10,18 +10,18 @@ import { EmployeeserviceService } from 'app/employeeservice.service';
 export class DeleteNeedypersonComponent implements OnInit {
 
   needyPeopleId: number;
+  employeeId:number;
+
   constructor(private employeeService: EmployeeserviceService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.needyPeopleId = this.route.snapshot.params['id'];
+    this.needyPeopleId = this.route.snapshot.params['npid'];
     console.log(this.needyPeopleId);
     this.deletePerson(this.needyPeopleId);
   }
 
   deletePerson(needyPeopleId: number) {
     this.employeeService.removeNeedyPerson(needyPeopleId).subscribe(
-      result => {
-      },
       error => console.error(error));
       alert("Needy person deleted succesfully");
       this.reloadEmployeeData();
@@ -29,7 +29,8 @@ export class DeleteNeedypersonComponent implements OnInit {
   }
 
   reloadEmployeeData() {
-    this.router.navigate(['employee/findAllNeedyPeople']);
+    this.employeeId=this.route.snapshot.params['id'];
+    this.router.navigate(['employee',this.employeeId,'findNeedyPeople','all']);
   }
 }
 

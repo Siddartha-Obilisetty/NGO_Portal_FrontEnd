@@ -42,25 +42,24 @@ const routes: Routes = [
   {path:'admin/getEmployeeByName/:name',component:FindEmployeeByNameComponent},
   {path:'admin/updateEmployeeById/:id',component:UpdateEmployeeComponent},
   
-  {path:'employee',component:EmployeeComponent},
   {path:'employee/login',component:EmployeeLoginComponent},
-  {path:'employee/addNeedyPerson',component:AddNeedypersonComponent},
-  {path:'employee/removeNeedyPerson/:id',component:DeleteNeedypersonComponent},
-  {path:'employee/findAllNeedyPeople',component:FindAllNeedypeopleComponent},
-  {path:'employee/findNeedyPeopleById/:id',component:FindNeedypersonByIdComponent},
-  {path:'employee/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
+  {path:'employee/:id',component:EmployeeComponent},
+  {path:'employee/:id/needyPerson/add',component:AddNeedypersonComponent},
+  {path:'employee/:id/needyPerson/remove/:npid',component:DeleteNeedypersonComponent},
+  {path:'employee/:id/findNeedyPeople/all',component:FindAllNeedypeopleComponent},
+  {path:'employee/:id/findNeedyPeopleById/:npid',component:FindNeedypersonByIdComponent},
+  {path:'employee/:id/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
 
   {path:'donor',component:DonorComponent},
   {path:'donor/login',component:LoginDonorComponent},
-  {path:'donor/login/register',component:RegisterDonorComponent},
+  {path:'donor/register',component:RegisterDonorComponent},
   {path:'donor/login/forgotPassword',component: ForgotPasswordComponent},
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
 
-
-  {path:'needyperson/:id',component:NeedypeopleComponent},
   {path:'needypeople/login',component:NeedypeopleLoginComponent},
   {path:'needypeople/register',component:RegisterNeedypersonComponent},
-  {path:'needypeople/request/',component:RequestForHelpComponent},
+  {path:'needypeople/:id',component:NeedypeopleComponent},
+  {path:'needypeople/:id/request',component:RequestForHelpComponent},
   
   {path:'about',component:AboutComponent},
   {path:'loginpage',component:LoginpageComponent}

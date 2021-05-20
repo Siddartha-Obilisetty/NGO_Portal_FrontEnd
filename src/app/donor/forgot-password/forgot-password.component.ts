@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DonorserviceService } from 'app/donorservice.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -6,10 +8,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forgot-password.component.css']
 })
 export class ForgotPasswordComponent implements OnInit {
+  username: string;
 
-  constructor() { }
+  constructor(private router:Router, private donorService:DonorserviceService) { }
 
   ngOnInit(): void {
   }
 
+  forgotPassword(){
+    this.donorService.forgotPassword(this.username).subscribe(
+      result=>{
+        console.log(result);
+       
+      },
+      error=>console.log(error)
+    );
+    alert("Your password has been sent to mail ");
+  }
+  onSubmit(){
+    this.forgotPassword();
+  }
 }

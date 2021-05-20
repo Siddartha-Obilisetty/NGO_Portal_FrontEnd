@@ -12,6 +12,7 @@ export class FindNeedypersonByIdComponent implements OnInit {
 
   needyPeopleId:number;
   needyPeople:NeedyPeople;
+  employeeId:number;
 
   constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -20,7 +21,7 @@ export class FindNeedypersonByIdComponent implements OnInit {
   }
 
   loadNeedyPeopleData(){
-    this.needyPeopleId=this.route.snapshot.params['id'];
+    this.needyPeopleId=this.route.snapshot.params['npid'];
     this.employeeService.findNeedyPeopleById(this.needyPeopleId).subscribe(
       needyPeople=>{
         this.needyPeople=needyPeople;
@@ -29,7 +30,8 @@ export class FindNeedypersonByIdComponent implements OnInit {
   }
 
   goToNeedyPeopleList(){
-    this.router.navigate(['employee/findAllNeedyPeople'])
+    this.employeeId=this.route.snapshot.params['id'];
+    this.router.navigate(['employee',this.employeeId,'findNeedyPeople','all']);
   }
 
 }
