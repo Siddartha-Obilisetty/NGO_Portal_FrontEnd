@@ -67,8 +67,8 @@ import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.compon
     LoginpageComponent,
     GetAllDonationsComponent,
     NeedypeopleLoginComponent,
-    RegisterDonorComponent,
     LoginDonorComponent,
+    RegisterDonorComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
     DonateToNgoComponent

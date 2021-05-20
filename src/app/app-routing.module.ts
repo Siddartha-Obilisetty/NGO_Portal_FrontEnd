@@ -12,7 +12,6 @@ import { UpdateEmployeeComponent } from './admin/update-employee/update-employee
 import { DonorComponent } from './donor/donor.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { NeedypeopleComponent } from './needypeople/needypeople.component';
 import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
@@ -28,6 +27,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeLoginComponent } from './employee/employee-login/employee-login.component';
 import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
 import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needypeople-login.component';
+import { NeedypeopleComponent } from './needypeople/needypeople.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -57,7 +57,7 @@ const routes: Routes = [
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
 
 
-  {path:'needypeople',component:NeedypeopleComponent},
+  {path:'needyperson/:id',component:NeedypeopleComponent},
   {path:'needypeople/login',component:NeedypeopleLoginComponent},
   {path:'needypeople/register',component:RegisterNeedypersonComponent},
   {path:'needypeople/request/',component:RequestForHelpComponent},

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { EmployeeserviceService } from 'app/employeeservice.service';
 import { NeedyPeople } from 'app/models/NeedyPeople';
 import { NeedypeopleserviceService } from 'app/needypeopleservice.service';
 
@@ -11,28 +12,25 @@ import { NeedypeopleserviceService } from 'app/needypeopleservice.service';
 export class NeedypeopleComponent implements OnInit {
 
   person:NeedyPeople=new NeedyPeople();
+  needyPersonId:number;
 
-  constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService) { }
+  constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService, private route:ActivatedRoute,private empService:EmployeeserviceService) { }
 
+  
   ngOnInit(): void {
-  }
-  needyPersonLogin(){
-    console.log(this.person.username);
-    this.needyPeopleService.login(this.person.username,this.person.password).subscribe(
-      result=>{
-        console.log(result);
-        this.requestForHelp(this.person.needyPeopleId);
-        console.log("request for help");
-      },
-      error=>{console.log(error)}
+    this.needyPersonId=this.route.snapshot.params['id'];
+    this.empService.findNeedyPeopleById(this.needyPersonId).subscribe(
+      person=>{
+        this.person=person;
+      }
     );
   }
-  requestForHelp(id:number){
-    id=this.person.needyPeopleId;
-    this.router.navigate(['needypeople/request/',id])
-  }
-  onSubmit(){
-    this.requestForHelp(111);
+
+
+  
+  requestForHelp()
+  {
+    this.router.navigate(['/needypeople/request/',this.needyPersonId]);
   }
 //  createNeedyPeople(){
 //   this.needyPeopleService.registerNeedyPerson(this.person).subscribe(

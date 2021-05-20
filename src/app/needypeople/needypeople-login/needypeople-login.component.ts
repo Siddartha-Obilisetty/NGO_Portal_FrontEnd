@@ -10,16 +10,25 @@ import { NeedypeopleserviceService } from 'app/needypeopleservice.service';
 })
 export class NeedypeopleLoginComponent implements OnInit {
 
-  people:NeedyPeople[]=[];
   person:NeedyPeople=new NeedyPeople();
 
   constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService) { }
-
+  
   ngOnInit(): void {
   }
 
-  requestForHelp()
-  {
-    this.router.navigate(['/needypeople/request/',this.person.needyPeopleId]);
+  login(){
+    console.log(this.person.username);
+    this.needyPeopleService.login(this.person.username,this.person.password).subscribe(
+      person=>{
+        console.log(person);
+        this.person=person;
+        this.loadNPHomePage(this.person.needyPeopleId);
+      },
+      error=>{console.log(error)}
+    );
+  }
+  loadNPHomePage(needyPeopleId: number) {
+    this.router.navigate(['needyperson',needyPeopleId]);
   }
 }
