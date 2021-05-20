@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { EmployeeserviceService } from 'app/employeeservice.service';
-import { NeedyPeople } from 'app/models/NeedyPeople';
+import { Employee } from 'app/models/Employee';
 
 @Component({
   selector: 'app-employee-login',
@@ -10,18 +10,25 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
 })
 export class EmployeeLoginComponent implements OnInit {
 
-  needyPeople:NeedyPeople[]=[];
-  needyPerson:NeedyPeople=new NeedyPeople();
+  employee:Employee=new Employee();
 
   constructor(private router:Router,private employeeService:EmployeeserviceService) { }
 
   ngOnInit(): void {
   }
 
-  public employeeLogin(username:string,password:string){
-    this.employeeService.employeeLogin(username,password).subscribe(Response=>console.log(Response));
-    this.router.navigate(['employee']);
+  public login(){
+    this.employeeService.employeeLogin(this.employee.username,this.employee.password).subscribe(
+      employee=>{
+        this.employee=employee;
+        this.loadEmployeePage(this.employee.employeeId);
+      }
+    );
   }
+  loadEmployeePage(employeeId: number) {
+    this.router.navigate(['employee',employeeId]);
+  }
+
 
 
 }

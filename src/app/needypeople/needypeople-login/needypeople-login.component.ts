@@ -29,6 +29,6 @@ export class NeedypeopleLoginComponent implements OnInit {
     );
   }
   loadNPHomePage(needyPeopleId: number) {
-    this.router.navigate(['needyperson',needyPeopleId]);
+    this.router.navigate(['needypeople',needyPeopleId]);
   }
 }

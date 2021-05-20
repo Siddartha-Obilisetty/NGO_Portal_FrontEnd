@@ -30,7 +30,7 @@ export class NeedypeopleComponent implements OnInit {
   
   requestForHelp()
   {
-    this.router.navigate(['/needypeople/request/',this.needyPersonId]);
+    this.router.navigate(['/needypeople',this.needyPersonId,'request']);
   }
 //  createNeedyPeople(){
 //   this.needyPeopleService.registerNeedyPerson(this.person).subscribe(

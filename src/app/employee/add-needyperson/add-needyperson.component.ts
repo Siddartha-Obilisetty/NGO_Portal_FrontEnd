@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EmployeeserviceService } from 'app/employeeservice.service';
-import { Address } from 'app/models/Address';
 import { NeedyPeople } from 'app/models/NeedyPeople';
 
 @Component({
@@ -12,8 +11,9 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
 export class AddNeedypersonComponent implements OnInit {
 
   needyPeople:NeedyPeople=new NeedyPeople();
+  employeeId:number;
 
-  constructor(private employeeService:EmployeeserviceService,private router:Router) { }
+  constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -31,7 +31,8 @@ export class AddNeedypersonComponent implements OnInit {
     alert("needy person added succesfully");
   }
   goToNeedyPeopleList() {
-    this.router.navigate(['employee/findAllNeedyPeople']);
+    this.employeeId=this.route.snapshot.params['id'];
+    this.router.navigate(['employee',this.employeeId,'findNeedyPeople','all']);
   }
   onSubmit(){
     this.addNeedyPerson();

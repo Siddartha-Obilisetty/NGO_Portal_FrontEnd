@@ -10,7 +10,7 @@ import { NeedypeopleserviceService } from 'app/needypeopleservice.service';
 })
 export class RegisterNeedypersonComponent implements OnInit {
   
-  person:NeedyPeople=new NeedyPeople();
+  needyPeople:NeedyPeople=new NeedyPeople();
 
   constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService) { }
 
@@ -18,10 +18,11 @@ export class RegisterNeedypersonComponent implements OnInit {
   }
   
   createNeedyPeople(){
-    this.needyPeopleService.registerNeedyPerson(this.person).subscribe(
-      result=>{
-        this.person=result;
-        console.log(result);
+    this.needyPeopleService.registerNeedyPerson(this.needyPeople).subscribe(
+      person=>{
+        console.log(person);
+        this.needyPeople=person;
+        console.log(this.needyPeople);
         this.goToNeedy();
       },
       error=>console.log(error)
@@ -29,7 +30,7 @@ export class RegisterNeedypersonComponent implements OnInit {
     alert("needy person added succesfully");
   }
   goToNeedy(){
-    this.router.navigate(['needypeople']);
+    this.router.navigate(['needypeople',this.needyPeople.needyPeopleId]);
   }
   onSubmit(){
     this.createNeedyPeople();
