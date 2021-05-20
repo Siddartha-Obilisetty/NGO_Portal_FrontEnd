@@ -1,0 +1,38 @@
+<p>get-all-donations works!</p>
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        <h2>Donations List...!</h2>
+    </div>>
+    <div class='panel-body'>
+      <table class="table table-striped table-inverse table-responsive">
+          <thead class="thead-inverse">
+              <tr>
+                  <th>Distribution Id</th>
+                  <th>Amount Distributed</th>
+                  <th>Date Of Distribution</th>
+                  <th>Approval Or Rejected Date</th>
+                  <th>Status</th>
+                  <th>Needy People Id</th>
+                  <th>Donation Item Id</th>
+                  <th>Employee</th>
+                  <th>Actions </th>
+              </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor='let donation of donationList'>
+                      <td scope="row">{{donation.distributionId}}</td>
+                      <td>{{donation.amountDistributed}}</td>
+                      <td>{{donation.dateOfDistribution}} </td>
+                      <td>{{donation.approvalOrRejectedDate}} </td>
+                      <td>{{donation.status}} </td>
+                      <td>{{donation.needyPeople}} </td>
+                      <td>{{donation.donationItem}} </td>
+                      <td>{{donation.employee}} </td>
+                      <td>
+                            <button (click)='approveDonation(donation.distributionId,donation.status)' class="btn btn-info" style='margin-left: auto;'>Approve Donation</button>
+                      </td>
+                  </tr>
+              </tbody>
+      </table>  
+    </div>
+</div>

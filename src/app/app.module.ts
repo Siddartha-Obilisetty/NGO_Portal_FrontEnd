@@ -29,13 +29,11 @@ import { EmployeeLoginComponent } from './employee/employee-login/employee-login
 import { FindNeedypersonByIdComponent } from './employee/find-needyperson-by-id/find-needyperson-by-id.component';
 import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-name/find-needyperson-by-name.component';
 import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
-import { LoginComponent } from './needypeople/login/login.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
-import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
-import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
-import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
+import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
+import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needypeople-login.component';
 
 @NgModule({
   declarations: [
@@ -59,13 +57,11 @@ import { ResetPasswordComponent } from './donor/reset-password/reset-password.co
     FindNeedypersonByNameComponent,
     EmployeeLoginComponent,
     HelpNeedypersonComponent,
-    LoginComponent,
     RegisterNeedypersonComponent,
     RequestForHelpComponent,
     LoginpageComponent,
-    RegisterDonorComponent,
-    ForgotPasswordComponent,
-    ResetPasswordComponent
+    GetAllDonationsComponent,
+    NeedypeopleLoginComponent
   ],
   imports: [
     BrowserModule,
