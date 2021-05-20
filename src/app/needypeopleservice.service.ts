@@ -1,7 +1,9 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NeedyPeople } from './models/NeedyPeople';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +27,30 @@ export class NeedypeopleserviceService {
     let params=new HttpParams()
       .set('username',username)
       .set('password',password);
-    return this.httpClient.get(this.baseURL+'/login',{params});
+    return this.httpClient.get(this.baseURL+'/login',{params}).pipe(catchError(this.handleError));
+  }
+  
+  handleError(errorResponse: HttpErrorResponse)
+  {
+    let errorMessage = 'An error occurred';
+    if(!errorResponse.error || !errorResponse.error.error){
+      return throwError(errorMessage);
+    }
+    switch(errorResponse.error.error.message){
+      case 'USERNAME_DOES_NOT_EXIST':
+        errorMessage='NoSuchNeedyPeople';
+        break;
+      case 'INVALID_PASSWORD':
+        errorMessage='WrongCredentials';
+        break;
+    }
+    return throwError(errorMessage);
+
+
+    
+    
+
+   
   }
 
 
