@@ -37,7 +37,7 @@ export class NeedypeopleserviceService {
       return throwError(errorMessage);
     }
     switch(errorResponse.error.error.message){
-      case 'USERNAME_DOES_NOT_EXIST':
+      case 'USERNAME_DOESNOT_EXIST':
         errorMessage='NoSuchNeedyPeople';
         break;
       case 'INVALID_PASSWORD':

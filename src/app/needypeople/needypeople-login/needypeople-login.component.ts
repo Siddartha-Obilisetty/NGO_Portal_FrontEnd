@@ -26,7 +26,8 @@ export class NeedypeopleLoginComponent implements OnInit {
         this.person=person;
         this.loadNPHomePage(this.person.needyPeopleId);
       },
-      (error)=>{this.error='error'}
+      (errorMessage)=>{
+        this.error=errorMessage}
     );
   }
   loadNPHomePage(needyPeopleId: number) {
