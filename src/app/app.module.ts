@@ -66,7 +66,12 @@ import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needy
     RequestForHelpComponent,
     LoginpageComponent,
     GetAllDonationsComponent,
-    NeedypeopleLoginComponent
+    NeedypeopleLoginComponent,
+    LoginDonorComponent,
+    RegisterDonorComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    DonateToNgoComponent
   ],
   imports: [
     BrowserModule,
