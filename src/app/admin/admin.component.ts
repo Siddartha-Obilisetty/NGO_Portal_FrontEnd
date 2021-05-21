@@ -35,4 +35,8 @@ export class AdminComponent implements OnInit {
   getAllDonations(){
     this.router.navigate(['admin/getAllDonations']);
   }
+
+  getAllDonors(){
+    this.router.navigate(['admin/getAllDonors']);
+  }
 }

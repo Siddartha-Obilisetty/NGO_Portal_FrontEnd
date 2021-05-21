@@ -54,4 +54,14 @@ export class AdminserviceService {
     console.log("get all donations in service");
     return this.httpClient.get(this.baseURL+'/donationDistribution/all');
   }
+
+  findAllDonors():Observable<any>{
+    console.log("find all Donor in service");
+    return this.httpClient.get(this.baseURL+'/donor/all');
+  }
+
+  findDonorById(donorid:number):Observable<any>{
+    console.log("get Donor by id in service");
+    return this.httpClient.get(this.baseURL+'/donor/getById/'+donorid);
+  }
 }
