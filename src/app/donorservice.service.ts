@@ -18,8 +18,18 @@ export class DonorserviceService {
 
   registerDonor(donor:Donor):Observable<any>{
     console.log("create donor ");
-    return this.httpClient.post(this.baseURL+'/register',donor);
+    return this.httpClient.post(this.baseURL+'/register',donor).pipe(catchError(this.handleError1));
  }
+ handleError1(errorResponse1: HttpErrorResponse){
+  let errorMessage1 = "An error occured";
+  console.log(errorResponse1.error);
+  if(errorResponse1.error[0]){
+
+      errorMessage1='Duplicate Donor';
+      
+  }
+  return throwError(errorMessage1);   
+}
 
 
    login(username:string,password:string):Observable<any>{

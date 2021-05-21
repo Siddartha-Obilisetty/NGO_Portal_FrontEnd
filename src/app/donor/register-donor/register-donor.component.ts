@@ -10,6 +10,7 @@ import { Donor } from 'app/models/Donor';
 })
 export class RegisterDonorComponent implements OnInit {
  donor:Donor=new Donor();
+  error: string=null;
   constructor(private router:Router, private donorService:DonorserviceService) { }
 
   ngOnInit(): void {
@@ -19,9 +20,11 @@ export class RegisterDonorComponent implements OnInit {
     this.donorService.registerDonor(this.donor).subscribe(
       result=>{
         console.log(result);
-       
+       /*  this.donor=result;
+       console.log(this.donor); */
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
     alert("donor added succesfully");
   }
