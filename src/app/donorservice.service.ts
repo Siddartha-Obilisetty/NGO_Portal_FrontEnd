@@ -1,6 +1,8 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 import { Donor } from './models/Donor';
 
@@ -16,7 +18,7 @@ export class DonorserviceService {
 
   registerDonor(donor:Donor):Observable<any>{
     console.log("create donor ");
-    return this.httpClient.post(this.baseURL+'/donor/register',donor);
+    return this.httpClient.post(this.baseURL+'/register',donor);
  }
 
 
@@ -25,13 +27,30 @@ export class DonorserviceService {
   let params=new HttpParams()
       .set('username',username)
       .set('password',password);
-  return this.httpClient.get(this.baseURL+'/donor/login',{params});
+  return this.httpClient.get(this.baseURL+'/login',{params}).pipe(catchError(this.handleError));
+
  }
+ handleError(errorResponse: HttpErrorResponse)
+  {
+    let errorMessage = 'An error occurred';
+    
+    console.log(errorResponse.error);
+    switch(errorResponse.error[0]){
+      case 'T':
+        errorMessage='No Such Donor';
+        break;
+      case 'W':
+        errorMessage='Wrong Credentials!!!';
+        break;
+    }
+    return throwError(errorMessage);   
+  }
+  
   forgotPassword(username:string):Observable<any>{
     console.log("");
     let params=new HttpParams()
       .set('username',username);
-    return this.httpClient.get(this.baseURL+'/donor/forgot_password',{params});
+    return this.httpClient.get(this.baseURL+'/forgot_password',{params});
  }
   resetPassword(username:string,oldPassword:string,newPassword:string):Observable<any>{
   console.log("");
@@ -39,6 +58,6 @@ export class DonorserviceService {
       .set('username',username)
       .set('password',oldPassword)
       .set('password',newPassword);
-  return this.httpClient.put(this.baseURL+'/donor/reset_password',{params});
+  return this.httpClient.put(this.baseURL+'/reset_password',{params});
  }
 }

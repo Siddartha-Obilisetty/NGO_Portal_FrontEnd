@@ -50,9 +50,10 @@ const routes: Routes = [
   {path:'employee/:id/findNeedyPeopleById/:npid',component:FindNeedypersonByIdComponent},
   {path:'employee/:id/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
 
-  {path:'donor',component:DonorComponent},
+  
   {path:'donor/login',component:LoginDonorComponent},
   {path:'donor/register',component:RegisterDonorComponent},
+  {path:'donor/:id',component:DonorComponent},
   {path:'donor/login/forgotPassword',component: ForgotPasswordComponent},
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
 
