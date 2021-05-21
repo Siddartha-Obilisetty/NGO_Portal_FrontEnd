@@ -9,6 +9,7 @@ import { DonorserviceService } from 'app/donorservice.service';
 })
 export class ForgotPasswordComponent implements OnInit {
   username: string;
+  error:string=null;
 
   constructor(private router:Router, private donorService:DonorserviceService) { }
 
@@ -21,7 +22,8 @@ export class ForgotPasswordComponent implements OnInit {
         console.log(result);
        
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
     alert("Your password has been sent to mail ");
   }

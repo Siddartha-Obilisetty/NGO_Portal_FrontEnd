@@ -21,13 +21,7 @@ export class DonorserviceService {
     return this.httpClient.post(this.baseURL+'/register',donor).pipe(catchError(this.handleError1));
  }
  handleError1(errorResponse1: HttpErrorResponse){
-  let errorMessage1 = "An error occured";
-  console.log(errorResponse1.error);
-  if(errorResponse1.error[0]){
-
-      errorMessage1='Duplicate Donor';
-      
-  }
+  let errorMessage1='Duplicate Donor';
   return throwError(errorMessage1);   
 }
 
@@ -60,7 +54,11 @@ export class DonorserviceService {
     console.log("");
     let params=new HttpParams()
       .set('username',username);
-    return this.httpClient.get(this.baseURL+'/forgot_password',{params});
+    return this.httpClient.get(this.baseURL+'/forgot_password',{params}).pipe(catchError(this.handleError2));
+ }
+ handleError2(errorResponse2: HttpErrorResponse){
+  console.log(errorResponse2.error);
+    return throwError(errorResponse2.error);  
  }
   resetPassword(username:string,oldPassword:string,newPassword:string):Observable<any>{
   console.log("");
@@ -68,6 +66,10 @@ export class DonorserviceService {
       .set('username',username)
       .set('password',oldPassword)
       .set('password',newPassword);
-  return this.httpClient.put(this.baseURL+'/reset_password',{params});
+  return this.httpClient.put(this.baseURL+'/reset_password',{params}).pipe(catchError(this.handleError3));
+ }
+ handleError3(errorResponse3: HttpErrorResponse){
+  console.log(errorResponse3.error);
+  return throwError(errorResponse3.error); 
  }
 }
