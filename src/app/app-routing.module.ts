@@ -30,6 +30,7 @@ import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needy
 import { NeedypeopleComponent } from './needypeople/needypeople.component';
 import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.component';
 import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
+import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -57,9 +58,10 @@ const routes: Routes = [
   
   {path:'donor/login',component:LoginDonorComponent},
   {path:'donor/register',component:RegisterDonorComponent},
-  {path:'donor/:id',component:DonorComponent},
   {path:'donor/login/forgotPassword',component: ForgotPasswordComponent},
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
+  {path:'donor/:id',component:DonorComponent},
+  {path:'donor/:id/donate',component:DonateToNgoComponent},
 
   {path:'needypeople/login',component:NeedypeopleLoginComponent},
   {path:'needypeople/register',component:RegisterNeedypersonComponent},

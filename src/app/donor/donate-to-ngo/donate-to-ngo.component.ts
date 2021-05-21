@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AdminserviceService } from 'app/adminservice.service';
+import { DonorserviceService } from 'app/donorservice.service';
+import { Donation } from 'app/models/Donation';
 
 @Component({
   selector: 'app-donate-to-ngo',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DonateToNgoComponent implements OnInit {
 
-  constructor() { }
+  donation:Donation=new Donation();
+  donorid:number;
+
+  constructor(private router:Router, private donorService:DonorserviceService,private route:ActivatedRoute,private adminService:AdminserviceService) { }
 
   ngOnInit(): void {
+    this.donorid=this.route.snapshot.params['id'];
+  }
+
+  addDonation(){
+    this.donorService.donateToNGO(this.donation).subscribe();
+    alert("donation added succesfully");
+  }
+
+  onSubmit(){
+    this.donation.donor.donorId=this.donorid;
+    this.addDonation();
   }
 
 }
