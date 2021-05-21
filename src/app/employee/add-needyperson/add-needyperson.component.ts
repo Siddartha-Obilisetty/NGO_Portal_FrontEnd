@@ -12,6 +12,7 @@ export class AddNeedypersonComponent implements OnInit {
 
   needyPeople:NeedyPeople=new NeedyPeople();
   employeeId:number;
+  error:string = null;
 
   constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -26,7 +27,8 @@ export class AddNeedypersonComponent implements OnInit {
         console.log(this.needyPeople);
         this.goToNeedyPeopleList();
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
     alert("needy person added succesfully");
   }

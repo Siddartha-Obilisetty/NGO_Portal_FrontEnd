@@ -11,6 +11,7 @@ import { NeedypeopleserviceService } from 'app/needypeopleservice.service';
 export class RegisterNeedypersonComponent implements OnInit {
   
   needyPeople:NeedyPeople=new NeedyPeople();
+  error:string = null;
 
   constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService) { }
 
@@ -25,7 +26,8 @@ export class RegisterNeedypersonComponent implements OnInit {
         console.log(this.needyPeople);
         this.goToNeedy();
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
     alert("needy person added succesfully");
   }

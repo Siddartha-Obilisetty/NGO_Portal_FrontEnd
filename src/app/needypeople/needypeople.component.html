@@ -1,6 +1,10 @@
 <div class="alert alert-success" role="alert">
     Hi,{{person.needyPeopleName}} You have <strong>successfully</strong> logged in as a needy person!!!
 </div>
-<div>
-    <button class="btn btn-primary" (click)='requestForHelp()'>Request</button>
+<div class="container">
+    <div class="bg-light p-5 rounded">
+        <h1>The requests of poeple</h1>
+        <p class="lead my-4">Request for help.</p>
+        <button class="btn btn-lg btn-success my-3" (click)='requestForHelp()'>Request »</button>
+    </div>
 </div>

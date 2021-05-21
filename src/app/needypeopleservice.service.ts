@@ -16,7 +16,17 @@ export class NeedypeopleserviceService {
 
   registerNeedyPerson(person:NeedyPeople):Observable<any>{
     console.log("register needy person");
-    return this.httpClient.post(this.baseURL+'/register',person);
+    return this.httpClient.post(this.baseURL+'/register',person).pipe(catchError(this.handleError1));
+  }
+  handleError1(errorResponse1: HttpErrorResponse){
+    let errorMessage1 = "An error occured";
+    console.log(errorResponse1.error);
+    if(errorResponse1.error[0]){
+  
+        errorMessage1='Duplicate Needy People';
+        
+    }
+    return throwError(errorMessage1);   
   }
 
     requestForHelp(npId:number): Observable<any>{

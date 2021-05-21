@@ -1,6 +1,9 @@
 <div class="container my-5">
+  <div class="alert alert-danger my-4" *ngIf="error">
+    {{error}}
+</div>
     <form #addNeedyPersonForm="ngForm" novalidate class="row g-3">
-      <div class="col-md-4">
+      <div class="col-md-4"> 
         <label for="needyPeopleId" class="form-label">Needy person Id</label>
         <input type="number" name="needyPeopleId" class="form-control" placeholder="Enter the Id here"
           #needyPeopleId="ngModel" [(ngModel)]="needyPeople.needyPeopleId">
@@ -74,4 +77,6 @@
       </div>
     </form>
   </div>
+  
+  
   

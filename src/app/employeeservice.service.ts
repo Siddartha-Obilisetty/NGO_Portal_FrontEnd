@@ -37,7 +37,17 @@ export class EmployeeserviceService {
   
   addNeedyPerson(needyPeople:NeedyPeople):Observable<any>{
     console.log("add needyperson in service");
-    return this.httpClient.post(this.baseURL+'/needypeople/add',needyPeople);
+    return this.httpClient.post(this.baseURL+'/needypeople/add',needyPeople).pipe(catchError(this.handleError1));
+  }
+  handleError1(errorResponse1: HttpErrorResponse){
+    let errorMessage1 = "An error occured";
+    console.log(errorResponse1.error);
+    if(errorResponse1.error[0]){
+  
+        errorMessage1='Duplicate Needy People';
+        
+    }
+    return throwError(errorMessage1);   
   }
 
   removeNeedyPerson(needyPeopleId:number):Observable<any>{
