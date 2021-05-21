@@ -1,7 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { NeedyPeople } from './models/NeedyPeople';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +17,23 @@ export class EmployeeserviceService {
 
   employeeLogin(username:string,password:string):Observable<any>{
     console.log(this.baseURL+'/login?username='+username+'&password='+password);
-    return this.httpClient.get(this.baseURL+'/login?username='+username+'&password='+password);
+    return this.httpClient.get(this.baseURL+'/login?username='+username+'&password='+password).pipe(catchError(this.handleError));
   }
+  handleError(errorResponse: HttpErrorResponse)
+  {
+    let errorMessage = 'An error occurred';
+    
+    console.log(errorResponse.error);
+    switch(errorResponse.error[0]){
+      case 'T':
+        errorMessage='No Such Employee';
+        break;
+      case 'W':
+        errorMessage='Wrong Credentials!!!';
+        break;
+    }
+    return throwError(errorMessage); 
+  }  
   
   addNeedyPerson(needyPeople:NeedyPeople):Observable<any>{
     console.log("add needyperson in service");
