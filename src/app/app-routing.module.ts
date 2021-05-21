@@ -31,6 +31,7 @@ import { NeedypeopleComponent } from './needypeople/needypeople.component';
 import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.component';
 import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
 import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
+import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -69,7 +70,8 @@ const routes: Routes = [
   {path:'needypeople/:id/request',component:RequestForHelpComponent},
   
   {path:'about',component:AboutComponent},
-  {path:'loginpage',component:LoginpageComponent}
+  {path:'loginpage',component:LoginpageComponent},
+  {path: 'contact',component:ContactComponent}
 ];
 
 @NgModule({
