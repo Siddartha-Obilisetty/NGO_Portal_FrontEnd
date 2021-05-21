@@ -24,11 +24,12 @@ export class AddEmployeeComponent implements OnInit {
       result=>{
         console.log(result);
         this.goToEmployeeList();
+        alert("employee added succesfully");
       },
       (error)=>{
         this.error=error}
     );
-    alert("employee added succesfully");
+    
   }
   goToEmployeeList() {
     this.router.navigate(['admin/getAllEmployees']);

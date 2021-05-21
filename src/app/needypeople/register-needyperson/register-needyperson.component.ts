@@ -25,11 +25,12 @@ export class RegisterNeedypersonComponent implements OnInit {
         this.needyPeople=person;
         console.log(this.needyPeople);
         this.goToNeedy();
+        alert("needy person added succesfully");
       },
       (error)=>{
         this.error=error}
     );
-    alert("needy person added succesfully");
+    
   }
   goToNeedy(){
     this.router.navigate(['needypeople',this.needyPeople.needyPeopleId]);

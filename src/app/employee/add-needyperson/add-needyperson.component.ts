@@ -26,11 +26,12 @@ export class AddNeedypersonComponent implements OnInit {
         console.log(result);
         console.log(this.needyPeople);
         this.goToNeedyPeopleList();
+        alert("needy person added succesfully");
       },
       (error)=>{
         this.error=error}
     );
-    alert("needy person added succesfully");
+    
   }
   goToNeedyPeopleList() {
     this.employeeId=this.route.snapshot.params['id'];
