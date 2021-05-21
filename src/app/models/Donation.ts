@@ -5,8 +5,8 @@ export class Donation{
     donationId:number;
     donationAmount:number;
     donationDate:Date;
-    item:DonationItem;
-    donor:Donor;
+    item:DonationItem=new DonationItem();
+    donor:Donor=new Donor();
     // constructor(donationId:number,donationAmount:number,
     //     donationDate:Date,item:DonationItem,donor:Donor){
     //     this.donationId = donationId;		
