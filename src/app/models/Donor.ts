@@ -8,7 +8,7 @@ export class Donor{
     phone:string;
     username:string;
     password:string;
-    address:Address;
+    address:Address=new Address();
     // constructor(donorId:number, donorName:string,email:string,phone:string,
     //     username:string,password:string,address:Address){
     //     this.donorId = donorId;		this.donorName = donorName;
