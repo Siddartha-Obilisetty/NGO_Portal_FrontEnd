@@ -11,6 +11,7 @@ import { Employee } from 'app/models/Employee';
 export class EmployeeLoginComponent implements OnInit {
 
   employee:Employee=new Employee();
+  error:string = null;
 
   constructor(private router:Router,private employeeService:EmployeeserviceService) { }
 
@@ -22,7 +23,9 @@ export class EmployeeLoginComponent implements OnInit {
       employee=>{
         this.employee=employee;
         this.loadEmployeePage(this.employee.employeeId);
-      }
+      },
+      (error)=>{
+        this.error=error}
     );
   }
   loadEmployeePage(employeeId: number) {

@@ -39,6 +39,8 @@ import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
 import { ForgotPasswordComponent } from './donor/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './donor/reset-password/reset-password.component';
 import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
+import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.component';
+import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.compon
     RegisterDonorComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-    DonateToNgoComponent
+    DonateToNgoComponent,
+    FindAllDonorsComponent,
+    FindDonorByIdComponent
   ],
   imports: [
     BrowserModule,
