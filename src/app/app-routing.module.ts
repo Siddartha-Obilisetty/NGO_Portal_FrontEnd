@@ -28,6 +28,8 @@ import { EmployeeLoginComponent } from './employee/employee-login/employee-login
 import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
 import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needypeople-login.component';
 import { NeedypeopleComponent } from './needypeople/needypeople.component';
+import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.component';
+import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -41,6 +43,8 @@ const routes: Routes = [
   {path:'admin/getEmployeeById/:id',component:FindEmployeeByIdComponent},
   {path:'admin/getEmployeeByName/:name',component:FindEmployeeByNameComponent},
   {path:'admin/updateEmployeeById/:id',component:UpdateEmployeeComponent},
+  {path:'admin/getAllDonors',component:FindAllDonorsComponent},
+  {path:'admin/getDonorById/:id',component:FindDonorByIdComponent},
   
   {path:'employee/login',component:EmployeeLoginComponent},
   {path:'employee/:id',component:EmployeeComponent},
