@@ -15,6 +15,7 @@ export class EmployeeComponent implements OnInit {
   employee:Employee=new Employee();
   empid:number;
   needyPeople:NeedyPeople=new NeedyPeople();
+  error:string=null;
   
   constructor(private router:Router,private employeeService:EmployeeserviceService,private route:ActivatedRoute,private adminService:AdminserviceService) { }
 

@@ -12,6 +12,7 @@ import { Employee } from 'app/models/Employee';
 export class AddEmployeeComponent implements OnInit {
 
   employee:Employee=new Employee();
+  error:string=null;
 
   constructor(private adminService:AdminserviceService,private router:Router) { }
 
@@ -24,7 +25,8 @@ export class AddEmployeeComponent implements OnInit {
         console.log(result);
         this.goToEmployeeList();
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
     alert("employee added succesfully");
   }

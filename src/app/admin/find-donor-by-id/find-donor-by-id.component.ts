@@ -12,6 +12,7 @@ export class FindDonorByIdComponent implements OnInit {
 
   donorId:number;
   donor:Donor=new Donor();
+  error:string=null;
 
   constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -24,7 +25,9 @@ export class FindDonorByIdComponent implements OnInit {
     this.adminService.findDonorById(this.donorId).subscribe(
       donor=>{
         this.donor=donor;
-      }
+      },
+      (error)=>{
+        this.error=error}
     );
   }
 

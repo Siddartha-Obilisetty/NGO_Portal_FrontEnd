@@ -13,6 +13,7 @@ export class FindNeedypersonByNameComponent implements OnInit {
   needyPeopleName:string;
   needyPeople:NeedyPeople[]=[];
   employeeId:number;
+  error:string=null;
   
   constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -26,7 +27,9 @@ export class FindNeedypersonByNameComponent implements OnInit {
       needyPeople=>{
         this.needyPeople=needyPeople;
         console.log(this.needyPeople);
-      }
+      },
+      (error)=>{
+        this.error=error}
     );
   }
 

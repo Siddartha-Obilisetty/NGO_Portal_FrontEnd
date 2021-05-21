@@ -12,6 +12,7 @@ export class FindEmployeeByNameComponent implements OnInit {
 
   employeeName:string;
   employees:Employee[]=[];
+  error:string=null;
 
   constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -25,7 +26,9 @@ export class FindEmployeeByNameComponent implements OnInit {
       employees=>{
         this.employees=employees;
         console.log(this.employees);
-      }
+      },
+      (error)=>{
+        this.error=error}
     );
   }
 
