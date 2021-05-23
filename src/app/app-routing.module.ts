@@ -33,6 +33,7 @@ import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-i
 import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
 import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
+import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -64,6 +65,7 @@ const routes: Routes = [
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
   {path:'donor/:id',component:DonorComponent},
   {path:'donor/:id/donate',component:DonateToNgoComponent},
+  {path:'donor/:id/donations',component:AllDonationsComponent},
 
   {path:'needypeople/login',component:NeedypeopleLoginComponent},
   {path:'needypeople/register',component:RegisterNeedypersonComponent},

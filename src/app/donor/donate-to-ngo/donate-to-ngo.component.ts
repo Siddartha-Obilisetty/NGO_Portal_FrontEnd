@@ -22,12 +22,13 @@ export class DonateToNgoComponent implements OnInit {
 
   addDonation(){
     this.donorService.donateToNGO(this.donation).subscribe();
-    alert("donation added succesfully");
+    alert("Thank You for the Donation..!");
   }
 
   onSubmit(){
     this.donation.donor.donorId=this.donorid;
     this.addDonation();
+    this.router.navigate(['donor',this.donorid]);
   }
 
 }

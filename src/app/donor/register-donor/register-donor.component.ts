@@ -31,5 +31,6 @@ export class RegisterDonorComponent implements OnInit {
   
  onSubmit(){
    this.createDonor();
+   this.router.navigate(['donor',this.donor.donorId]);
  }
 }
