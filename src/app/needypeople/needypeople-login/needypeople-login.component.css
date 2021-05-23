@@ -1,8 +1,5 @@
-.body{
-    
-}
-.container { 
-    background-image:url("https://miro.medium.com/max/2000/1*4-ML1PM9ke7UiLuoNLN7fg.jpeg");
+.background { 
+    background-image:url("https://c.pxhere.com/photos/16/c1/poor_black_poverty_homeless_jobless_money_person_crisis-373298.jpg!d");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -10,7 +7,7 @@
 
 }
 
-.container .row { 
+/* .container .row { 
 
 }
 
@@ -58,4 +55,4 @@
 
 .container .row .col-md-10 .p-4 .my-4 { 
 
-}
+} */
