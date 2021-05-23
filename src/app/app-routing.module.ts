@@ -32,6 +32,7 @@ import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.
 import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
 import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.component';
 import { ContactComponent } from './contact/contact.component';
+import { WriteComponent } from './write/write.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -71,7 +72,8 @@ const routes: Routes = [
   
   {path:'about',component:AboutComponent},
   {path:'loginpage',component:LoginpageComponent},
-  {path: 'contact',component:ContactComponent}
+  {path:'contact',component:ContactComponent},
+  {path:'write',component:WriteComponent}
 ];
 
 @NgModule({
