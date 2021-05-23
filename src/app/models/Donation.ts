@@ -4,7 +4,7 @@ import { Donor } from "./Donor";
 export class Donation{
     donationId:number;
     donationAmount:number;
-    donationDate:Date;
+    donationDate:Date=new Date();
     item:DonationItem=new DonationItem();
     donor:Donor=new Donor();
     // constructor(donationId:number,donationAmount:number,

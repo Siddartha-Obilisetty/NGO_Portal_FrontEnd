@@ -22,6 +22,11 @@ export class DonorserviceService {
     return this.httpClient.put(this.baseURL+'/donate',donation);
   }
 
+  getDonations(donorId:number):Observable<any>{
+    console.log("Donations by DonorId");
+    return this.httpClient.get(this.baseURL+'/donations/all/'+donorId);
+  }
+
   registerDonor(donor:Donor):Observable<any>{
     console.log("create donor ");
     return this.httpClient.post(this.baseURL+'/register',donor).pipe(catchError(this.handleError1));

@@ -43,6 +43,7 @@ import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.
 import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
 import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
+import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,8 @@ import { WriteComponent } from './write/write.component';
     FindAllDonorsComponent,
     FindDonorByIdComponent,
     ContactComponent,
-    WriteComponent
+    WriteComponent,
+    AllDonationsComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdminserviceService } from 'app/adminservice.service';
 import { DonorserviceService } from 'app/donorservice.service';
+import { Donation } from 'app/models/Donation';
 import { Donor } from 'app/models/Donor';
 
 @Component({
@@ -13,6 +14,8 @@ import { Donor } from 'app/models/Donor';
 export class DonorComponent implements OnInit {
   donor:Donor=new Donor();
   donorId:number;
+  donations:Donation[]=[]
+
   constructor(private router:Router, private donorService:DonorserviceService,private route:ActivatedRoute,private adminService:AdminserviceService) { }
 
   ngOnInit(): void {
@@ -22,11 +25,15 @@ export class DonorComponent implements OnInit {
         this.donor=donor;
       }
     );
-
+    
   }
   
+  goToDonations(){
+    this.router.navigate(['donor',this.donorId,'donations']);
+  }
+
   donateToNGO(){
-    this.router.navigate(['donor',this.donorId,'donate'])
+    this.router.navigate(['donor',this.donorId,'donate']);
   }
   
 }
