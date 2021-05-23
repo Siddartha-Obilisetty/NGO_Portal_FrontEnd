@@ -11,6 +11,7 @@ export class ResetPasswordComponent implements OnInit {
   username: string;
   oldPassword: string;
   newPassword: string;
+  error: string=null;
 
   constructor(private router:Router, private donorService:DonorserviceService) { }
 
@@ -22,7 +23,8 @@ export class ResetPasswordComponent implements OnInit {
       console.log(result);
      
     },
-    error=>console.log(error)
+    (error)=>{
+      this.error=error}
   );
   alert("Your password has been Changed");
  }
