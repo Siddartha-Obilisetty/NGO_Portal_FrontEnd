@@ -13,8 +13,7 @@
                   <th>Approval Or Rejected Date</th>
                   <th>Status</th>
                   <th>Needy People Id</th>
-                  <th>Donation Item Id</th>
-                  <th>Employee</th>
+                  <th *ngif='employee'>Employee</th>
                   <th>Actions </th>
               </tr>
               </thead>
@@ -25,9 +24,8 @@
                       <td>{{donation.dateOfDistribution}} </td>
                       <td>{{donation.approvalOrRejectedDate}} </td>
                       <td>{{donation.status}} </td>
-                      <td>{{donation.needyPeople}} </td>
-                      <td>{{donation.donationItem}} </td>
-                      <td>{{donation.employee}} </td>
+                      <td>{{donation.needyPeople.needyPeopleId}} </td>
+                      <td *ngif='employee'>{{donation.employee}} </td>
                       <td>
                             <button (click)='approveDonation(donation.distributionId,donation.status)' class="btn btn-info" style='margin-left: auto;'>Approve Donation</button>
                       </td>

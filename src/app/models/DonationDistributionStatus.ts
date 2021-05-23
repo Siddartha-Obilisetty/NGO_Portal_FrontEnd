@@ -1,5 +1,5 @@
-export enum DonationDistributionStatus{
-    PENDING,
-    APPROVED,
-    REJECTED
+export enum DonationDistributionStatus {
+  PENDING="PENDING",
+  APPROVED="APPROVED",
+  REJECTED="REJECTED",
 }

@@ -23,10 +23,11 @@ export class NeedypeopleserviceService {
     return throwError(errorResponse1.error);   
   }
 
-    requestForHelp(npId:number): Observable<any>{
-      console.log("request for help in service");
-      return this.httpClient.put(this.baseURL+'/request/',npId);
+  requestForHelp(npId:number): Observable<any>{
+    console.log("request for help in service");
+    return this.httpClient.put(this.baseURL+'/request/'+npId,npId);
   }
+
   login(username:string,password:string): Observable<any>{
     let params=new HttpParams()
       .set('username',username)

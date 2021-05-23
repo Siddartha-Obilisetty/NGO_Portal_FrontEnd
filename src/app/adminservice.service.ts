@@ -50,6 +50,7 @@ export class AdminserviceService {
 
   approveDonation(dd_id:number):Observable<any>{
     console.log("approve donation in service");
+    console.log(this.baseURL+'/approveDonation/'+dd_id);
     return this.httpClient.get(this.baseURL+'/approveDonation/'+dd_id);
   }
 

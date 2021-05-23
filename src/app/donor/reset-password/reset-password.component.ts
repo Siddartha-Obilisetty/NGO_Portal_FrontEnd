@@ -1,3 +1,4 @@
+import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DonorserviceService } from 'app/donorservice.service';
@@ -17,20 +18,18 @@ export class ResetPasswordComponent implements OnInit {
 
   ngOnInit(): void {
   }
- resetPassword(){
-  this.donorService.resetPassword(this.username,this.oldPassword,this.newPassword).subscribe(
+ resetPassword(username:string,oldPassword:string,newPassword:string){
+  this.donorService.resetPassword(username,oldPassword,newPassword).subscribe(
     result=>{
       console.log(result);
-     
     },
-    (error)=>{
-      this.error=error}
+    error=>{this.error=error}    
   );
-  alert("Your password has been Changed");
  }
 
 
- onSubmit(){
-  this.resetPassword();
+ onSubmit(username:string,oldPassword:string,newPassword:string){
+  this.resetPassword(username,oldPassword,newPassword);
+  alert("Your password has been Changed");
 }
 }

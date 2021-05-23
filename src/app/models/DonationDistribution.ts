@@ -9,9 +9,9 @@ export class DonationDistribution{
     dateOfDistribution:Date;
     approvalOrRejectedDate:Date;
     status:DonationDistributionStatus;
-    needyPeople:NeedyPeople;
-    donationItem:DonationItem;
-    employee:Employee;
+    needyPeople:NeedyPeople=new NeedyPeople();
+    donationItem:DonationItem=new DonationItem();
+    employee:Employee=new Employee();
     // constructor(distributionId:number,amountDistributed:number,
     //     dateOfDistribution:Date,approvalOrRejectedDate:Date,
     //     status:DonationDistributionStatus,needyPeople:NeedyPeople,

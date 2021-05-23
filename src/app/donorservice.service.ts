@@ -6,6 +6,7 @@ import { throwError } from 'rxjs';
 
 import { Donor } from './models/Donor';
 import { Donation } from './models/Donation';
+import { stringify } from '@angular/compiler/src/util';
 
 
 @Injectable({
@@ -79,12 +80,13 @@ export class DonorserviceService {
  }
 
   resetPassword(username:string,oldPassword:string,newPassword:string):Observable<any>{
-  console.log("");
   let params=new HttpParams()
       .set('username',username)
-      .set('password',oldPassword)
-      .set('password',newPassword);
-  return this.httpClient.put(this.baseURL+'/reset_password',{params}).pipe(catchError(this.handleError3));
+      .set('oldPassword',oldPassword)
+      .set('newPassword',newPassword);
+  console.log(this.baseURL+'/reset_password',{params});
+  return this.httpClient.put("http://localhost:8085/donor/reset_password?username="+username+"&oldPassword="+oldPassword+"&newPassword="+newPassword,{params}).pipe(catchError(this.handleError3));
+  //return this.httpClient.put(this.baseURL+'/reset_password',{params}).pipe(catchError(this.handleError3));
  }
  handleError3(errorResponse3: HttpErrorResponse){
   console.log(errorResponse3.error);
