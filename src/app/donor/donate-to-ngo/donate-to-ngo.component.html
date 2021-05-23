@@ -1,1 +1,45 @@
-<p>donate-to-ngo works!</p>
+<div style="width:400px">
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+    <form #createDonationForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="donationId">Donation Id</label>
+            <input type="number" name="donationId" class="form-control" 
+                    placeholder="Enter the Donation Id"
+                    #donationId="ngModel"
+                    [(ngModel)]= "donation.donationId">
+        </div>
+        <div class="form-group">
+            <label for="donationAmount">Donation Amount</label>
+            <input type="text" name="donationAmount" class="form-control" 
+                  placeholder="Enter the Donation Amount" 
+                  [(ngModel)]= "donation.donationAmount" #donationAmount="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="donationDate">Donation Date</label>
+            <input type="date" name="donationDate" class="form-control" 
+                  placeholder="Enter the Date"
+                  [(ngModel)]= "donation.donationDate" #donationDate="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="itemId">Item Id</label>
+            <input type="number" name="itemId" class="form-control" 
+                  placeholder="Enter the Item Id" 
+                  [(ngModel)]= "donation.item.itemId" #itemId="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="itemDescription">Item Description</label>
+            <input type="text" name="itemDescription" class="form-control" 
+                  placeholder="Enter the Item Description" required 
+                  [(ngModel)]= "donation.item.itemDescription" #itemDescription="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="type">Donation Type</label>
+            <input type="text" name="type" class="form-control" 
+                  placeholder="Enter the Password"
+                  [(ngModel)]= "donation.item.type" #type="ngModel">
+        </div>
+        
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add Donation</button>
+        <button type="submit" class="btn btn-default" (click)= "createDonationForm.reset()">Reset</button>
+    </form>
+</div>
