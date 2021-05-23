@@ -15,8 +15,8 @@
         <p class="lead my-4">Access all the details of an employee by entering the unique id given him/her.
             You can also check whether the employee with a particular id exists or not.
         </p>
-        <input class="form-control my-2" type="text" placeholder="Enter the id of employee here" id='employeeId' name='employeeId'
-            [(ngModel)]="employee.employeeId" #employeeId="ngModel">
+        <input class="form-control my-2" type="text" placeholder="Enter the id of employee here" id='employeeId'
+            name='employeeId' [(ngModel)]="employee.employeeId" #employeeId="ngModel">
         <button class="btn btn-lg btn-primary my-2" (click)='getEmployeeById()'>Get Details »</button>
     </div>
 
@@ -24,8 +24,8 @@
         <h1>Get details by person's Name</h1>
         <p class="lead my-4 ">Access all the details of an employee by entering the name of him/her.
             You can also access list of employee and their details, if there are multiple people with same name.</p>
-        <input class="form-control my-2" type='text' placeholder="Enter the name of employee here" id='employeeName' name='employeeName'
-            [(ngModel)]="employee.employeeName" #employeeName="ngModel">
+        <input class="form-control my-2" type='text' placeholder="Enter the name of employee here" id='employeeName'
+            name='employeeName' [(ngModel)]="employee.employeeName" #employeeName="ngModel">
         <button class="btn btn-lg btn-primary my-2" (click)='getEmployeeByName()'>Get Details »</button>
     </div>
     <div class="container">
@@ -41,4 +41,5 @@
                 details of each donation.</p>
             <button class="btn btn-lg btn-success my-3" (click)='getAllDonors()'>Donations List »</button>
         </div>
+    </div>
 </div>
