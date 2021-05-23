@@ -40,7 +40,7 @@ const routes: Routes = [
 
   {path:'admin',component:AdminComponent},
   {path:'admin/addEmployee',component:AddEmployeeComponent},
-  {path:'admin/approveDonation/:id',component:ApproveDonationComponent},
+  {path:'admin/approveDonation/:id/:status',component:ApproveDonationComponent},
   {path:'admin/getAllDonations',component:GetAllDonationsComponent},
   {path:'admin/deleteEmployeeById/:id',component:DeleteEmployeeComponent},
   {path:'admin/getAllEmployees',component:FindAllEmployeesComponent},

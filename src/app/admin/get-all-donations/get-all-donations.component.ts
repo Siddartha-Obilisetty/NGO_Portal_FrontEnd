@@ -29,12 +29,7 @@ export class GetAllDonationsComponent implements OnInit {
   }
 
   approveDonation(distributionId:number,status:DonationDistributionStatus){
-    if(status==DonationDistributionStatus.APPROVED){
-      alert("already approved");
-    }
-    else{
-      this.adminService.approveDonation(distributionId);
-    }
-
+    this.router.navigate(["admin/approveDonation/",distributionId,status]);
+    this.loadDonations();
   }
 }
