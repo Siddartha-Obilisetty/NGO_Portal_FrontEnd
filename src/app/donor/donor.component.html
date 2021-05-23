@@ -1,6 +1,10 @@
 <div class="alert alert-success" role="alert">
-    Hi,{{donor.donorName}}   You have <strong>successfully</strong> logged in as a donor!!!
+    Hi,{{donor.donorName}} You have <strong>successfully</strong> logged in as a donor!!!
 </div>
-<div>
-    <button class="btn btn-primary" (click)='donateToNGO()'>Donate</button>
+<div class="container">
+    <div class="bg-light p-5 rounded">
+        <h1>Donations to NGO</h1>
+        <p class="lead my-4">Donate</p>
+        <button class="btn btn-lg btn-success my-3" (click)='donateToNGO()'>Donate »</button>
+    </div>
 </div>

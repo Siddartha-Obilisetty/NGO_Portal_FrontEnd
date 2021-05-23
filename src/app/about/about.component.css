@@ -1,3 +1,87 @@
-.col-md-7{
-    background-color:rgba(214, 198, 55, 0.562);
+.px-4 { 
+    background-color: rgb(248, 191, 83);
+
+}
+
+.px-4 .d-block { 
+
+}
+
+.px-4 h1 { 
+    font-family: 'Padauk', sans-serif;
+    font-style: oblique;
+    font-weight: lighter;
+    
+
+}
+
+.px-4 .col-lg-6 { 
+
+}
+
+.px-4 .col-lg-6 .lead { 
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.px-4 .col-lg-6 .lead strong { 
+    
+    
+    
+
+}
+
+.container { 
+    
+
+}
+
+.container .featurette-divider { 
+    
+
+}
+
+.container .row { 
+    
+
+}
+
+.container .row .col-md-7 { 
+    
+
+    
+
+}
+
+.container .row .col-md-7 .featurette-heading { 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+    
+
+}
+
+.container .row .col-md-7 .featurette-heading .text-muted { 
+    font-family: 'Times New Roman', Times, serif;
+    
+
+}
+
+.container .row .col-md-7 .lead { 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+
+}
+
+.container .row .col-md-7 .lead strong { 
+    
+    
+
+}
+
+.container .row .col-md-5 { 
+
+}
+
+.container .row .col-md-5 img { 
+
 }

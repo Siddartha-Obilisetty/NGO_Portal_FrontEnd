@@ -6,7 +6,7 @@
 }
 
 .navbar .container-fluid a{ 
-    color: #febe10;
+    color:rgb(248, 191, 83);
 
 }
 
@@ -128,8 +128,7 @@
 }
 
 .container .row .col-md-6 .row .col { 
-   background-color: #febe10;
-
+    background-color: rgb(248, 191, 83);
 
     
 

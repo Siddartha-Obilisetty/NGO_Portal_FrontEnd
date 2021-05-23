@@ -1,78 +1,76 @@
-<p>register-donor works!</p>
-<div style="width:400px">
-    <!-- <form (ngSubmit)="onSubmit()"> -->
-        <div class="alert alert-danger my-4" *ngIf="error">
-            {{error}}
+<div class="container my-5">
+    <div class="alert alert-danger my-4" *ngIf="error">
+      {{error}}
+  </div>
+    <form #createDonorForm="ngForm" novalidate class="row g-3">
+      <div class="col-md-4">
+        <label for="donorId" class="form-label">Donor Id</label>
+        <input type="number" name="donorId" class="form-control" placeholder="Enter the Id here"
+          #donorId="ngModel" [(ngModel)]="donor.donorId">
+      </div>
+      <div class="col-md-8">
+        <label for="name">Donor Name</label>
+        <input type="text" name="name" class="form-control my-1" placeholder="Enter name of donor here"
+          [(ngModel)]="donor.donorName" #name="ngModel">
+      </div>
+      <div class="col-md-6">
+        <label for="phone">Phone</label>
+        <input type="number" name="phone" class="form-control my-1" placeholder="Enter phone number here"
+          [(ngModel)]="donor.phone" #phone="ngModel">
+      </div>
+      <div class="col-md-6">
+        <label for="email">Family Income</label>
+        <input type="text" name="email" class="form-control my-1" placeholder="Enter email here"
+          [(ngModel)]="donor.email" #email="ngModel">
+      </div>
+      <div class="col-md-6">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control my-1" placeholder="Enter the username" required
+          [(ngModel)]="donor.username" #username="ngModel">
+      </div>
+      <div class="col-md-3">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control my-1" placeholder="Enter the Password"
+          [(ngModel)]="donor.password" #password="ngModel">
+      </div>
+      <hr class="my-4">
+      <div class="col-md-4">
+        <label for="addressId">Address Id</label>
+        <input type="number" name="addressId" class="form-control my-1" placeholder="Enter the Address Id"
+          [(ngModel)]="donor.address.addressId" #addressId="ngModel">
+      </div>
+      <div class="col-md-4">
+        <label for="city">City</label>
+        <input type="text" name="city" class="form-control my-1" placeholder="Enter the City"
+          [(ngModel)]="donor.address.city" #city="ngModel">
+      </div>
+      <div class="col-md-4">
+        <label for="state">State</label>
+        <input type="text" name="state" class="form-control my-1" placeholder="Enter the State"
+          [(ngModel)]="donor.address.state" #state="ngModel">
+      </div>
+      <div class="col-md-2">
+        <label for="pin">PinCode</label>
+        <input type="text" name="pin" class="form-control my-1" placeholder="Enter the pin"
+          [(ngModel)]="donor.address.pin" #pin="ngModel">
+      </div>
+      <div class="col-md-10">
+        <label for="landmark">Landmark</label>
+        <input type="text" name="landmark" class="form-control my-1" placeholder="Enter the landmark" required
+          [(ngModel)]="donor.address.landmark" #landmark="ngModel">
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <label class="form-check-label" for="gridCheck">
+            Remember me
+          </label>
         </div>
-    <form #createDonorForm="ngForm" novalidate>
-        <div class="form-group">
-            <label for="needyPeopleId">Donor Id</label>
-            <input type="number" name="donorId" class="form-control" 
-                    placeholder="Enter the Donor Id"
-                    #donorId="ngModel"
-                    [(ngModel)]= "donor.donorId">
-        </div>
-        <div class="form-group">
-            <label for="donorName">Donor Name</label>
-            <input type="text" name="donorName" class="form-control" 
-                  placeholder="Enter the donor name" 
-                  [(ngModel)]= "donor.donorName" #donorName>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="email" class="form-control" 
-                  placeholder="Enter the email"
-                  [(ngModel)]= "donor.email" #email>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="number" name="phone" class="form-control" 
-                  placeholder="Enter the phone number" 
-                  [(ngModel)]= "donor.phone" #phone>
-        </div>
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" 
-                  placeholder="Enter the username" required 
-                  [(ngModel)]= "donor.username" #username>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" class="form-control" 
-                  placeholder="Enter the Password"
-                  [(ngModel)]= "donor.password" #password>
-        </div>
-        <div class="form-group">
-            <label for="address id">Address Id</label>
-            <input type="number" name="addressId" class="form-control" 
-                  placeholder="Enter the Address Id" 
-                  [(ngModel)]= "donor.address.addressId" #addressId>
-        </div>
-        <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" name="city" class="form-control" 
-                  placeholder="Enter the City"  
-                  [(ngModel)]= "donor.address.city" #city>
-        </div>
-        <div class="form-group">
-            <label for="state">State</label>
-            <input type="text" name="state" class="form-control" 
-                  placeholder="Enter the State"
-                  [(ngModel)]= "donor.address.state" #state>
-        </div>
-        <div class="form-group">
-            <label for="pin">pin</label>
-            <input type="text" name="pin" class="form-control" 
-                  placeholder="Enter the pin"
-                  [(ngModel)]= "donor.address.pin" #pin>
-        </div>
-        <div class="form-group">
-            <label for="landmark">landmark</label>
-            <input type="text" name="landmark" class="form-control" 
-                  placeholder="Enter the landmark" required 
-                  [(ngModel)]= "donor.address.landmark" #landmark>
-        </div>
-        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add Donor</button>
-        <button type="submit" class="btn btn-default" (click)= "createDonorForm.reset()">Reset</button>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-lg btn-success" (click)="onSubmit()">Add Donor »</button>
+        <button type="submit" class="btn btn-lg btn-default" (click)="createDonorForm.reset()">Reset</button>
+      </div>
     </form>
-</div>
+  </div>
+  
