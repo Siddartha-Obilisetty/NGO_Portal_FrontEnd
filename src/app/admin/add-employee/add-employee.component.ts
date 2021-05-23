@@ -12,6 +12,7 @@ import { Employee } from 'app/models/Employee';
 export class AddEmployeeComponent implements OnInit {
 
   employee:Employee=new Employee();
+  error:string=null;
 
   constructor(private adminService:AdminserviceService,private router:Router) { }
 
@@ -23,10 +24,12 @@ export class AddEmployeeComponent implements OnInit {
       result=>{
         console.log(result);
         this.goToEmployeeList();
+        alert("employee added succesfully");
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
-    alert("employee added succesfully");
+    
   }
   goToEmployeeList() {
     this.router.navigate(['admin/getAllEmployees']);

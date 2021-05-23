@@ -1,119 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
-    <title>NGO Portal</title>
-</head>
-
-<body>
-    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="assets/3.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <p><a class="btn btn-lg btn-warning" href="loginpage"> Login/SignUp </a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/4.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <p><a class="btn btn-lg btn-warning" href="loginpage"> Login/SignUp </a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/9.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <p><a class="btn btn-lg btn-warning" href="loginpage"> Login/SignUp </a></p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="assets/10.png" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <p><a class="btn btn-lg btn-warning" href="loginpage"> Login/SignUp </a></p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            
-            <span class="visually-hidden">Previous</span>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">NGO Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="true">
+                        Actions
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item">Donate</a></li>
+                        <li><a class="dropdown-item">Register</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Write for us</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="mx-2">
+                <a class="nav-link link-warning" href="contact">Contact us</a>
 
-    <div class="container my-4 ">
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">Children Education</strong>
-                        <h3 class="mb-0">Rebuilding lives for futures.</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">Let's help to fulfil their dreams, there are still more children
-                            who dream about school.</p>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img class="img-fluid" src="assets/card2.png" class="d-block w-100" alt="...">
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div
-                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">Electricity</strong>
-                        <h3 class="mb-0">Creating a brighter tomorrow.</h3>
-                        <div class="mb-1 text-muted">Nov 11</div>
-                        <p class="mb-auto">Put in hands together to knockout darkness in this world</p>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img class="img-fluid" src="assets/card3.png" class="d-block w-100" alt="...">
-
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <div class="card text-center ">
-        <div class="card-header ">
-            <strong>Akshara Foundation</strong>
+</nav>
+
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="assets/home4.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Well Being</h1>
+                <p style="font-size:25px;">"Together we can do great things. Come, contribute your first step towards
+                    changing the world"</p>
+                <p><a class="btn btn-lg btn-warning " style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+            </div>
         </div>
-        <div class="card-body">
-            <h5 class="card-title">Help the Needy!</h5>
-            <p class="card-text">Your contribution will help the homeless poor people. A small step can create a
-                great impact</p>
-            <a href="#" class="btn btn-primary">Go to Start</a>
+        <div class="carousel-item">
+            <img src="assets/home3.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Empowerment</h1>
+                <p style="font-size:25px;">"Discipline is the bridge between goals and accomplishments"</p>
+                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/home1.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Spreading Smiles</h1>
+                <p style="font-size:25px;">"If you can't feed a hundred people, feed just one"</p>
+                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/home5.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Build a better life</h1>
+                <p style="font-size:25px;">"We make a living by what we get, but we make a life by what we give"</p>
+                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/home6.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Love People</h1>
+                <p style="font-size:25px;">"It's not how much you give but how much love we put into giving"</p>
+                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="assets/home2.png" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Helping others is equal to helping yourself</h1>
+                <p style="font-size:25px;">"You have two hands. One to help yourself, the second to help others"</p>
+                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+            </div>
         </div>
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 
-</body>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-    crossorigin="anonymous"></script>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
-</html>
- 
+<div class="container my-4 ">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Children Education</strong>
+                    <h3 class="mb-0">Rebuilding lives for futures.</h3>
+                    <div class="mb-1 text-muted">Nov 12</div>
+                    <p class="card-text mb-auto">Let's help to fulfil their dreams, there are still more children
+                        who dream about school.</p>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="img-fluid" src="assets/14.png" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success">Electricity</strong>
+                    <h3 class="mb-0">Creating a brighter tomorrow.</h3>
+                    <div class="mb-1 text-muted">Nov 11</div>
+                    <p class="mb-auto">Put in hands together to knockout darkness in this world</p>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img class="img-fluid" src="assets/card3.png" class="d-block w-100" alt="...">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-auto d-none d-lg-block">
+                    <img class="img-fluid" src="assets/13.png" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Feeding the needy</strong>
+                    <h3 class="mb-0">Don't let hunger eat you.</h3>
+                    <div class="mb-1 text-muted">Nov 12</div>
+                    <p class="card-text mb-auto">Join your hands together to feed a person in need, your leftovers are their living.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col-auto d-none d-lg-block">
+                    <img class="img-fluid" src="assets/15.png" class="d-block w-100" alt="...">
+
+                </div>
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success">Fight against social injustice</strong>
+                    <h3 class="mb-0">Protection from discrimination</h3>
+                    <div class="mb-1 text-muted">Nov 11</div>
+                    <p class="mb-auto">Become a shield in order to protect children.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card text-center ">
+    <div class="card-header ">
+        <strong>Akshara Foundation</strong>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Help the Needy!</h5>
+        <p class="card-text">Your contribution will help the homeless poor people. A small step can create a
+            great impact</p>
+        <a href="#" class="btn btn-primary">Go to Start</a>
+    </div>
+</div>
+
+
 
 <!-- 
 <footer id="footer">

@@ -1,6 +1,9 @@
 <h2>Donor Details</h2>
 <hr>
 <div *ngIf='donor'>
+    <div class="alert alert-danger my-4" *ngIf="error">
+        {{error}}
+    </div>
     <div>
         <label><b>Donor Id:</b></label> {{donor.donorId}}
     </div>

@@ -13,6 +13,7 @@ export class FindNeedypersonByIdComponent implements OnInit {
   needyPeopleId:number;
   needyPeople:NeedyPeople;
   employeeId:number;
+  error:string = null;
 
   constructor(private employeeService:EmployeeserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -25,7 +26,9 @@ export class FindNeedypersonByIdComponent implements OnInit {
     this.employeeService.findNeedyPeopleById(this.needyPeopleId).subscribe(
       needyPeople=>{
         this.needyPeople=needyPeople;
-      }
+      },
+      (error)=>{
+        this.error=error}
     );
   }
 

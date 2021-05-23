@@ -19,14 +19,8 @@ export class NeedypeopleserviceService {
     return this.httpClient.post(this.baseURL+'/register',person).pipe(catchError(this.handleError1));
   }
   handleError1(errorResponse1: HttpErrorResponse){
-    let errorMessage1 = "An error occured";
     console.log(errorResponse1.error);
-    if(errorResponse1.error[0]){
-  
-        errorMessage1='Duplicate Needy People';
-        
-    }
-    return throwError(errorMessage1);   
+    return throwError(errorResponse1.error);   
   }
 
     requestForHelp(npId:number): Observable<any>{
@@ -41,19 +35,9 @@ export class NeedypeopleserviceService {
   }
   
   handleError(errorResponse: HttpErrorResponse)
-  {
-    let errorMessage = 'An error occurred';
-    
+  { 
     console.log(errorResponse.error);
-    switch(errorResponse.error[0]){
-      case 'T':
-        errorMessage='No Such Needy People';
-        break;
-      case 'W':
-        errorMessage='Wrong Credentials!!!';
-        break;
-    }
-    return throwError(errorMessage);   
+    return throwError(errorResponse.error);   
   }
 
 

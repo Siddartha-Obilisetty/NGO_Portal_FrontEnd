@@ -12,6 +12,7 @@ export class UpdateEmployeeComponent implements OnInit {
 
   empid:number;
   employee:Employee=new Employee();
+  error:string=null;
 
   constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -28,7 +29,8 @@ export class UpdateEmployeeComponent implements OnInit {
         this.employee=selectedEmployee;
         this.goToEmployeeList();
       },
-      error=>console.log(error)
+      (error)=>{
+        this.error=error}
     );
   }
   goToEmployeeList() {

@@ -1,0 +1,206 @@
+ 
+.navbar { 
+    
+    
+
+}
+
+.navbar .container-fluid a{ 
+    color: #febe10;
+
+}
+
+.navbar .container-fluid .navbar-brand { 
+    
+    
+
+}
+
+.navbar .container-fluid .navbar-toggler { 
+    
+
+}
+
+.navbar .container-fluid .navbar-toggler .navbar-toggler-icon { 
+    
+
+}
+
+.navbar .container-fluid .collapse { 
+    
+
+}
+
+.navbar .container-fluid .collapse .navbar-nav { 
+
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item { 
+
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link { 
+
+}
+
+.navbar .container-fluid .collapse .mx-2 { 
+    
+    
+
+}
+
+.navbar .container-fluid .collapse .mx-2 .nav-link { 
+    
+
+}
+
+.carousel { 
+
+}
+
+.carousel .carousel-inner { 
+
+}
+
+.carousel .carousel-inner .carousel-item { 
+
+}
+
+.carousel .carousel-inner .carousel-item .d-block { 
+
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption { 
+
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption h1 { 
+    font-family: 'Brawler', serif;
+    font-style:oblique;
+    font-weight: 500;
+    
+
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption p { 
+    font-family: 'Brawler', serif;
+    font-style:italic;
+    font-weight: 500;
+}
+
+.carousel .carousel-control-prev { 
+
+
+}
+
+.carousel .carousel-control-prev .visually-hidden { 
+
+}
+
+.carousel .carousel-control-next { 
+
+}
+
+.carousel .carousel-control-next .visually-hidden { 
+
+}
+
+.container { 
+
+}
+
+.container .row { 
+
+}
+
+.container .row .col-md-6 { 
+    font-family: 'Vollkorn SC', serif;
+    
+   
+
+}
+
+.container .row .col-md-6 .row { 
+   
+
+    
+
+}
+
+.container .row .col-md-6 .row .col { 
+   background-color: #febe10;
+
+
+    
+
+}
+
+.container .row .col-md-6 .row .col .d-inline-block { 
+    
+    
+
+}
+
+.container .row .col-md-6 .row .col .mb-0 { 
+    
+
+}
+
+.container .row .col-md-6 .row .col .mb-1 { 
+
+}
+
+.container .row .col-md-6 .row .col .card-text { 
+    
+
+}
+
+.container .row .col-md-6 .row .col-auto { 
+
+}
+
+.container .row .col-md-6 .row .col-auto .img-fluid { 
+
+}
+
+.card { 
+
+}
+
+.card .card-header { 
+   background-color: grey;
+
+
+}
+
+.card-header strong { 
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-style: oblique;
+    font-size: 16px;
+    
+    
+
+}
+
+.card .card-body { 
+    font-family: 'Cormorant Unicase', serif;
+    
+
+}
+
+.card .card-body .card-title { 
+    
+
+}
+
+.card .card-body .card-text { 
+    font-family: 'Cormorant Unicase', serif;
+
+}
+
+.card .card-body .btn { 
+    
+
+}

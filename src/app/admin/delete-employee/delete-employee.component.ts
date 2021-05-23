@@ -10,6 +10,7 @@ import { AdminserviceService } from 'app/adminservice.service';
 export class DeleteEmployeeComponent implements OnInit {
 
   empid:number;
+  error:string=null;
   constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -21,7 +22,9 @@ export class DeleteEmployeeComponent implements OnInit {
     this.adminService.deleteEmployee(employeeId).subscribe(
       result=>{
       },
-      error=>console.log(error));
+      (error)=>{
+        this.error=error}
+      );
       alert("Employee deleted succesfully");
       this.reloadEmployeeData();
   }

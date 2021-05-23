@@ -1,6 +1,9 @@
 <h2>Needypeople Details</h2>
 <hr>
 <!-- <div *ngFor='let needyPerson of needyPeople'></div> -->
+<div class="alert alert-danger my-4" *ngIf="error">
+    {{error}}
+</div>
     <div *ngIf='needyPeople'>
         <div>
             <label><b>NeedyPerson Id:</b></label> {{needyPeople.needyPeopleId}}

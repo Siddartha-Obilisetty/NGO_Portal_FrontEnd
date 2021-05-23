@@ -12,6 +12,7 @@ export class FindEmployeeByIdComponent implements OnInit {
 
   employeeId:number;
   employee:Employee;
+  error:string=null;
 
   constructor(private adminService:AdminserviceService,private router:Router,private route:ActivatedRoute) { }
 
@@ -24,7 +25,9 @@ export class FindEmployeeByIdComponent implements OnInit {
     this.adminService.findEmployeeById(this.employeeId).subscribe(
       employee=>{
         this.employee=employee;
-      }
+      },
+      (error)=>{
+        this.error=error}
     );
   }
 
