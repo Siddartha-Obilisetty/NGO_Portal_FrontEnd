@@ -28,6 +28,10 @@ export class FindAllNeedypeopleComponent implements OnInit {
     );
   }
 
+  helpNeedyPeopleById(needyPeopleId:number){
+    this.router.navigate(['employee',this.employeeId,'helpNeedyPeopleById',needyPeopleId]);
+  }
+
   findNeedyPeopleById(needyPeopleId:number){
     this.router.navigate(['employee',this.employeeId,'findNeedyPeopleById',needyPeopleId]);
   }

@@ -34,6 +34,7 @@ import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.compon
 import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
 import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
+import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -57,7 +58,7 @@ const routes: Routes = [
   {path:'employee/:id/findNeedyPeople/all',component:FindAllNeedypeopleComponent},
   {path:'employee/:id/findNeedyPeopleById/:npid',component:FindNeedypersonByIdComponent},
   {path:'employee/:id/findNeedyPeopleByName/:name',component:FindNeedypersonByNameComponent},
-
+  {path:'employee/:id/helpNeedyPeopleById/:npid',component:HelpNeedypersonComponent},
   
   {path:'donor/login',component:LoginDonorComponent},
   {path:'donor/register',component:RegisterDonorComponent},

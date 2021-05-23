@@ -12,6 +12,7 @@
                         <th>Phone</th>
                         <th>Family Income</th>
                         <th>User Name</th>
+                        <th>Request Status</th>
                         <th>Address</th>
                         <th>Actions</th>
                     </tr>
@@ -23,6 +24,7 @@
                         <td>{{needyPerson.phone}} </td>
                         <td>{{needyPerson.familyIncome}}</td>
                         <td>{{needyPerson.username}} </td>
+                        <td>{{needyPerson.request}} </td>
                         <td>
                             <p>{{needyPerson.address.addressId}}, {{needyPerson.address.city}},
                                 {{needyPerson.address.state}}
@@ -32,6 +34,8 @@
                         <td>
                             <button (click)='findNeedyPeopleById(needyPerson.needyPeopleId)' class="btn btn-info"
                                 style='margin-left: auto;'>Details</button>
+                            <button (click)='helpNeedyPeopleById(needyPerson.needyPeopleId)' class="btn btn-info"
+                                style='margin-left: 15px;'>Help</button>
                             <button (click)='removeNeedyPerson(needyPerson.needyPeopleId)' class="btn btn-danger"
                                 style='margin-left: 15px;'>Delete</button>
                         </td>

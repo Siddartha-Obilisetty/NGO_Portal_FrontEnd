@@ -69,5 +69,9 @@ export class EmployeeserviceService {
 
   }
 
+  helpNeedyPeopleById(npId:number):Observable<any>{
+    console.log("help needyperson by Name in service");
+    return this.httpClient.put(this.baseURL+'/helpNeedyPeople/'+npId,npId);
+  }
 
 }
