@@ -42,6 +42,7 @@ import { DonateToNgoComponent } from './donor/donate-to-ngo/donate-to-ngo.compon
 import { FindAllDonorsComponent } from './admin/find-all-donors/find-all-donors.component';
 import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-id.component';
 import { ContactComponent } from './contact/contact.component';
+import { WriteComponent } from './write/write.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { ContactComponent } from './contact/contact.component';
     DonateToNgoComponent,
     FindAllDonorsComponent,
     FindDonorByIdComponent,
-    ContactComponent
+    ContactComponent,
+    WriteComponent
   ],
   imports: [
     BrowserModule,
