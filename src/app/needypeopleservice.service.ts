@@ -16,6 +16,7 @@ export class NeedypeopleserviceService {
 
   registerNeedyPerson(person:NeedyPeople):Observable<any>{
     console.log("register needy person");
+    console.log(person)
     return this.httpClient.post(this.baseURL+'/register',person).pipe(catchError(this.handleError1));
   }
   handleError1(errorResponse1: HttpErrorResponse){

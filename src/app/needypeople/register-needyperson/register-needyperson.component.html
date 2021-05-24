@@ -1,69 +1,195 @@
-<app-needypeople-nav></app-needypeople-nav>
-<div class="container my-5">
+<h3>Book Complaint</h3>
+<div style="width:400px">
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+        <form #createNeedyPeopleForm="ngForm" novalidate>
+        <div class="form-group">
+            <label for="needyPeopleId">NeedyPeople Id</label>
+            <input type="number" name="needyPeopleId" class="form-control" 
+                    placeholder="Enter the product needyPeopleId " required  
+                    #needyPeopleId="ngModel"
+                    [(ngModel)]= "needyPeople.needyPeopleId"
+                    [ngClass]= "{'is-invalid':needyPeopleId?.errors && (needyPeopleId?.touched),
+                    'is-valid':needyPeopleId?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf= "needyPeopleId?.errors?.required">Needy People Id is required</strong>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createNeedyPeopleForm.invalid">Add Product</button>
+        <button type="submit" class="btn btn-default" (click)= "createNeedyPeopleForm.reset()">Reset</button>
+    </form>
+        <!--
+        <div class="form-group">
+            <label for="complaintName">Complaint Description</label>
+            <input type="text" name="complaintName" class="form-control" 
+                  placeholder="Enter the details of complaint" 
+                  required [(ngModel)]= "complaint.complaintName" #complaintName="ngModel"
+                  [ngClass]= "{'is-invalid':complaintName?.errors && (complaintName?.touched || complaintName?.dirty),
+                  'is-valid':complaintName?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "complaintName?.errors?.required">Complaint Description is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="clientId">Client Id</label>
+            <input type="text" name="clientId" class="form-control" 
+                  placeholder="Enter the Client Id" required 
+                  [(ngModel)]= "complaint.clientId" #clientId="ngModel"
+                  [ngClass]= "{'is-invalid':clientId?.errors && (clientId?.touched || clientId?.dirty),
+                  'is-valid':clientId?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "clientId?.errors?.required">Client Id is required</strong>
+                </div>
+        </div>
+        <div class="form-group">
+            <label for="complaintRegDate">Complaint Registration Date</label>
+            <input type="date" name="complaintRegDate" class="form-control" 
+                  placeholder="Enter the complaint registration date" required 
+                  [(ngModel)]= "complaint.complaintRegDate" #complaintRegDate="ngModel"
+                  [ngClass]= "{'is-invalid':complaintRegDate?.errors && (complaintRegDate?.touched || complaintRegDate?.dirty),
+                  'is-valid':complaintRegDate?.valid}">
+                  <div class="invalid-feedback">
+                    <strong *ngIf= "complaintRegDate?.errors?.required">complaintRegDate is required</strong>
+                </div>
+        </div>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createComplaintForm.invalid">Add Product</button>
+        <button type="submit" class="btn btn-default" (click)= "createComplaintForm.reset()">Reset</button>
+    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container my-5">
   <div class="alert alert-danger my-4" *ngIf="error">
     {{error}}
 </div>
-    <form #addNeedyPersonForm="ngForm" novalidate class="row g-3">
+    <form #addNeedyPersonForm="ngForm"  (ngSubmit)="onSubmit(addNeedyPersonForm)">
       <div class="col-md-4"> 
         <label for="needyPeopleId" class="form-label">Needy person Id</label>
-        <input type="number" name="needyPeopleId" class="form-control" placeholder="Enter the Id here"
-          #needyPeopleId="ngModel" [(ngModel)]="needyPeople.needyPeopleId">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="needyPeopleId" [(ngModel)]="needyPeople.needyPeopleId" required>
+        </div>
       </div>
       <div class="col-md-8">
         <label for="name">Needy person Name</label>
-        <input type="text" name="name" class="form-control my-1" placeholder="Enter name of the needy person here"
-          [(ngModel)]="needyPeople.needyPeopleName" #name="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="needyPeopleName" [(ngModel)]="needyPeople.needyPeopleName" required>
+        </div>
       </div>
       <div class="col-md-6">
         <label for="phone">Phone</label>
-        <input type="number" name="phone" class="form-control my-1" placeholder="Enter phone number here"
-          [(ngModel)]="needyPeople.phone" #phone="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="phone" [(ngModel)]="needyPeople.phone" required>
+        </div>
       </div>
+
       <div class="col-md-6">
         <label for="familyIncome">Family Income</label>
-        <input type="number" name="familyIncome" class="form-control my-1" placeholder="Enter family Income here"
-          [(ngModel)]="needyPeople.familyIncome" #familyIncome="ngModel">
+        <div class="form-group">
+         
+          <input type="text" class="form-control" name="familyIncome" [(ngModel)]="needyPeople.familyIncome" required>
+        </div>
       </div>
+
       <div class="col-md-6">
         <label for="username">Username</label>
-        <input type="text" name="username" class="form-control my-1" placeholder="Enter the username" required
-          [(ngModel)]="needyPeople.username" #username="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="username" [(ngModel)]="needyPeople.username" required>
+        </div>
       </div>
+
       <div class="col-md-3">
         <label for="password">Password</label>
-        <input type="password" name="password" class="form-control my-1" placeholder="Enter the Password"
-          [(ngModel)]="needyPeople.password" #password="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="password" [(ngModel)]="needyPeople.password" required>
+        </div>
       </div>
       <div class="col-md-3">
         <label for="password">Confirm Password</label>
         <input type="password" name="password" class="form-control my-1" placeholder="Enter the Password">
       </div>
+
       <hr class="my-4">
       <div class="col-md-4">
         <label for="addressId">Address Id</label>
-        <input type="number" name="addressId" class="form-control my-1" placeholder="Enter the Address Id"
-          [(ngModel)]="needyPeople.address.addressId" #addressId="ngModel">
+          <div class="form-group">
+            <input type="text" class="form-control" name="addressId" [(ngModel)]="needyPeople.address.addressId" required>
+          </div>
       </div>
+
       <div class="col-md-4">
         <label for="city">City</label>
-        <input type="text" name="city" class="form-control my-1" placeholder="Enter the City"
-          [(ngModel)]="needyPeople.address.city" #city="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="city" [(ngModel)]="needyPeople.address.city" required>
+        </div>
       </div>
+      <!-- <div class="form-group">
+        <label for="clientId">Client Id</label>
+        <input type="text" name="clientId" class="form-control" 
+              placeholder="Enter the Client Id" required 
+              [(ngModel)]= "product.clientId" #clientId="ngModel"
+              [ngClass]= "{'is-invalid':clientId?.errors && (clientId?.touched || clientId?.dirty),
+              'is-valid':clientId?.valid}">
+              <div class="invalid-feedback">
+                <strong *ngIf= "clientId?.errors?.required">Client Id is required</strong>
+            </div></div> 
+
       <div class="col-md-4">
         <label for="state">State</label>
-        <input type="text" name="state" class="form-control my-1" placeholder="Enter the State"
-          [(ngModel)]="needyPeople.address.state" #state="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="state" [(ngModel)]="needyPeople.address.state" required>
+        </div>
       </div>
       <div class="col-md-2">
         <label for="pin">PinCode</label>
-        <input type="text" name="pin" class="form-control my-1" placeholder="Enter the pin"
-          [(ngModel)]="needyPeople.address.pin" #pin="ngModel">
+        <div class="form-group">
+         
+          <input type="text" class="form-control" name="pin" [(ngModel)]="needyPeople.address.pin" required>
+        </div>
       </div>
+
       <div class="col-md-10">
         <label for="landmark">Landmark</label>
-        <input type="text" name="landmark" class="form-control my-1" placeholder="Enter the landmark" required
-          [(ngModel)]="needyPeople.address.landmark" #landmark="ngModel">
+        <div class="form-group">
+          
+          <input type="text" class="form-control" name="landmark" [(ngModel)]="needyPeople.address.landmark" required>
+        </div>
       </div>
+      
       <div class="col-12">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="gridCheck">
@@ -73,11 +199,11 @@
         </div>
       </div>
       <div>
-        <button type="submit" class="btn btn-lg btn-success" (click)="onSubmit()">Register »</button>
+        <button type="submit" class="btn btn-lg btn-success">Register »</button>
         <button type="submit" class="btn btn-lg btn-default" (click)="addNeedyPersonForm.reset()">Reset</button>
       </div>
     </form>
   </div>
   
   
-  
+   -->
