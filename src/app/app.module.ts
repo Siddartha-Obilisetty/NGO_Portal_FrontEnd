@@ -31,7 +31,6 @@ import { FindNeedypersonByNameComponent } from './employee/find-needyperson-by-n
 import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
-import { LoginpageComponent } from './loginpage/loginpage.component';
 import { GetAllDonationsComponent } from './admin/get-all-donations/get-all-donations.component';
 import { NeedypeopleLoginComponent } from './needypeople/needypeople-login/needypeople-login.component';
 import { RegisterDonorComponent } from './donor/register-donor/register-donor.component';
@@ -70,7 +69,6 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
     HelpNeedypersonComponent,
     RegisterNeedypersonComponent,
     RequestForHelpComponent,
-    LoginpageComponent,
     GetAllDonationsComponent,
     NeedypeopleLoginComponent,
     LoginDonorComponent,
