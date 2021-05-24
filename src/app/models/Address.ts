@@ -1,5 +1,5 @@
 export class Address{
-    addressId:number;
+    addressId:number=0;
     city :string;
     state:string;
     pin:string;
