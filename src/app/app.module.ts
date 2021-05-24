@@ -44,6 +44,9 @@ import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
 import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { DonorProfileComponent } from './donor/donor-profile/donor-profile.component';
+import { NeedypeopleProfileComponent } from './needypeople/needypeople-profile/needypeople-profile.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +84,10 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
     ContactComponent,
     WriteComponent,
     AllDonationsComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    EmployeeProfileComponent,
+    DonorProfileComponent,
+    NeedypeopleProfileComponent
     //these are imports
   ],
   imports: [
