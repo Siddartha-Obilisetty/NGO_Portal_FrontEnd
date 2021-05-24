@@ -11,7 +11,6 @@ import { FindEmployeeByNameComponent } from './admin/find-employee-by-name/find-
 import { UpdateEmployeeComponent } from './admin/update-employee/update-employee.component';
 import { DonorComponent } from './donor/donor.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LoginpageComponent } from './loginpage/loginpage.component';
 import { LoginDonorComponent } from './donor/login-donor/login-donor.component';
 import { RegisterNeedypersonComponent } from './needypeople/register-needyperson/register-needyperson.component';
 import { RequestForHelpComponent } from './needypeople/request-for-help/request-for-help.component';
@@ -76,7 +75,6 @@ const routes: Routes = [
   {path:'needypeople/:id/request',component:RequestForHelpComponent},
   
   {path:'about',component:AboutComponent},
-  {path:'loginpage',component:LoginpageComponent},
   {path:'contact',component:ContactComponent},
   {path:'write',component:WriteComponent}
 ];
