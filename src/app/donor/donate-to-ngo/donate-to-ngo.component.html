@@ -1,44 +1,87 @@
-<app-donor-nav></app-donor-nav>
+<h3>Donate</h3>
 <div class="container my-5">
-    <form #createDonationForm="ngForm" novalidate class="row g-3">
-      <div class="col-md-4">
-        <label for="donationId" class="form-label">Donation Id</label>
-        <input type="number" name="donationId" class="form-control" placeholder="Enter the Id here"
-          #donorId="ngModel" [(ngModel)]="donation.donationId">
-      </div>
-      <div class="col-md-8">
-        <label for="name">donation Amount</label>
-        <input type="text" name="donationAmount" class="form-control my-1" placeholder="Enter donation amount here"
-          [(ngModel)]="donation.donationAmount" #name="ngModel">
-      </div>
-      <div class="col-md-6">
-        <label for="donationDate">donation Date</label>
-        <input type="date" name="donationDate" class="form-control my-1" placeholder="Enter donation Date here"
-          [(ngModel)]="donation.donationDate" #phone="ngModel">
-      </div>
-      <div class="col-md-6">
-        <label for="itemId">Item Id</label>
-        <input type="number" name="itemId" class="form-control my-1" placeholder="Enter item Id here"
-          [(ngModel)]="donation.item.itemId" #email="ngModel">
-      </div>
-     
-      <div class="form-group">
-        <label for="itemDescription">Item Description</label>
-        <input type="text" name="itemDescription" class="form-control" 
-              placeholder="Enter the Item Description" required 
-              [(ngModel)]= "donation.item.itemDescription" #itemDescription="ngModel">
-    </div>
-     
-    <div class="form-group">
-        <label for="type">Donation Type</label>
-        <input type="text" name="type" class="form-control" 
-              placeholder="Enter the donation type"
-              [(ngModel)]= "donation.item.type" #type="ngModel">
-    </div>
-      <div>
-        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add Donation</button>
+    <!-- <form (ngSubmit)="onSubmit()"> -->
+        <form #createDonationForm="ngForm" novalidate class="row g-3">
+        <div class="form-group col-md-4">
+            <label for="donationId" class="form-label">Donation Id</label>
+            <input type="number" name="donationId" class="form-control" 
+                    placeholder="Enter the donationId " required  
+                    #donationId="ngModel"
+                    [(ngModel)]= "donation.donationId"
+                    [ngClass]= "{'is-invalid':donationId?.errors && (donationId?.touched),
+                    'is-valid':donationId?.valid}">
+            <div class="invalid-feedback">
+                <strong *ngIf= "donationId?.errors?.required">donationId is required</strong>
+            </div>
+        </div>
+
+        
+        <div class="form-group col-md-8">
+          <label for="donationAmount" class="form-label">donationAmount</label>
+              <input type="number" name="donationAmount" class="form-control" 
+                      placeholder="Enter the donationAmount " required  
+                      #donationAmount="ngModel"
+                      [(ngModel)]= "donation.donationAmount"
+                      [ngClass]= "{'is-invalid':donationAmount?.errors && (donationAmount?.touched),
+                      'is-valid':donationAmount?.valid}">
+              <div class="invalid-feedback">
+                  <strong *ngIf= "donationAmount?.errors?.required">donationAmount is required</strong>
+              </div>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="donationDate" class="form-label">donationDate</label>
+                <input type="date" name="donationDate" class="form-control" 
+                        placeholder="Enter the donationDate " required  
+                        #donationDate="ngModel"
+                        [(ngModel)]= "donation.donationDate"
+                        [ngClass]= "{'is-invalid':donationDate?.errors && (donationDate?.touched),
+                        'is-valid':donationDate?.valid}">
+                <div class="invalid-feedback">
+                    <strong *ngIf= "donationDate?.errors?.required">donationDate is required</strong>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="itemId" class="form-label">itemId </label>  
+                  <input type="number" name="itemId" class="form-control" 
+                          placeholder="Enter the itemId " required  
+                          #itemId="ngModel"
+                          [(ngModel)]= "donation.item.itemId"
+                          [ngClass]= "{'is-invalid':itemId?.errors && (itemId?.touched),
+                          'is-valid':itemId?.valid}">
+                  <div class="invalid-feedback">
+                      <strong *ngIf= "itemId?.errors?.required">itemId is required</strong>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <label for="itemDescription" class="form-label">itemDescription</label>  
+                    <input type="text" name="itemDescription" class="form-control" 
+                            placeholder="Enter the itemDescription " required  
+                            #itemDescription="ngModel"
+                            [(ngModel)]= "donation.item.itemDescription"
+                            [ngClass]= "{'is-invalid':itemDescription?.errors && (itemDescription?.touched),
+                            'is-valid':itemDescription?.valid}">
+                    <div class="invalid-feedback">
+                        <strong *ngIf= "itemDescription?.errors?.required">itemDescription is required</strong>
+                    </div>
+                </div>
+
+                <div class="form-group">                      
+                  <label for="donationType" class="form-label">donationType</label>  
+                      <input type="text" name="donationType" class="form-control" 
+                              placeholder="Enter the donationType " required  
+                              #donationType="ngModel"
+                              [(ngModel)]= "donation.item.type"
+                              [ngClass]= "{'is-invalid':donationType?.errors && (donationType?.touched),
+                              'is-valid':donationType?.valid}">
+                      <div class="invalid-feedback">
+                          <strong *ngIf= "donationType?.errors?.required">itemDescription is required</strong>
+                      </div>
+                  </div>
+        
+      
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createDonationForm.invalid">Add Donation</button>
         <button type="submit" class="btn btn-default" (click)= "createDonationForm.reset()">Reset</button>
-      </div>
     </form>
-  </div>
-  
