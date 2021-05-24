@@ -44,6 +44,7 @@ import { FindDonorByIdComponent } from './admin/find-donor-by-id/find-donor-by-i
 import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
 import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { AllDonationsComponent } from './donor/all-donations/all-donations.compo
     FindDonorByIdComponent,
     ContactComponent,
     WriteComponent,
-    AllDonationsComponent
+    AllDonationsComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
