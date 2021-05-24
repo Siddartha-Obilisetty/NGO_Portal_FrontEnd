@@ -18,11 +18,11 @@ export class HelpNeedypersonComponent implements OnInit {
     this.empid=this.route.snapshot.params['id'];
     this.npid=this.route.snapshot.params['npid'];
     this.help();
-    this.router.navigate(['employee',this.npid,'findNeedyPeople','all'])
+    this.router.navigate(['employee',this.empid,'findNeedyPeople','all'])
   }
   
   help(){
-    this.empService.helpNeedyPeopleById(this.npid).subscribe(
+    this.empService.helpNeedyPeopleById(this.empid,this.npid).subscribe(
       result=>{
         console.log(result);
       },

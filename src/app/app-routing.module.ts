@@ -35,11 +35,13 @@ import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
 import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
 import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
+import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
 
   {path:'admin',component:AdminComponent},
+  {path:'admin/login',component:AdminLoginComponent},
   {path:'admin/addEmployee',component:AddEmployeeComponent},
   {path:'admin/approveDonation/:id/:status',component:ApproveDonationComponent},
   {path:'admin/getAllDonations',component:GetAllDonationsComponent},
