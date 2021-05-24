@@ -17,6 +17,7 @@ export class GetAllDonationsComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadDonations();
+    this.loadDonations();
   }
 
   loadDonations(){
