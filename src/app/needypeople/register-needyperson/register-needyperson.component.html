@@ -1,5 +1,6 @@
-<h3>Register as Needy Person</h3>
+
 <div class="container my-5">
+  <h1 class="display-4" style="text-align: center;">Register as needy person</h1>
     <!-- <form (ngSubmit)="onSubmit()"> -->
         <form #createNeedyPeopleForm="ngForm" novalidate class="row g-3">
         <div class="form-group">
@@ -28,7 +29,7 @@
           </div>
       </div>
       <div class="form-group">
-        <label for="phone">phone</label>
+        <label for="phone">NeedyPeople Phone</label>
         <input type="text" name="phone" class="form-control" 
                 placeholder="Enter the phone" required  
                 #phone="ngModel"
@@ -41,7 +42,7 @@
     </div>
 
     <div class="form-group">
-      <label for="familyIncome">familyIncome</label>
+      <label for="familyIncome">NeedyPeople FamilyIncome</label>
       <input type="number" name="familyIncome" class="form-control" 
               placeholder="Enter the family Income" required  
               #familyIncome="ngModel"
@@ -54,7 +55,7 @@
     </div>
 
     <div class="form-group">
-      <label for="username">username</label>
+      <label for="username">NeedyPeople username</label>
       <input type="text" name="username" class="form-control" 
               placeholder="Enter the username" required  
               #username="ngModel"
@@ -67,7 +68,7 @@
     </div>
 
     <div class="form-group">
-      <label for="password">password</label>
+      <label for="password">NeedyPeople password</label>
       <input type="text" name="password" class="form-control" 
               placeholder="Enter the password" required  
               #password="ngModel"
@@ -80,7 +81,7 @@
     </div>
 
     <div class="form-group">
-      <label for="addressId">addressId</label>
+      <label for="addressId">NeedyPeople addressId</label>
       <input type="number" name="addressId" class="form-control" 
               placeholder="Enter the addressId" required  
               #addressId="ngModel"
@@ -93,7 +94,7 @@
     </div>
 
     <div class="form-group">
-      <label for="city">city</label>
+      <label for="city">NeedyPeople city</label>
       <input type="text" name="city" class="form-control" 
               placeholder="Enter the city" required  
               #city="ngModel"
@@ -106,7 +107,7 @@
     </div>
 
     <div class="form-group">
-      <label for="state">state</label>
+      <label for="state">NeedyPeople state</label>
       <input type="text" name="state" class="form-control" 
               placeholder="Enter the state" required  
               #state="ngModel"
@@ -119,7 +120,7 @@
     </div>
 
     <div class="form-group">
-      <label for="pin">pin</label>
+      <label for="pin">NeedyPeople pin</label>
       <input type="text" name="pin" class="form-control" 
               placeholder="Enter the pin" required  
               #pin="ngModel"
@@ -132,7 +133,7 @@
     </div>
 
     <div class="form-group">
-      <label for="landmark">landmark</label>
+      <label for="landmark">NeedyPeople landmark</label>
       <input type="text" name="landmark" class="form-control" 
               placeholder="Enter the landmark" required  
               #landmark="ngModel"
@@ -144,6 +145,6 @@
       </div>
     </div>
 
-        <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createNeedyPeopleForm.invalid">Add Product</button>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createNeedyPeopleForm.invalid">Register</button>
         <button type="submit" class="btn btn-default" (click)= "createNeedyPeopleForm.reset()">Reset</button>
     </form>

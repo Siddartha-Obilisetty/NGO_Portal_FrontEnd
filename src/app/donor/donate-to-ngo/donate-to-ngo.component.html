@@ -1,11 +1,12 @@
-<h3>Donate</h3>
+
 <div class="container my-5">
+    <h1 class="display-4" style="text-align: center;">Donate</h1>
     <!-- <form (ngSubmit)="onSubmit()"> -->
         <form #createDonationForm="ngForm" novalidate class="row g-3">
         <div class="form-group col-md-4">
             <label for="donationId" class="form-label">Donation Id</label>
             <input type="number" name="donationId" class="form-control" 
-                    placeholder="Enter the donationId " required  
+                    placeholder="Enter the donation Id " required  
                     #donationId="ngModel"
                     [(ngModel)]= "donation.donationId"
                     [ngClass]= "{'is-invalid':donationId?.errors && (donationId?.touched),
@@ -19,7 +20,7 @@
         <div class="form-group col-md-8">
           <label for="donationAmount" class="form-label">donationAmount</label>
               <input type="number" name="donationAmount" class="form-control" 
-                      placeholder="Enter the donationAmount " required  
+                      placeholder="Enter the donation Amount " required  
                       #donationAmount="ngModel"
                       [(ngModel)]= "donation.donationAmount"
                       [ngClass]= "{'is-invalid':donationAmount?.errors && (donationAmount?.touched),
@@ -32,7 +33,7 @@
           <div class="form-group col-md-6">
             <label for="donationDate" class="form-label">donationDate</label>
                 <input type="date" name="donationDate" class="form-control" 
-                        placeholder="Enter the donationDate " required  
+                        placeholder="Enter the donation Date " required  
                         #donationDate="ngModel"
                         [(ngModel)]= "donation.donationDate"
                         [ngClass]= "{'is-invalid':donationDate?.errors && (donationDate?.touched),
@@ -45,7 +46,7 @@
             <div class="form-group col-md-6">
               <label for="itemId" class="form-label">itemId </label>  
                   <input type="number" name="itemId" class="form-control" 
-                          placeholder="Enter the itemId " required  
+                          placeholder="Enter the item Id " required  
                           #itemId="ngModel"
                           [(ngModel)]= "donation.item.itemId"
                           [ngClass]= "{'is-invalid':itemId?.errors && (itemId?.touched),
@@ -58,7 +59,7 @@
               <div class="form-group">
                 <label for="itemDescription" class="form-label">itemDescription</label>  
                     <input type="text" name="itemDescription" class="form-control" 
-                            placeholder="Enter the itemDescription " required  
+                            placeholder="Enter the item Description " required  
                             #itemDescription="ngModel"
                             [(ngModel)]= "donation.item.itemDescription"
                             [ngClass]= "{'is-invalid':itemDescription?.errors && (itemDescription?.touched),
@@ -71,7 +72,7 @@
                 <div class="form-group">                      
                   <label for="donationType" class="form-label">donationType</label>  
                       <input type="text" name="donationType" class="form-control" 
-                              placeholder="Enter the donationType " required  
+                              placeholder="Enter the donation Type " required  
                               #donationType="ngModel"
                               [(ngModel)]= "donation.item.type"
                               [ngClass]= "{'is-invalid':donationType?.errors && (donationType?.touched),
