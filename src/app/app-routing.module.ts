@@ -35,6 +35,9 @@ import { WriteComponent } from './write/write.component';
 import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
 import { HelpNeedypersonComponent } from './employee/help-needyperson/help-needyperson.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { DonorProfileComponent } from './donor/donor-profile/donor-profile.component';
+import { NeedypeopleProfileComponent } from './needypeople/needypeople-profile/needypeople-profile.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -54,6 +57,7 @@ const routes: Routes = [
   
   {path:'employee/login',component:EmployeeLoginComponent},
   {path:'employee/:id',component:EmployeeComponent},
+  {path:'employee/:id/profile',component:EmployeeProfileComponent},
   {path:'employee/:id/needyPerson/add',component:AddNeedypersonComponent},
   {path:'employee/:id/needyPerson/remove/:npid',component:DeleteNeedypersonComponent},
   {path:'employee/:id/findNeedyPeople/all',component:FindAllNeedypeopleComponent},
@@ -66,12 +70,14 @@ const routes: Routes = [
   {path:'donor/login/forgotPassword',component: ForgotPasswordComponent},
   {path:'donor/login/resetPassword',component:ResetPasswordComponent},
   {path:'donor/:id',component:DonorComponent},
+  {path:'donor/:id/profile',component:DonorProfileComponent},
   {path:'donor/:id/donate',component:DonateToNgoComponent},
   {path:'donor/:id/donations',component:AllDonationsComponent},
 
   {path:'needypeople/login',component:NeedypeopleLoginComponent},
   {path:'needypeople/register',component:RegisterNeedypersonComponent},
   {path:'needypeople/:id',component:NeedypeopleComponent},
+  {path:'needypeople/:id/profile',component:NeedypeopleProfileComponent},
   {path:'needypeople/:id/request',component:RequestForHelpComponent},
   
   {path:'about',component:AboutComponent},

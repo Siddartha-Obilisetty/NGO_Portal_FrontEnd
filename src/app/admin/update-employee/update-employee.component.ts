@@ -22,11 +22,12 @@ export class UpdateEmployeeComponent implements OnInit {
   updateEmployee(){
     this.empid=this.route.snapshot.params['id'];
     this.employee.employeeId=this.empid;
-    
+    console.log(this.employee.address.addressId)
     this.adminService.modifyEmployee(this.empid,this.employee).subscribe(
       selectedEmployee=>{
         console.log(selectedEmployee);
         this.employee=selectedEmployee;
+        console.log(this.employee.address.addressId)
         this.goToEmployeeList();
       },
       (error)=>{

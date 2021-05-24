@@ -1,30 +1,45 @@
-<h2>Donor Details</h2>
-<hr>
-<div *ngIf='donor'>
-    <div class="alert alert-danger my-4" *ngIf="error">
-        {{error}}
-    </div>
-    <div>
-        <label><b>Donor Id:</b></label> {{donor.donorId}}
-    </div>
-    <div>
-        <label><b>Donor Name:</b></label> {{donor.donorName}}
-    </div>
-    <div>
-        <label><b>Email:</b></label> {{donor.email}}
-    </div>
-    <div>
-        <label><b>Phone:</b></label> {{donor.phone}}
-    </div>
-    <div>
-        <label><b>Username:</b></label> {{donor.username}}
-    </div>
-    <div>
-        <label><b>Password:</b></label> {{donor.password}}
-    </div>
-    <div>
-        <label><b>Address:</b></label> {{donor.address.addressId}}, {{donor.address.city}}, {{donor.address.state}}
-        , {{donor.address.pin}}, {{donor.address.landmark}}.
+<app-admin-nav></app-admin-nav>
+
+<div class="container col-md-9">
+    <div class="row featurette my-5 ">
+        <div class="col-md-5 ">
+            <img src="assets/details.png" height="90%" width="90%" alt="...">
+
+        </div>
+        <div class="col-md-7">
+            <div class="my-5">
+                <h2 class="my-5">Donor Details</h2>
+                <hr>
+                <div *ngIf='donor'>
+                    <div class="alert alert-danger my-4" *ngIf="error">
+                        {{error}}
+                    </div>
+                    <div>
+                        <label><b>Donor Id:</b></label> {{donor.donorId}}
+                    </div>
+                    <div>
+                        <label><b>Donor Name:</b></label> {{donor.donorName}}
+                    </div>
+                    <div>
+                        <label><b>Email:</b></label> {{donor.email}}
+                    </div>
+                    <div>
+                        <label><b>Phone:</b></label> {{donor.phone}}
+                    </div>
+                    <div>
+                        <label><b>Username:</b></label> {{donor.username}}
+                    </div>
+                    <div>
+                        <label><b>Password:</b></label> {{donor.password}}
+                    </div>
+                    <div>
+                        <label><b>Address:</b></label> {{donor.address.addressId}}, {{donor.address.city}},
+                        {{donor.address.state}}
+                        , {{donor.address.pin}}, {{donor.address.landmark}}.
+                    </div>
+                </div>
+                <button (click)='goToDonorList()' class='btn btn-primary my-5'>Go To Donor List</button>
+            </div>
+        </div>
     </div>
 </div>
-<button (click)='goToDonorList()' class='btn btn-primary'>Go To Donor List</button>

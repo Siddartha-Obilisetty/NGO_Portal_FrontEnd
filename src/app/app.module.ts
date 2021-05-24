@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { EmployeeComponent } from './employee/employee.component';
 import { AdminComponent } from './admin/admin.component';
 import { DonorComponent } from './donor/donor.component';
 import { NeedypeopleComponent } from './needypeople/needypeople.component';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DonorserviceService } from './donorservice.service';
 import { AdminserviceService } from './adminservice.service';
 import { NeedypeopleserviceService } from './needypeopleservice.service';
@@ -44,6 +40,18 @@ import { ContactComponent } from './contact/contact.component';
 import { WriteComponent } from './write/write.component';
 import { AllDonationsComponent } from './donor/all-donations/all-donations.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
+import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
+import { DonorProfileComponent } from './donor/donor-profile/donor-profile.component';
+import { NeedypeopleProfileComponent } from './needypeople/needypeople-profile/needypeople-profile.component';
+import { NeedypeopleNavComponent } from './needypeople/needypeople-nav/needypeople-nav.component';
+import { DonorNavComponent } from './donor/donor-nav/donor-nav.component';
+import { EmployeeNavComponent } from './employee/employee-nav/employee-nav.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -81,7 +89,15 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
     ContactComponent,
     WriteComponent,
     AllDonationsComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    EmployeeProfileComponent,
+    DonorProfileComponent,
+    NeedypeopleProfileComponent,
+    NeedypeopleNavComponent,
+    DonorNavComponent,
+    EmployeeNavComponent,
+    AdminNavComponent
+    //these are imports
   ],
   imports: [
     BrowserModule,
