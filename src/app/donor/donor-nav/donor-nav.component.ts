@@ -13,7 +13,7 @@ export class DonorNavComponent implements OnInit {
   donor:Donor = new Donor;
   donorId:number;
 
-  constructor(private router:Router,private donorService:DonorserviceService,private route:ActivatedRoute,private adminService:AdminserviceService) { }
+  constructor(private router:Router, private donorService:DonorserviceService,private route:ActivatedRoute,private adminService:AdminserviceService) { }
 
   ngOnInit(): void {
     this.donorId=this.route.snapshot.params['id'];
@@ -23,7 +23,9 @@ export class DonorNavComponent implements OnInit {
       }
     );
   }
+
+  
   goToProfile(){
-    this.router.navigate(['employee',this.donorId,'profile']);
+    this.router.navigate(['donor',this.donorId,'profile']);
   }
 }

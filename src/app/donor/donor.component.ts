@@ -32,9 +32,6 @@ export class DonorComponent implements OnInit {
     this.router.navigate(['donor',this.donorId,'donations']);
   }
 
-  goToProfile(){
-    this.router.navigate(['donor',this.donorId,'profile']);
-  }
   
   donateToNGO(){
     this.router.navigate(['donor',this.donorId,'donate']);
