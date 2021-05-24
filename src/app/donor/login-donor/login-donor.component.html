@@ -1,43 +1,53 @@
-<div class="background" >
-<div class="container col-xl-10 col-xxl-8 px-4 py-5">
-    <div class="row align-items-center g-lg-5 py-5">
-        <div class="col-md-10 mx-auto col-lg-5">
-           
-            <div class="alert alert-danger my-4" *ngIf="error">
-                {{error}}
+<div class="background">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-md-10 mx-auto col-lg-5">
+
+                <div class="alert alert-danger my-4" *ngIf="error">
+                    {{error}}
+                </div>
+
+                <form class="p-4 p-md-5 border rounded-3 bg-light">
+                    <div class="feature-icon center col-md-8 mx-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="80%" height="80%" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            <path fill-rule="evenodd"
+                                d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                        </svg>
+                        <p class="mx-4">Donor Login</p>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="username" placeholder="Username"
+                            [(ngModel)]="donor.username" #username="ngModel">
+                        <label for="floatingInput"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                <path fill-rule="evenodd"
+                                    d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                            </svg> Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" placeholder="Password"
+                            [(ngModel)]="donor.password" #password="ngModel">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+
+                            <a href="donor/login/forgotPassword">forgot password?</a>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" (click)='login()'>Login</button>
+
+                    <hr class="my-4">
+                    <p>New User?</p>
+                    <a class="btn btn-primary" href="donor/register">Register</a>
+                    <!--   <small>You are getting logged in as a donor</small>-->
+                </form>
             </div>
-           
-            <form class="p-4 p-md-5 border rounded-3 bg-light">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" name="username" placeholder="Username"
-                    [(ngModel)]="donor.username" #username="ngModel">
-                    <label for="floatingInput">Username</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="password" placeholder="Password"
-                    [(ngModel)]="donor.password" #password="ngModel">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="checkbox mb-3">
-                    <label>
-                       
-                        <a  href="donor/login/forgotPassword">forgot password?</a>
-                    </label>
-                </div>
-                <button class="btn btn-primary" (click)='login()'>Login</button>
-               
-                <hr class="my-4">
-                <a>new user?</a>
-                <a class="btn btn-primary" href="donor/register">Register</a>
-                <hr class="my-4">
-                <a  href="donor/login/resetPassword">reset password</a>
-                <hr class="my-4">
-                
-              
-             <!--   <small>You are getting logged in as a donor</small>-->
-            </form>
         </div>
     </div>
-</div>
-<p class="my-5">a</p>
+    <p class="my-5">a</p>
 </div>

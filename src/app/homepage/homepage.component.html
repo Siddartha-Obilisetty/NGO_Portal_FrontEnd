@@ -21,7 +21,7 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="donor/login">Donate</a></li>
                         <li><a class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-                                aria-controls="offcanvasRight" href="">Register</a></li>
+                                aria-controls="offcanvasRight">Register</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
@@ -73,7 +73,8 @@
             <div class="carousel-caption d-none d-md-block">
                 <h1>Empowerment</h1>
                 <p style="font-size:25px;">"Discipline is the bridge between goals and accomplishments"</p>
-                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" href="loginpage"> Login/SignUp </a></p>
+                <p><a class="btn btn-lg btn-warning" style="border-radius:30px" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal" href="#"> Login/SignUp </a></p>
             </div>
         </div>
         <div class="carousel-item">
@@ -109,6 +110,7 @@
             </div>
         </div>
     </div>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
 
         <span class="visually-hidden">Previous</span>
@@ -118,6 +120,53 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Who is trying to Login ??</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="text-align:center;">
+                <p>Admin can access his page by clicking on the button below.</p>
+                <a class="btn btn-light" href="admin"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z" />
+                    </svg> Admin</a>
+                <p></p>
+                <p>Employee can access his page by clicking on the button below.</p>
+                <a class="btn btn-light" href="employee/login"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg> Employee</a>
+                <p></p>
+                <p>Donor can access his page by clicking on the button below.</p>
+                <a class="btn btn-light" href="donor/login"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        <path fill-rule="evenodd"
+                            d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                    </svg> Donor</a>
+                <p></p>
+                <p>Needy person can access his page by clicking on the button below.</p>
+                <a class="btn btn-light" href="needypeople/login"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+                        <path
+                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+                    </svg> Needy person</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container col-md-9">
     <div class="row featurette my-5 ">
         <div class="col-md-5 ">
@@ -141,7 +190,6 @@
 
     </div>
 </div>
-
 
 <div class="container my-4 ">
     <div class="row mb-2">
