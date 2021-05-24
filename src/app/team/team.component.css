@@ -1,0 +1,130 @@
+.carousel .carousel-inner .carousel-item .carousel-caption h1 { 
+    font-family: 'Brawler', serif;
+    font-style:oblique;
+    font-weight: 500;
+    
+
+}
+
+.carousel .carousel-inner .carousel-item .carousel-caption p { 
+    font-family: 'Brawler', serif;
+    font-style:italic;
+    font-weight: 500;
+}
+
+
+
+.card .card-header { 
+   background-color:rgb(44, 41, 41);
+
+
+}
+
+.card-header { 
+    color:rgb(255, 196, 0);
+    font-family:cursive;
+    font-size: 25px;
+    
+    
+
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block; }
+
+.blockquote-footer {
+display: block;
+font-size: 80%;
+color: #6c757d; }
+.blockquote-footer::before {
+content: "\2014\00A0"; }
+
+.card-footer {
+padding: 0.75rem 1.25rem;
+background-color: rgba(0, 0, 0, 0.03);
+border-top: 1px solid rgba(0, 0, 0, 0.125); }
+.card-footer:last-child {
+border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px); }
+
+ @media (min-width: 576px) {
+.card-group {
+ display: flex;
+flex-flow: row wrap; }
+.card-group > .card {
+ flex: 1 0 0%;
+margin-bottom: 0; }
+.card-group > .card + .card {
+margin-left: 0;
+border-left: 0; }
+.card-group > .card:not(:last-child) {
+border-top-right-radius: 0;
+border-bottom-right-radius: 0; }
+.card-group > .card:not(:last-child) .card-img-top,
+.card-group > .card:not(:last-child) .card-header {
+border-top-right-radius: 0; }
+.card-group > .card:not(:last-child) .card-img-bottom,
+.card-group > .card:not(:last-child) .card-footer {
+border-bottom-right-radius: 0; }
+.card-group > .card:not(:first-child) {
+border-top-left-radius: 0;
+border-bottom-left-radius: 0; }
+.card-group > .card:not(:first-child) .card-img-top,
+.card-group > .card:not(:first-child) .card-header {
+border-top-left-radius: 0; }
+.card-group > .card:not(:first-child) .card-img-bottom,
+.card-group > .card:not(:first-child) .card-footer {
+border-bottom-left-radius: 0; } }
+.modal-dialog-scrollable {
+    display: flex;
+    max-height: calc(100% - 1rem); }
+    .modal-dialog-scrollable .modal-content {
+      max-height: calc(100vh - 1rem);
+      overflow: hidden; }
+    .modal-dialog-scrollable .modal-header,
+    .modal-dialog-scrollable .modal-footer {
+      flex-shrink: 0; }
+    .modal-dialog-scrollable .modal-body {
+      overflow-y: auto; }
+
+      .modal-footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0.75rem;
+        border-top: 1px solid #dee2e6;
+        border-bottom-right-radius: calc(0.3rem - 1px);
+        border-bottom-left-radius: calc(0.3rem - 1px); }
+        .modal-footer > * {
+          margin: 0.25rem; }
+          .font-os, .badge, .foi-footer .footer-widget-area p, .foi-footer .nav-link, .team-section-title, .team-member-card .team-member-designation {
+            font-family: 'Open Sans', sans-serif; }
+            .foi-footer {
+                padding-top: 150px;
+                padding-bottom: 110px;
+                background-color: #ffffff;
+                background-image: url(assets/blog.png);
+                background-repeat: no-repeat;
+                background-size: cover; }
+                .foi-footer .footer-content {
+                  padding-bottom: 34px;
+                  border-bottom: 1px solid rgba(240, 240, 240, 0.39); }
+                .foi-footer .footer-widget-area {
+                  padding-top: 70px; }
+                  .foi-footer .footer-widget-area p {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: #fefefe; }
+                .foi-footer .nav-link {
+                  font-size: 15px;
+                  line-height: 2.33;
+                  font-weight: 600;
+                  color: #fefefe;
+                  padding: 0; }
+                .foi-footer .social-menu a {
+                  display: inline-block;
+                  margin-right: 10px; }
+                  .form-footer-text {
+                    font-size: 14px;
+                    font-weight: 700;
+                    left: 1.5; }
