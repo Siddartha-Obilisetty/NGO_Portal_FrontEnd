@@ -10,6 +10,7 @@ import { NeedyPeople } from 'app/models/NeedyPeople';
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
+
 export class EmployeeComponent implements OnInit {
 
   employee:Employee=new Employee();
@@ -40,4 +41,7 @@ export class EmployeeComponent implements OnInit {
     this.router.navigate(['employee',this.empid,'findNeedyPeopleByName',this.needyPeople.needyPeopleName]);
   }
 
+  goToProfile(){
+    this.router.navigate(['employee',this.empid,'profile']);
+  }
 }

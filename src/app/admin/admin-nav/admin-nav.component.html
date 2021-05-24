@@ -15,10 +15,9 @@
                 <div class="nav-item dropdown">
                     <a class="nav-link link-warning dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="true">
-                       Donor
+                        Admin
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="goToProfile()">Profile</a></li>
                         <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
                 </div>
@@ -27,19 +26,3 @@
         </div>
     </div>
 </nav>
-<div class="alert alert-success" role="alert">
-    Hi,{{donor.donorName}} You have <strong>successfully</strong> logged in as a donor!!!
-</div>
-<div class="container">
-    <div class="bg-light p-5 rounded">
-        <h1>Reset password</h1>
-        <p>Change your password by clicking the button bellow</p>
-        <a class="btn btn-lg btn-info lead my-4" href="donor/login/resetPassword">Reset »</a>
-        <h1>Donations to NGO</h1>
-        <p class="lead my-4">Donate</p>
-        <button class="btn btn-lg btn-success my-3" (click)='donateToNGO()'>Donate »</button>
-        <hr>
-        <p class="lead my-4">Your Donations</p>
-        <button class="btn btn-lg btn-success my-3" (click)='goToDonations()'>Donations »</button>
-    </div>
-</div>
