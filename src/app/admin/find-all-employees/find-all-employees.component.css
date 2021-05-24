@@ -1,0 +1,7 @@
+.panel .panel-heading{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.thead-inverse{
+    background-color:black;
+    color: white;
+}
