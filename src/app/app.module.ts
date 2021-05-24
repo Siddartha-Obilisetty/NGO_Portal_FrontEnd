@@ -82,6 +82,7 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
     WriteComponent,
     AllDonationsComponent,
     AdminLoginComponent
+    //these are imports
   ],
   imports: [
     BrowserModule,
