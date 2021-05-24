@@ -30,6 +30,7 @@ export class FindAllNeedypeopleComponent implements OnInit {
 
   helpNeedyPeopleById(needyPeopleId:number){
     this.router.navigate(['employee',this.employeeId,'helpNeedyPeopleById',needyPeopleId]);
+    alert("Request has been sent for the approval")
   }
 
   findNeedyPeopleById(needyPeopleId:number){
