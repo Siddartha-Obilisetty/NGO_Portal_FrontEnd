@@ -30,5 +30,9 @@ export class NeedypeopleNavComponent implements OnInit {
   goToProfile(){
     this.router.navigate(['/needypeople',this.needyPersonId,'profile']);
   }
+  requestForHelp()
+  {
+    this.router.navigate(['/needypeople',this.needyPersonId,'request']);
+  }
 
 }
