@@ -41,7 +41,4 @@ export class NeedypeopleserviceService {
     return throwError(errorResponse.error);   
   }
 
-
-
-
 }

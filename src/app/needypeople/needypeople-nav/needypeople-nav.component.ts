@@ -19,6 +19,7 @@ export class NeedypeopleNavComponent implements OnInit {
 
   ngOnInit(): void {
     this.needyPersonId=this.route.snapshot.params['id'];
+    console.log(this.needyPersonId);
     this.empService.findNeedyPeopleById(this.needyPersonId).subscribe(
       person=>{
         this.person=person;

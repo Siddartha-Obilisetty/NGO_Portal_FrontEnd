@@ -1,1 +1,42 @@
 <app-donor-nav></app-donor-nav>
+<div class="container col-md-9">
+    <div class="row featurette my-5 ">
+        <div class="col-md-3 ">
+            <img src="assets/profile.jpg" height="90%" width="90%" alt="...">
+
+        </div>
+        <div class="alert alert-danger my-4" *ngIf="error">
+            {{error}}
+        </div>
+        <div class="col-md-7">
+            <div class="my-5">
+                <h2 class="my-5">Profile</h2>
+                <div *ngIf='donor'>
+                    <div>
+                        <label><b>Id:</b></label> {{donor.donorId}}
+                    </div>
+                    <div>
+                        <label><b>Name:</b></label> {{donor.donorName}}
+                    </div>
+                    <div>
+                        <label><b>Email:</b></label> {{donor.email}}
+                    </div>
+                    <div>
+                        <label><b>Phone:</b></label> {{donor.phone}}
+                    </div>
+                    <div>
+                        <label><b>Username:</b></label> {{donor.username}}
+                    </div>
+                    <div>
+                        <label><b>Password:</b></label> {{donor.password}}
+                    </div>
+                    <div>
+                        <label><b>Address:</b></label> {{donor.address.addressId}}, {{donor.address.city}},
+                        {{donor.address.state}}
+                        , {{donor.address.pin}}, {{donor.address.landmark}}.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

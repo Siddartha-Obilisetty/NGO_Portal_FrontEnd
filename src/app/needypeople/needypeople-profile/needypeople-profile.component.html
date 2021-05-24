@@ -1,1 +1,42 @@
 <app-needypeople-nav></app-needypeople-nav>
+<div class="container col-md-9">
+    <div class="row featurette my-5 ">
+        <div class="col-md-3 ">
+            <img src="assets/profile.jpg" height="90%" width="90%" alt="...">
+
+        </div>
+        <div class="alert alert-danger my-4" *ngIf="error">
+            {{error}}
+        </div>
+        <div class="col-md-7">
+            <div class="my-5">
+                <h2 class="my-5">Profile</h2>
+                <div *ngIf='needyPeople'>
+                    <div>
+                        <label><b>Id:</b></label> {{needyPeople.needyPeopleId}}
+                    </div>
+                    <div>
+                        <label><b>Name:</b></label> {{needyPeople.needyPeopleName}}
+                    </div>
+                    <div>
+                        <label><b>Phone:</b></label> {{needyPeople.phone}}
+                    </div>
+                    <div>
+                        <label><b>Username:</b></label> {{needyPeople.username}}
+                    </div>
+                    <div>
+                        <label><b>Password:</b></label> {{needyPeople.password}}
+                    </div>
+                    <div>
+                        <label><b>Family Income:</b></label> {{needyPeople.familyIncome}}
+                    </div>
+                    <div>
+                        <label><b>Address:</b></label> {{needyPeople.address.addressId}}, {{needyPeople.address.city}},
+                        {{needyPeople.address.state}}
+                        , {{needyPeople.address.pin}}, {{needyPeople.address.landmark}}.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
