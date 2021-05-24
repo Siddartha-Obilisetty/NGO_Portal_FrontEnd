@@ -1,30 +1,43 @@
-<h2>Employee Details</h2>
-<hr>
-<div *ngIf='employee'>
-    <div>
-        <label><b>Employee Id:</b></label> {{employee.employeeId}}
+<div class="container col-md-9">
+    <div class="row featurette my-5 ">
+        <div class="col-md-5 ">
+            <img src="assets/details.png" height="90%" width="90%" alt="...">
+
+        </div>
+        <div class="col-md-7">
+            <div class="my-5">
+                <h2 class="my-5">Employee Details</h2>
+                <hr>
+                <div *ngIf='employee'>
+                    <div>
+                        <label><b>Employee Id:</b></label> {{employee.employeeId}}
+                    </div>
+                    <div>
+                        <label><b>Employee Name:</b></label> {{employee.employeeName}}
+                    </div>
+                    <div>
+                        <label><b>Email:</b></label> {{employee.email}}
+                    </div>
+                    <div>
+                        <label><b>Phone:</b></label> {{employee.phone}}
+                    </div>
+                    <div>
+                        <label><b>Username:</b></label> {{employee.username}}
+                    </div>
+                    <div>
+                        <label><b>Password:</b></label> {{employee.password}}
+                    </div>
+                    <div>
+                        <label><b>Address:</b></label> {{employee.address.addressId}}, {{employee.address.city}},
+                        {{employee.address.state}}
+                        , {{employee.address.pin}}, {{employee.address.landmark}}.
+                    </div>
+                </div>
+                <button (click)='goToEmployeeList()' class='btn btn-primary my-5'>Go To Employee List</button>
+                <div class="alert alert-danger my-4" *ngIf="error">
+                    {{error}}
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <label><b>Employee Name:</b></label> {{employee.employeeName}}
-    </div>
-    <div>
-        <label><b>Email:</b></label> {{employee.email}}
-    </div>
-    <div>
-        <label><b>Phone:</b></label> {{employee.phone}}
-    </div>
-    <div>
-        <label><b>Username:</b></label> {{employee.username}}
-    </div>
-    <div>
-        <label><b>Password:</b></label> {{employee.password}}
-    </div>
-    <div>
-        <label><b>Address:</b></label> {{employee.address.addressId}}, {{employee.address.city}}, {{employee.address.state}}
-        , {{employee.address.pin}}, {{employee.address.landmark}}.
-    </div>
-</div>
-<button (click)='goToEmployeeList()' class='btn btn-primary'>Go To Employee List</button>
-<div class="alert alert-danger my-4" *ngIf="error">
-    {{error}}
 </div>

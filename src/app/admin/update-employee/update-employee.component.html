@@ -3,7 +3,7 @@
       {{error}}
   </div>
     <form #createEmployeeForm="ngForm" novalidate class="row g-3">
-      <div class="col-md-8">
+      <div class="col-md-6">
         <label for="name">Employee Name</label>
         <input type="text" name="employeeName" class="form-control my-1" placeholder="Enter name of the employee here"
           [(ngModel)]="employee.employeeName" #name="ngModel">
@@ -13,17 +13,17 @@
         <input type="number" name="phone" class="form-control my-1" placeholder="Enter phone number here"
           [(ngModel)]="employee.phone" #phone="ngModel">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <label for="email">Email</label>
         <input type="text" name="email" class="form-control my-1" placeholder="Enter email here"
           [(ngModel)]="employee.email" #familyIncome="ngModel">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <label for="username">Username</label>
         <input type="text" name="username" class="form-control my-1" placeholder="Enter the username" required
           [(ngModel)]="employee.username" #username="ngModel">
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <label for="password">Password</label>
         <input type="password" name="password" class="form-control my-1" placeholder="Enter the Password"
           [(ngModel)]="employee.password" #password="ngModel">
