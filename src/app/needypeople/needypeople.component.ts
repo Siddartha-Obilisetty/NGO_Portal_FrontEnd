@@ -14,7 +14,9 @@ export class NeedypeopleComponent implements OnInit {
   person:NeedyPeople=new NeedyPeople();
   needyPersonId:number;
 
-  constructor(private router:Router, private needyPeopleService:NeedypeopleserviceService, private route:ActivatedRoute,private empService:EmployeeserviceService) { }
+  constructor(private router:Router,
+              private route:ActivatedRoute,
+              private empService:EmployeeserviceService) { }
 
   
   ngOnInit(): void {
@@ -26,28 +28,9 @@ export class NeedypeopleComponent implements OnInit {
     );
   }
 
-  goToProfile(){
-    this.router.navigate(['/needypeople',this.needyPersonId,'profile']);
-  }
   
   requestForHelp()
   {
     this.router.navigate(['/needypeople',this.needyPersonId,'request']);
   }
-//  createNeedyPeople(){
-//   this.needyPeopleService.registerNeedyPerson(this.person).subscribe(
-//     result=>{
-//       console.log(result);
-//       this.goToNeedyPeopleList();
-//     },
-//     error=>console.log(error)
-//   );
-//   alert("needy person added succesfully");
-// }
-// goToNeedyPeopleList(){
-//   this.router.navigate(['/employee/needypeople/all'])
-// }
-// onSubmit1(){
-//   this.createNeedyPeople();
-// }
 }

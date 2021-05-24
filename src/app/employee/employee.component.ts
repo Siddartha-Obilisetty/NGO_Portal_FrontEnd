@@ -41,7 +41,5 @@ export class EmployeeComponent implements OnInit {
     this.router.navigate(['employee',this.empid,'findNeedyPeopleByName',this.needyPeople.needyPeopleName]);
   }
 
-  goToProfile(){
-    this.router.navigate(['employee',this.empid,'profile']);
-  }
+  
 }
