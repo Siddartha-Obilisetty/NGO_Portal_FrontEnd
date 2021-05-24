@@ -12,18 +12,27 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                 </li>
-            </ul>
-            <div class="mx-2">
-                <div class="nav-item dropdown">
-                    <a class="nav-link link-warning dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <li class="nav-item">
+                    <a class="nav-link" href="about">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="true">
-                        Hi, {{employee.employeeName}}
+                        Actions
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" (click)="goToProfile()">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="donor/login">Donate</a></li>
+                        <li><a class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                aria-controls="offcanvasRight">Register</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="write">Write for us</a></li>
                     </ul>
-                </div>
+                </li>
+            </ul>
+            <div class="mx-2">
+                <a class="nav-link link-warning" href="contact">Contact us</a>
 
             </div>
         </div>
