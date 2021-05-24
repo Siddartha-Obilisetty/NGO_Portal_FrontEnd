@@ -11,7 +11,8 @@ import { Admin } from 'app/models/Admin';
 export class AdminLoginComponent implements OnInit {
 
   admin:Admin=new Admin();
-  error:string="Wrong Credentials";
+  error:string;
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class AdminLoginComponent implements OnInit {
       this.loadAdminPage();
     }
     else{
-      this.error;
+      this.error="Wrong Credentials";
     }
   }
   loadAdminPage() {
