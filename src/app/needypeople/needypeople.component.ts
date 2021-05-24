@@ -32,5 +32,6 @@ export class NeedypeopleComponent implements OnInit {
   requestForHelp()
   {
     this.router.navigate(['/needypeople',this.needyPersonId,'request']);
+    alert("Requested for help");
   }
 }
