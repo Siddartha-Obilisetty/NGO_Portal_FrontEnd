@@ -24,8 +24,8 @@ export class DonorNavComponent implements OnInit {
     );
   }
 
-  
   goToProfile(){
-    this.router.navigate(['donor',this.donorId,'profile']);
+    console.log('hello');
+    this.router.navigate(['/donor',this.donorId,'profile']);
   }
 }

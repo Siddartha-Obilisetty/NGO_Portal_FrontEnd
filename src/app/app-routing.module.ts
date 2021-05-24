@@ -38,6 +38,7 @@ import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
 import { EmployeeProfileComponent } from './employee/employee-profile/employee-profile.component';
 import { DonorProfileComponent } from './donor/donor-profile/donor-profile.component';
 import { NeedypeopleProfileComponent } from './needypeople/needypeople-profile/needypeople-profile.component';
+import { TeamComponent } from './team/team.component';
 
 const routes: Routes = [
   {path:'',component:HomepageComponent},
@@ -82,7 +83,8 @@ const routes: Routes = [
   
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
-  {path:'write',component:WriteComponent}
+  {path:'write',component:WriteComponent},
+  {path:'team',component:TeamComponent}
 ];
 
 @NgModule({

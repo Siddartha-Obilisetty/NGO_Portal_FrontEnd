@@ -51,6 +51,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TeamComponent } from './team/team.component';
 
 
 @NgModule({
@@ -96,7 +97,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NeedypeopleNavComponent,
     DonorNavComponent,
     EmployeeNavComponent,
-    AdminNavComponent
+    AdminNavComponent,
+    TeamComponent
     //these are imports
   ],
   imports: [
