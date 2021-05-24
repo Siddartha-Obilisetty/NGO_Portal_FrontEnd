@@ -49,7 +49,7 @@
               [ngClass]= "{'is-invalid':familyIncome?.errors && (familyIncome?.touched),
               'is-valid':familyIncome?.valid}">
       <div class="invalid-feedback">
-          <strong *ngIf= "familyIncome?.errors?.required">Needy People familyIncome is required</strong>
+          <strong *ngIf= "familyIncome?.errors?.required">Needy People family Income is required</strong>
       </div>
     </div>
 
@@ -144,7 +144,6 @@
       </div>
     </div>
 
-      
         <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createNeedyPeopleForm.invalid">Add Product</button>
         <button type="submit" class="btn btn-default" (click)= "createNeedyPeopleForm.reset()">Reset</button>
     </form>
