@@ -5,68 +5,137 @@
       {{error}}
   </div>
     <form #createEmployeeForm="ngForm" novalidate class="row g-3">
-      <div class="col-md-4">
+      <div class="form-group col-md-4">
         <label for="employeeId" class="form-label">Employee Id</label>
-        <input type="number" name="employeeId" class="form-control" placeholder="Enter the Id here"
-          #needyPeopleId="ngModel" [(ngModel)]="employee.employeeId">
+        <input type="number" name="employeeId" class="form-control" 
+                placeholder="Enter the Employee Id here" required
+                #employeeId="ngModel" 
+                [(ngModel)]="employee.employeeId"
+                [ngClass]="{'is-invalid':employeeId?.errors && employeeId?.touched,
+                'is-valid':employeeId?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="employeeId?.errors?.required">Id is Required</strong></span>
+                </div>
       </div>
-      <div class="col-md-8">
-        <label for="name">Employee Name</label>
-        <input type="text" name="employeeName" class="form-control my-1" placeholder="Enter name of the employee here"
-          [(ngModel)]="employee.employeeName" #name="ngModel">
+      <div class="form-group col-md-8">
+        <label for="employeeName" class="form-label">Employee Name</label>
+        <input type="text" name="employeeName" class="form-control my-1"
+                placeholder="Enter name of the employee here" required
+                [(ngModel)]="employee.employeeName" 
+                #employeeName="ngModel"
+                [ngClass]="{'is-invalid':employeeName?.errors && employeeName?.touched,
+                'is-valid':employeeName?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="employeeName?.errors?.required">Name is Required</strong></span>
+                </div>
       </div>
-      <div class="col-md-6">
+      <div class="form-group col-md-6">
         <label for="phone">Phone</label>
-        <input type="number" name="phone" class="form-control my-1" placeholder="Enter phone number here"
-          [(ngModel)]="employee.phone" #phone="ngModel">
+        <input type="number" name="phone" class="form-control my-1" 
+                placeholder="Enter phone number here" required
+                [(ngModel)]="employee.phone" 
+                #phone="ngModel"
+                [ngClass]="{'is-invalid':phone?.errors && phone?.touched,
+                'is-valid':phone?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="phone?.errors?.required">Phone is Required</strong></span>
+                </div>
       </div>
-      <div class="col-md-6">
+      <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="text" name="email" class="form-control my-1" placeholder="Enter email here"
-          [(ngModel)]="employee.email" #familyIncome="ngModel">
+        <input type="text" name="email" class="form-control my-1"
+                placeholder="Enter email here" required
+                [(ngModel)]="employee.email" 
+                #email="ngModel"
+                [ngClass]="{'is-invalid':email?.errors && email?.touched,
+                'is-valid':email?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="email?.errors?.required">Email is Required</strong></span>
+                </div>
       </div>
-      <div class="col-md-6">
+      <div class="form-group col-md-6">
         <label for="username">Username</label>
-        <input type="text" name="username" class="form-control my-1" placeholder="Enter the username" required
-          [(ngModel)]="employee.username" #username="ngModel">
+        <input type="text" name="username" class="form-control my-1" 
+                placeholder="Enter the username" required
+                [(ngModel)]="employee.username" 
+                #username="ngModel"
+                [ngClass]="{'is-invalid':username?.errors && username?.touched,
+                'is-valid':username?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="username?.errors?.required">Username is Required</strong></span>
+                </div>
       </div>
-      <div class="col-md-3">
+      <div class="form-group col-md-3">
         <label for="password">Password</label>
-        <input type="password" name="password" class="form-control my-1" placeholder="Enter the Password"
-          [(ngModel)]="employee.password" #password="ngModel">
-      </div>
-      <div class="col-md-3">
-        <label for="password">Confirm Password</label>
-        <input type="password" name="password" class="form-control my-1" placeholder="Enter the Password">
+        <input type="password" name="password" class="form-control my-1" 
+                placeholder="Enter the Password" required
+                [(ngModel)]="employee.password" 
+                #password="ngModel"
+                [ngClass]="{'is-invalid':password?.errors && password?.touched,
+                'is-valid':password?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="password?.errors?.required">Password is Required</strong></span>
+                </div>
       </div>
       <hr class="my-4">
-      <div class="col-md-4">
+      <div class="form-group col-md-4">
         <label for="addressId">Address Id</label>
-        <input type="number" name="addressId" class="form-control my-1" placeholder="Enter the Address Id"
-          [(ngModel)]="employee.address.addressId" #addressId="ngModel">
+        <input type="number" name="addressId" class="form-control my-1"
+                placeholder="Enter the Address Id" required
+                [(ngModel)]="employee.address.addressId" 
+                #addressId="ngModel"
+                [ngClass]="{'is-invalid':addressId?.errors && addressId?.touched,
+                'is-valid':addressId?.valid}">
+                <div class="invalid-feedback">
+                  <span><strong *ngIf="addressId?.errors?.required">Address Id is Required</strong></span>
+                </div>
       </div>
-      <div class="col-md-4">
+      <div class="form-group col-md-4">
         <label for="city">City</label>
-        <input type="text" name="city" class="form-control my-1" placeholder="Enter the City"
-          [(ngModel)]="employee.address.city" #city="ngModel">
+        <input type="text" name="city" class="form-control my-1"
+                  placeholder="Enter the City" required
+                  [(ngModel)]="employee.address.city" #city="ngModel"
+                  [ngClass]="{'is-invalid':city?.errors && city?.touched,
+                  'is-valid':city?.valid}">
+                  <div class="invalid-feedback">
+                    <span><strong *ngIf="city?.errors?.required">City is Required</strong></span>
+                  </div>
       </div>
-      <div class="col-md-4">
+      <div class="form-group col-md-4">
         <label for="state">State</label>
-        <input type="text" name="state" class="form-control my-1" placeholder="Enter the State"
-          [(ngModel)]="employee.address.state" #state="ngModel">
+        <input type="text" name="state" class="form-control my-1" 
+                placeholder="Enter the State" required
+                [(ngModel)]="employee.address.state" #state="ngModel"
+                [ngClass]="{'is-invalid':state?.errors && state?.touched,
+                  'is-valid':state?.valid}">
+                  <div class="invalid-feedback">
+                    <span><strong *ngIf="state?.errors?.required">State is Required</strong></span>
+                  </div>
       </div>
-      <div class="col-md-2">
+      <div class="form-group col-md-2">
         <label for="pin">PinCode</label>
-        <input type="text" name="pin" class="form-control my-1" placeholder="Enter the pin"
-          [(ngModel)]="employee.address.pin" #pin="ngModel">
+        <input type="text" name="pin" class="form-control my-1" 
+                placeholder="Enter the pin" required
+                [(ngModel)]="employee.address.pin" #pin="ngModel"
+                [ngClass]="{'is-invalid':pin?.errors && pin?.touched,
+                  'is-valid':pin?.valid}">
+                  <div class="invalid-feedback">
+                    <span><strong *ngIf="pin?.errors?.required">Pin is Required</strong></span>
+                  </div>
       </div>
-      <div class="col-md-10">
+      <div class="form-group col-md-10">
         <label for="landmark">Landmark</label>
-        <input type="text" name="landmark" class="form-control my-1" placeholder="Enter the landmark" required
-          [(ngModel)]="employee.address.landmark" #landmark="ngModel">
+        <input type="text" name="landmark" class="form-control my-1" 
+                placeholder="Enter the landmark" required
+                [(ngModel)]="employee.address.landmark" #landmark="ngModel"
+                [ngClass]="{'is-invalid':landmark?.errors && landmark?.touched,
+                  'is-valid':landmark?.valid}">
+                  <div class="invalid-feedback">
+                    <span><strong *ngIf="landmark?.errors?.required">Landmark is Required</strong></span>
+                  </div>
       </div>
       <div>
-        <button type="submit" class="btn btn-success" (click)= "onSubmit()">Add Employee</button>
+        <button type="submit" class="btn btn-success" (click)= "onSubmit()" [disabled]= "createEmployeeForm.invalid">Add Employee</button>
         <button type="submit" class="btn btn-default" (click)= "createEmployeeForm.reset()">Reset</button>
       </div>
     </form>
