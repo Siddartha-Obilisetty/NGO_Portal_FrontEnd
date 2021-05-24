@@ -26,7 +26,9 @@ export class NeedypeopleComponent implements OnInit {
     );
   }
 
-
+  goToProfile(){
+    this.router.navigate(['/needypeople',this.needyPersonId,'profile']);
+  }
   
   requestForHelp()
   {
