@@ -1,7 +1,9 @@
 .panel .panel-heading{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Great Vibes';
+    font-style:italic;
 }
 .thead-inverse{
-    background-color:aqua;
+    background-color:rgba(14, 147, 165, 0.788);
     color: white;
+    font-family:serif;
 }

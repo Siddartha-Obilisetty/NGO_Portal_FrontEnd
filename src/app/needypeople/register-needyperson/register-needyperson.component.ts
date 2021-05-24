@@ -37,6 +37,7 @@ export class RegisterNeedypersonComponent implements OnInit {
   }
   onSubmit(){
     this.createNeedyPeople();
+
   }
 
 
