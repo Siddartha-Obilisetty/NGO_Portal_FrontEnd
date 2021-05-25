@@ -20,7 +20,6 @@
                   <th>Approval Or Rejected Date</th>
                   <th>Status</th>
                   <th>Needy People Id</th>
-                  <th>Employee Id</th>
                   <th>Actions </th>
               </tr>
               </thead>
@@ -32,7 +31,6 @@
                       <td>{{donation.approvalOrRejectedDate}} </td>
                       <td>{{donation.status}} </td>
                       <td>{{donation.needyPeople.needyPeopleId}} </td>
-                      <td>{{donation.employee.employeeId}} </td>
                       <td>
                             <button (click)='approveDonation(donation.distributionId,donation.status)' class="btn btn-info" style='margin-left: auto;'>Approve Donation</button>
                       </td>
